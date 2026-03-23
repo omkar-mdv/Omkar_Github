@@ -11,3 +11,5 @@ Scenario: Login and Logout with valid credentials
     Then page title should be "nopCommerce demo store. Login"
 
     And close the browser
+    
+    
