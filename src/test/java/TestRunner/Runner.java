@@ -2,18 +2,21 @@ package TestRunner;
 
 import org.junit.runner.RunWith;
 
-import io.cucumber.junit.*;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 
-@RunWith(Cucumber.class)
+//@RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "./Features/Login.feature",
-		glue = "StepDefinition",
-		dryRun = false,
-		monochrome = true,
-		tags = "@smoke",
-		plugin = {"pretty", "html:target/HtmlReports/report.html"}
-		)
-
-public class Runner {
-	// This is empty on purpose
+    features = "src/test/resources/Features",   // path to feature files
+    glue = {"StepDefinition"},                  // step definitions package
+    dryRun = false,
+    	monochrome = true,
+    plugin = {
+        "pretty",
+        "html:target/HtmlReports/report.html"
+    }
+)
+public class Runner extends AbstractTestNGCucumberTests {
+	// This class serves as the test runner for Cucumber tests using TestNG.
 }

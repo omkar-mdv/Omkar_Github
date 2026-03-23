@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-03-23T20:48:52 IST" name="Default suite" finished-at="2026-03-23T20:48:59 IST" duration-ms="7670">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.Runner@19b843ba]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2026-03-23T20:48:52 IST" name="Default test" finished-at="2026-03-23T20:48:59 IST" duration-ms="7670">
+      <class name="TestRunner.Runner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:TestRunner.Runner@19b843ba]" started-at="2026-03-23T20:48:52 IST" name="setUpClass" finished-at="2026-03-23T20:48:52 IST" duration-ms="633" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3a90c13c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.Runner@19b843ba]" started-at="2026-03-23T20:48:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-03-23T20:48:59 IST" duration-ms="6530" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login and Logout with valid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError
+at org.junit.Assert.fail(Assert.java:87)
+at org.junit.Assert.assertTrue(Assert.java:42)
+at org.junit.Assert.assertTrue(Assert.java:53)
+at StepDefinition.StepDef.the_page_title_should_be(StepDef.java:53)
+at ✽.the page title should be "Dashboard / nopCommerce administratio"(file:///C:/Users/omkar/omkar-eclipse-workspace/com.cucumber.framework/src/test/resources/Features/Login.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:TestRunner.Runner@19b843ba]" started-at="2026-03-23T20:48:59 IST" name="tearDownClass" finished-at="2026-03-23T20:48:59 IST" duration-ms="90" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- TestRunner.Runner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
