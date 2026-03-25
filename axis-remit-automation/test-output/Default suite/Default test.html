@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Mar 24 10:22:45 IST 2026</td>
+<td>Started on:</td><td>Wed Mar 25 16:09:17 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>10 seconds (10305 ms)</td>
+<tr><td>Total time:</td><td>13 seconds (13288 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,23 +76,59 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Open Remit Website", "Launch Website"</td>
-<td><div><pre>java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at stepdefinitions.StepDef.page_title_should_be_displayed(StepDef.java:81)
-	at ✽.page title should be displayed(file:///C:/Users/omkar.madav/git/Omkar_Github/axis-remit-automation/src/test/resources/Features/Launch.feature:6)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2009196049", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2009196049'><pre>java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at stepdefinitions.StepDef.page_title_should_be_displayed(StepDef.java:81)
-	at ✽.page title should be displayed(file:///C:/Users/omkar.madav/git/Omkar_Github/axis-remit-automation/src/test/resources/Features/Launch.feature:6)
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User successfully signs up and verifies account", "Signup functionality"</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (333, 656)
+  (Session info: chrome=146.0.7680.81)
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [059c40db959bd3b118c482eda7b6fd2c, clickElement {id=f.22E686C2BCDAA2415FCC186D14909220.d.967DCD57982C9AD0FF743BBE52EEFAA9.e.169}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.81, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\OMKAR~1.MAD\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60855}, goog:processID: 20736, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60855/devtoo..., se:cdpVersion: 146.0.7680.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (059c40db959bd3b118c482eda7b6fd2c)] -&gt; xpath: //span[normalize-space()=&apos;No&apos;]]
+Session ID: 059c40db959bd3b118c482eda7b6fd2c
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.EuroSignupPage.selectOption(EuroSignupPage.java:111)
+	at stepdefinitions.EuroSignupSteps.user_selects_option(EuroSignupSteps.java:111)
+	at ✽.user selects option &quot;No&quot;(file:///C:/Users/omkar.madav/git/Omkar_Github/axis-remit-automation/src/test/resources/Features/EuroSignup.feature:14)
+</pre></div><a href='#' onClick='toggleBox("stack-trace52642932", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace52642932'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (333, 656)
+  (Session info: chrome=146.0.7680.81)
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [059c40db959bd3b118c482eda7b6fd2c, clickElement {id=f.22E686C2BCDAA2415FCC186D14909220.d.967DCD57982C9AD0FF743BBE52EEFAA9.e.169}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.81, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\OMKAR~1.MAD\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60855}, goog:processID: 20736, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60855/devtoo..., se:cdpVersion: 146.0.7680.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (059c40db959bd3b118c482eda7b6fd2c)] -&gt; xpath: //span[normalize-space()=&apos;No&apos;]]
+Session ID: 059c40db959bd3b118c482eda7b6fd2c
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.EuroSignupPage.selectOption(EuroSignupPage.java:111)
+	at stepdefinitions.EuroSignupSteps.user_selects_option(EuroSignupSteps.java:111)
+	at ✽.user selects option &quot;No&quot;(file:///C:/Users/omkar.madav/git/Omkar_Github/axis-remit-automation/src/test/resources/Features/EuroSignup.feature:14)
 </pre></div></td>
-<td>8</td>
-<td>runner.TestRunner@19b843ba</td></tr>
+<td>12</td>
+<td>runner.TestRunner@4b2c5e02</td></tr>
 </table><p>
 </body>
 </html>

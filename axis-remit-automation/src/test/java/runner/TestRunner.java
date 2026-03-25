@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
 
 //@RunWith(Cucumber.class)
 @CucumberOptions(
-    features = "src/test/resources/Features/Launch.feature",   // path to feature files
+    features = "src/test/resources/Features",   // path to feature files
     glue = {"stepdefinitions"},                  // step definitions package
     dryRun = false,
     	monochrome = true,
