@@ -8,13 +8,11 @@ import io.cucumber.testng.CucumberOptions;
 
 //@RunWith(Cucumber.class)
 @CucumberOptions(
-    features = "src/test/resources/Features",   // path to feature files
+    features = "src/test/resources/features",   // path to feature files
     glue = {"stepdefinitions"},                  // step definitions package
     dryRun = false,
     	monochrome = true,
-    plugin = {
-        "pretty",
-        "html:target/HtmlReports/report.html"
+    plugin = {"pretty","html:target/HtmlReports/report.html"
     }
 )
 public class TestRunner extends AbstractTestNGCucumberTests {

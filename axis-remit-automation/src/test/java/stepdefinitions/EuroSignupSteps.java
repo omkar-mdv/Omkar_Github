@@ -1,121 +1,137 @@
 package stepdefinitions;
 
-import org.openqa.selenium.By;
+import java.util.HashMap;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import base.BaseTest;
 import io.cucumber.java.en.*;
 import pages.EuroSignupPage;
+import utils.ExcelUtils;
+import utils.FakerUtils;
+
+/**
+ * ============================================================ 
+ * Class Name :
+ * EuroSignupSteps Description : Step Definitions for Euro Signup Feature Author
+ * : Omkar Framework : Cucumber + Selenium + POM + Excel + Faker
+ *
+ * Data Strategy: - Static Data → Excel (TestData.xlsx) - Dynamic Data → Faker
+ * (Name, Email, Mobile, Password)
+ *
+ * Excel Location: src/test/resources/testdata/TestData.xlsx
+ *
+ * Sheet Format: Row 0 → Headers Row 1 → Test Data
+ *
+ * ============================================================
+ */
 
 public class EuroSignupSteps {
 
 	WebDriver driver = BaseTest.getDriver();
 	EuroSignupPage signupPage;
 
-	@Given("user opens the axis remit page {string}")
-	public void user_opens_signup_page(String url) {
-		driver.get(url);
+	// Store Excel Data
+	HashMap<String, String> testData;
+
+	// ============================
+	// 🔹 Load Application & Test Data
+	// ============================
+	@Given("user opens the axis remit page")
+	public void user_opens_signup_page() throws Exception {
+
+		String path = System.getProperty("user.dir") + "/src/test/resources/testdata/TestData.xlsx";
+
+		ExcelUtils.loadExcel(path, "Sheet1");
+		testData = ExcelUtils.getTestData(1);
+
+		driver.get(testData.get("url"));
 		signupPage = new EuroSignupPage(driver);
 	}
 
-//    @When("user clicks on {string}")
-//    public void user_clicks_on(String button) {
-//
-//        if (button.equalsIgnoreCase("SIGN UP")) {
-//            signupPage.clickSignup();
-//        } else {
-//            throw new IllegalArgumentException("Only SIGN UP is supported. Passed: " + button);
-//        }
-//    }
-
-	@When("user clicks on {string}")
-	public void user_clicks_on(String button) {
-
-		switch (button.toUpperCase()) {
-		case "SIGN UP":
-			signupPage.clickSignup();
-			break;
-
-		case "REGISTER NOW":
-			signupPage.clickRegister();
-			break;
-
-		case "VERIFY ACCOUNT":
-			signupPage.clickVerify();
-			break;
-
-		default:
-			throw new IllegalArgumentException("Invalid button: " + button);
-		}
+	// ============================
+	// 🔹 Button Actions (From Excel)
+	// ============================
+	@When("user clicks on signup button")
+	public void user_clicks_signup() {
+		signupPage.clickSignup();
 	}
-	
-//	@When("user scrolls down")
-//	public void user_scrolls_down() {
-//		WebElement verifyBtn = driver.findElement(By.xpath("//button[contains(text(),'VERIFY')]"));
-//
-//		JavascriptExecutor js = (JavascriptExecutor) driver;
-//		js.executeScript("arguments[0].scrollIntoView(true);", verifyBtn);
-//	}
 
-	@When("user selects country {string}")
-	public void user_selects_country(String country) {
-		signupPage.selectCountry(country);
+	@When("user clicks on register button")
+	public void user_clicks_register() {
+		signupPage.clickRegister();
 	}
-	
+
+	@Then("user clicks on verify button")
+	public void user_clicks_verify() {
+		signupPage.clickVerify();
+	}
+
+	// ============================
+	// 🔹 Scroll Action
+	// ============================
 	@When("user scrolls down")
 	public void user_scrolls_down() {
-	    JavascriptExecutor js = (JavascriptExecutor) driver;
-	    js.executeScript("window.scrollBy(0,500)");
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,500)");
 	}
 
-	@When("user selects euro country {string}")
-	public void user_selects_euro_country(String euroCountry) {
-		signupPage.selectEuroCountry(euroCountry);
+	// ============================
+	// 🔹 Dropdown Selections (Excel)
+	// ============================
+	@When("user selects country")
+	public void user_selects_country() {
+		signupPage.selectCountry(testData.get("country"));
 	}
 
-	@When("user enters name {string}")
-	public void user_enters_name(String name) {
-		signupPage.enterName(name);
+	@When("user selects euro country")
+	public void user_selects_euro_country() {
+		signupPage.selectEuroCountry(testData.get("euroCountry"));
 	}
 
-	@When("user enters email {string}")
-	public void user_enters_email(String email) {
-		signupPage.enterEmail(email);
-	}
-
-	@When("user enters password {string}")
-	public void user_enters_password(String password) {
-		signupPage.enterPassword(password);
-	}
-	
-//	@When("user selects country code {string}")
-//	public void user_selects_country_code(String code) {
-//		signupPage.selectMobileCode(code);
-//	}
-	
-	@When("user selects country code {string}")
-	public void user_selects_country_code(String code) {
-	    // Skipped intentionally
+	@When("user selects country code")
+	public void user_selects_country_code() {
+	    // Intentionally skipped
 	    System.out.println("Skipping country code selection step");
 	}
 
-	@When("user enters mobile number {string}")
-	public void user_enters_mobile(String mobile) {
-		signupPage.enterMobileNo(mobile);
+	@When("user selects option")
+	public void user_selects_option() {
+		signupPage.selectOption(testData.get("option"));
 	}
 
-	@When("user selects option {string}")
-	public void user_selects_option(String option) {
-		signupPage.selectOption(option);
+	@When("user selects nationality")
+	public void user_selects_nationality() {
+		signupPage.selectCitizenship(testData.get("nationality"));
 	}
 
-	@When("user selects nationality {string}")
-	public void user_selects_nationality(String nationality) {
-		signupPage.selectCitizenship(nationality);
+	// ============================
+	// 🔹 Dynamic Inputs (Faker)
+	// ============================
+	@When("user enters name")
+	public void user_enters_name() {
+		signupPage.enterName(FakerUtils.getName());
 	}
 
+	@When("user enters email")
+	public void user_enters_email() {
+		signupPage.enterEmail(FakerUtils.getEmail());
+	}
+
+	@When("user enters password")
+	public void user_enters_password() {
+		signupPage.enterPassword(FakerUtils.getPassword());
+	}
+
+	@When("user enters mobile number")
+	public void user_enters_mobile() {
+		signupPage.enterMobileNo(FakerUtils.getMobile());
+	}
+
+	// ============================
+	// 🔹 Checkbox Actions
+	// ============================
 	@When("user checks receive mail checkbox")
 	public void user_checks_receive_mail_checkbox() {
 		signupPage.setReceiveMail(true);
@@ -127,13 +143,11 @@ public class EuroSignupSteps {
 		signupPage.setConsent(true);
 	}
 
-	@When("user enters OTP {string}")
-	public void user_enters_otp(String otp) {
-		signupPage.enterOtp(otp);
-	}
-
-	@Then("user verifies the account")
-	public void user_verifies_the_account() {
-		signupPage.clickVerify();
+	// ============================
+	// 🔹 OTP Handling
+	// ============================
+	@When("user enters OTP")
+	public void user_enters_otp() {
+		signupPage.enterOtp(testData.get("otp"));
 	}
 }

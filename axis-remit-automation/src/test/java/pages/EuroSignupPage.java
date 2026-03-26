@@ -108,7 +108,14 @@ public class EuroSignupPage {
     }
 
     public void selectOption(String option) {
-        driver.findElement(By.xpath("//span[normalize-space()='" + option + "']")).click();
+
+        WebElement element = driver.findElement(
+            By.xpath("//span[normalize-space()='" + option + "']")
+        );
+
+        ((JavascriptExecutor) driver).executeScript(
+            "arguments[0].click();", element
+        );
     }
 
     public void selectCitizenship(String citizenship) {
