@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-26T14:07:38 IST" name="Default suite" finished-at="2026-03-26T14:07:53 IST" duration-ms="14728">
+  <suite started-at="2026-03-30T11:46:24 IST" name="Default suite" finished-at="2026-03-30T11:47:20 IST" duration-ms="55592">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@3eb91815]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@27912e3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-03-26T14:07:38 IST" name="Default test" finished-at="2026-03-26T14:07:53 IST" duration-ms="14728">
+    <test started-at="2026-03-30T11:46:24 IST" name="Default test" finished-at="2026-03-30T11:47:20 IST" duration-ms="55592">
       <class name="runner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@3eb91815]" started-at="2026-03-26T14:07:39 IST" name="setUpClass" finished-at="2026-03-26T14:07:39 IST" duration-ms="755" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@27912e3]" started-at="2026-03-30T11:46:24 IST" name="setUpClass" finished-at="2026-03-30T11:46:25 IST" duration-ms="988" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@11dbcb3b]]>
+                <![CDATA[org.testng.TestRunner@6ba08a09]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@3eb91815]" started-at="2026-03-26T14:07:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-03-26T14:07:53 IST" duration-ms="13711" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@27912e3]" started-at="2026-03-30T11:46:25 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-03-30T11:47:19 IST" duration-ms="54189" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -34,50 +34,10 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element is not clickable at point (344, 592)
-  (Session info: chrome=146.0.7680.165)
-Build info: version: '4.22.0', revision: 'c5f3146703*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5bd66781e79e8e3d8ea1a0d6e9eec416, clickElement {id=f.840B473618A7E003CF5810091FC8EF58.d.F25E90AA40A8AE183680B63C17576915.e.144}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\OMKAR~1.MAD\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62827}, goog:processID: 19604, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62827/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (5bd66781e79e8e3d8ea1a0d6e9eec416)] -> xpath: //span[normalize-space()='Indian']]
-Session ID: 5bd66781e79e8e3d8ea1a0d6e9eec416]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (344, 592)
-  (Session info: chrome=146.0.7680.165)
-Build info: version: '4.22.0', revision: 'c5f3146703*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5bd66781e79e8e3d8ea1a0d6e9eec416, clickElement {id=f.840B473618A7E003CF5810091FC8EF58.d.F25E90AA40A8AE183680B63C17576915.e.144}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\OMKAR~1.MAD\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62827}, goog:processID: 19604, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62827/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (5bd66781e79e8e3d8ea1a0d6e9eec416)] -> xpath: //span[normalize-space()='Indian']]
-Session ID: 5bd66781e79e8e3d8ea1a0d6e9eec416
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at pages.EuroSignupPage.selectCitizenship(EuroSignupPage.java:124)
-at stepdefinitions.EuroSignupSteps.user_selects_nationality(EuroSignupSteps.java:106)
-at ✽.user selects nationality(file:///C:/Users/omkar.madav/git/Omkar_Github/axis-remit-automation/src/test/resources/features/EuroSignup.feature:16)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@3eb91815]" started-at="2026-03-26T14:07:53 IST" name="tearDownClass" finished-at="2026-03-26T14:07:53 IST" duration-ms="57" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@27912e3]" started-at="2026-03-30T11:47:19 IST" name="tearDownClass" finished-at="2026-03-30T11:47:20 IST" duration-ms="123" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

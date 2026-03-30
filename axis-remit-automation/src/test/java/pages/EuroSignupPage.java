@@ -119,9 +119,22 @@ public class EuroSignupPage {
     }
 
     public void selectCitizenship(String citizenship) {
-        WebElement element = driver.findElement(
-                By.xpath("//span[normalize-space()='" + citizenship + "']"));
-        element.click();
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        // Target LABEL instead of SPAN
+        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(
+                By.xpath("//label[.//span[normalize-space()='" + citizenship + "']]")
+        ));
+
+        // Scroll to center (fix viewport issue)
+        js.executeScript("arguments[0].scrollIntoView({block:'center'});", element);
+
+        try { Thread.sleep(500); } catch (InterruptedException e) {}
+
+        // JS click (avoids interception)
+        js.executeScript("arguments[0].click();", element);
     }
 
     public void setReceiveMail(boolean value) {
@@ -151,6 +164,24 @@ public class EuroSignupPage {
     }
 
     public void clickVerify() {
-        wait.until(ExpectedConditions.elementToBeClickable(btnVerify)).click();
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        WebElement verifyBtn = wait.until(ExpectedConditions.presenceOfElementLocated(
+                By.xpath("//button[normalize-space()='VERIFY ACCOUNT']")
+        ));
+
+        // Scroll to center (CRITICAL FIX)
+        js.executeScript("arguments[0].scrollIntoView({block:'center'});", verifyBtn);
+
+        // wait for UI stability
+        try { Thread.sleep(700); } catch (InterruptedException e) {}
+
+        // Wait until clickable
+        wait.until(ExpectedConditions.elementToBeClickable(verifyBtn));
+
+        // JS click (final reliable click)
+        js.executeScript("arguments[0].click();", verifyBtn);
     }
 }

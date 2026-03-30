@@ -12,7 +12,9 @@ import io.cucumber.testng.CucumberOptions;
     glue = {"stepdefinitions"},                  // step definitions package
     dryRun = false,
     	monochrome = true,
-    plugin = {"pretty","html:target/HtmlReports/report.html"
+    plugin = {"pretty","html:target/cucumber-reports.html",
+    		"json:target/cucumber.json",
+    	    "junit:target/cucumber.xml"
     }
 )
 public class TestRunner extends AbstractTestNGCucumberTests {

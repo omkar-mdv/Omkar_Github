@@ -4,7 +4,6 @@ Feature: Signup functionality
 
     Given user opens the axis remit page
     When user clicks on signup button
-    And user scrolls down
     And user selects country
     And user selects euro country
     And user enters name
