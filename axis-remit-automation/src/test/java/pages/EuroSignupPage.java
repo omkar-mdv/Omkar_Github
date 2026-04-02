@@ -56,6 +56,9 @@ public class EuroSignupPage {
 
     @FindBy(xpath = "//button[normalize-space()='VERIFY ACCOUNT']")
     WebElement btnVerify;
+    
+    @FindBy(xpath = "//div[contains(@class,'ant-notification-notice-message')]")
+    private WebElement successMessage;
 
     // ================= ACTION METHODS ================= //
 
@@ -183,5 +186,9 @@ public class EuroSignupPage {
 
         // JS click (final reliable click)
         js.executeScript("arguments[0].click();", verifyBtn);
+    }
+    
+    public String getSuccessMessage() {
+        return wait.until(ExpectedConditions.visibilityOf(successMessage)).getText();
     }
 }

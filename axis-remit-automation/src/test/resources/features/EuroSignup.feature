@@ -18,3 +18,4 @@ Feature: Signup functionality
     And user clicks on register button
     And user enters OTP
     Then user clicks on verify button
+    Then user should see registration success message

@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.HashMap;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 import base.BaseTest;
 import io.cucumber.java.AfterStep;
@@ -148,5 +149,14 @@ public class EuroSignupSteps {
         System.out.println("OTP: " + otp);
 
         signupPage.enterOtp(otp);
+    }
+    
+    @Then("user should see registration success message")
+    public void user_should_see_registration_success_message(String expectedMessage) {
+    	String actualMessage = signupPage.getSuccessMessage();
+
+        System.out.println("Actual Message: " + actualMessage);
+
+        Assert.assertEquals(actualMessage.trim(), expectedMessage);
     }
 }
