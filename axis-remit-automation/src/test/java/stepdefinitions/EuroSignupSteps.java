@@ -44,7 +44,7 @@ public class EuroSignupSteps {
         ExcelUtils.loadExcel(path, "Sheet1");
         testData = ExcelUtils.getTestData(1);
 
-        driver.get(testData.get("url"));
+        driver.get(testData.get("baseUrl"));
         signupPage = new EuroSignupPage(driver);
     }
 
@@ -61,8 +61,8 @@ public class EuroSignupSteps {
         signupPage.clickRegister();
     }
 
-    @Then("user clicks on verify button")
-    public void user_clicks_verify() {
+    @Then("user clicks on verify button for signup")
+    public void user_clicks_on_verify_button_for_signup() {
         signupPage.clickVerify();
     }
 
@@ -142,8 +142,8 @@ public class EuroSignupSteps {
     // ============================
     // 🔹 OTP Handling
     // ============================
-    @When("user enters OTP")
-    public void user_enters_otp() {
+    @When("user enters OTP for signup")
+    public void user_enters_otp_for_signup() {
 
         String otp = testData.get("otp").replace(".0", "");
         System.out.println("OTP: " + otp);
@@ -152,8 +152,10 @@ public class EuroSignupSteps {
     }
     
     @Then("user should see registration success message")
-    public void user_should_see_registration_success_message(String expectedMessage) {
-    	String actualMessage = signupPage.getSuccessMessage();
+    public void user_should_see_registration_success_message() {
+
+        String actualMessage = signupPage.getSuccessMessage();
+        String expectedMessage = "Thank you. You are successfully registered.";
 
         System.out.println("Actual Message: " + actualMessage);
 

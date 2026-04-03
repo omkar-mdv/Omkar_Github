@@ -3,192 +3,206 @@ package pages;
 import java.time.Duration;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.*;
 
 public class EuroSignupPage {
 
-    WebDriver driver;
-    WebDriverWait wait;
+	WebDriver driver;
+	WebDriverWait wait;
 
-    public EuroSignupPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    }
+	public EuroSignupPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	}
 
-    @FindBy(id = "country")
-    WebElement drpCountry;
+	@FindBy(id = "country")
+	WebElement drpCountry;
 
-    @FindBy(id = "euro_country")
-    WebElement drpEuroCountry;
+	@FindBy(id = "euro_country")
+	WebElement drpEuroCountry;
 
-    @FindBy(id = "name")
-    WebElement txtName;
+	@FindBy(id = "name")
+	WebElement txtName;
 
-    @FindBy(id = "emailId")
-    WebElement txtEmail;
+	@FindBy(id = "emailId")
+	WebElement txtEmail;
 
-    @FindBy(id = "newPassword")
-    WebElement txtPassword;
+	@FindBy(id = "newPassword")
+	WebElement txtPassword;
 
-    @FindBy(id = "mobileNo")
-    WebElement txtMobileNo;
+	@FindBy(id = "mobileNo")
+	WebElement txtMobileNo;
 
-    @FindBy(id = "recvMailChk")
-    WebElement receiveMailCheckbox;
+	@FindBy(id = "recvMailChk")
+	WebElement receiveMailCheckbox;
 
-    @FindBy(id = "terms")
-    WebElement agreeTermsCheckbox;
+	@FindBy(xpath = "//*[@id=\"terms\"]")
+	WebElement agreeTermsCheckbox;
 
-    @FindBy(id = "consentChkBox")
-    WebElement consentCheckbox;
+	@FindBy(xpath = "//*[@id=\"consentChkBox\"]")
+	WebElement consentCheckbox;
 
-    @FindBy(xpath = "//button[normalize-space()='REGISTER NOW']")
-    WebElement btnRegister;
+	@FindBy(xpath = "//button[normalize-space()='REGISTER NOW']")
+	WebElement btnRegister;
 
-    @FindBy(xpath = "//a[normalize-space()='SIGN UP']")
-    WebElement btnSignup;
+	@FindBy(xpath = "//a[normalize-space()='SIGN UP']")
+	WebElement btnSignup;
 
-    @FindBy(id = "otp")
-    WebElement txtOtp;
+	@FindBy(id = "otp")
+	WebElement txtOtp;
 
-    @FindBy(xpath = "//button[normalize-space()='VERIFY ACCOUNT']")
-    WebElement btnVerify;
-    
-    @FindBy(xpath = "//div[contains(@class,'ant-notification-notice-message')]")
-    private WebElement successMessage;
+	@FindBy(xpath = "//button[normalize-space()='VERIFY ACCOUNT']")
+	WebElement btnVerify;
 
-    // ================= ACTION METHODS ================= //
+	@FindBy(xpath = "//div[contains(@class,'ant-notification-notice-message')]")
+	WebElement successMessage;
 
-    public void clickSignup() {
-        WebElement signupBtn = wait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("//a[@href='#/signup']")
-        ));
+	// ================= ACTION METHODS ================= //
 
-        signupBtn.click();
-    }
+	public void safeClick(WebElement element) {
 
-    public void selectCountry(String country) {
-        drpCountry.click();
-        WebElement option = wait.until(ExpectedConditions
-                .visibilityOfElementLocated(By.xpath("//span[contains(text(),'" + country + "')]")));
-        option.click();
-    }
+		// Wait only for presence in DOM (not visibility)
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id(element.getAttribute("id"))));
 
-    public void selectEuroCountry(String euroCountry) {
-        drpEuroCountry.click();
-        WebElement option = wait.until(ExpectedConditions
-                .visibilityOfElementLocated(By.xpath("//div[normalize-space()='" + euroCountry + "']")));
-        option.click();
-    }
+		// Click using Actions (handles hidden/overlap better)
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).pause(Duration.ofMillis(200)).click().perform();
+	}
 
-    public void enterName(String name) {
-        txtName.sendKeys(name);
-    }
+	public void clickSignup() {
+		WebElement signupBtn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='#/signup']")));
 
-    public void enterEmail(String email) {
-        txtEmail.sendKeys(email);
-    }
+		signupBtn.click();
+	}
 
-    public void enterPassword(String password) {
-        txtPassword.sendKeys(password);
-    }
+	public void selectCountry(String country) {
+		drpCountry.click();
+		WebElement option = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'" + country + "')]")));
+		option.click();
+	}
 
-    public void selectMobileCode(String code) {
-        WebElement dropdown = wait.until(ExpectedConditions
-                .elementToBeClickable(By.xpath("//span[@title='" + code + "']")));
-        dropdown.click();
+	public void selectEuroCountry(String euroCountry) {
+		drpEuroCountry.click();
+		WebElement option = wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//div[normalize-space()='" + euroCountry + "']")));
+		option.click();
+	}
 
-        WebElement option = wait.until(ExpectedConditions
-                .visibilityOfElementLocated(By.xpath("//div[contains(text(),'" + code + "')]")));
-        option.click();
-    }
+	public void enterName(String name) {
+		txtName.sendKeys(name);
+	}
 
-    public void enterMobileNo(String mobileNo) {
-        txtMobileNo.sendKeys(mobileNo);
-    }
+	public void enterEmail(String email) {
+		txtEmail.sendKeys(email);
+	}
 
-    public void selectOption(String option) {
+	public void enterPassword(String password) {
+		txtPassword.sendKeys(password);
+	}
 
-        WebElement element = driver.findElement(
-            By.xpath("//span[normalize-space()='" + option + "']")
-        );
+	public void selectMobileCode(String code) {
+		WebElement dropdown = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@title='" + code + "']")));
+		dropdown.click();
 
-        ((JavascriptExecutor) driver).executeScript(
-            "arguments[0].click();", element
-        );
-    }
+		WebElement option = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'" + code + "')]")));
+		option.click();
+	}
 
-    public void selectCitizenship(String citizenship) {
+	public void enterMobileNo(String mobileNo) {
+		txtMobileNo.sendKeys(mobileNo);
+	}
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+	public void selectOption(String option) {
 
-        // Target LABEL instead of SPAN
-        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(
-                By.xpath("//label[.//span[normalize-space()='" + citizenship + "']]")
-        ));
+		WebElement element = driver.findElement(By.xpath("//span[normalize-space()='" + option + "']"));
 
-        // Scroll to center (fix viewport issue)
-        js.executeScript("arguments[0].scrollIntoView({block:'center'});", element);
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+	}
 
-        try { Thread.sleep(500); } catch (InterruptedException e) {}
+	public void selectCitizenship(String citizenship) {
 
-        // JS click (avoids interception)
-        js.executeScript("arguments[0].click();", element);
-    }
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 
-    public void setReceiveMail(boolean value) {
-        if (receiveMailCheckbox.isSelected() != value) {
-            receiveMailCheckbox.click();
-        }
-    }
+		// Target LABEL instead of SPAN
+		WebElement element = wait.until(ExpectedConditions
+				.presenceOfElementLocated(By.xpath("//label[.//span[normalize-space()='" + citizenship + "']]")));
 
-    public void setAgreeTerms(boolean value) {
-        if (agreeTermsCheckbox.isSelected() != value) {
-            agreeTermsCheckbox.click();
-        }
-    }
+		// Scroll to center (fix viewport issue)
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});", element);
 
-    public void setConsent(boolean value) {
-        if (consentCheckbox.isSelected() != value) {
-            consentCheckbox.click();
-        }
-    }
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+		}
 
-    public void clickRegister() {
-        wait.until(ExpectedConditions.elementToBeClickable(btnRegister)).click();
-    }
+		// JS click (avoids interception)
+		js.executeScript("arguments[0].click();", element);
+	}
 
-    public void enterOtp(String otp) {
-        wait.until(ExpectedConditions.visibilityOf(txtOtp)).sendKeys(otp);
-    }
+	public void setReceiveMail(boolean value) {
+		if (receiveMailCheckbox.isSelected() != value) {
+			receiveMailCheckbox.click();
+		}
+	}
 
-    public void clickVerify() {
+	public void setConsent(boolean value) {
+		safeClick(consentCheckbox);
+	}
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+	public void setAgreeTerms(boolean value) {
+		safeClick(agreeTermsCheckbox);
+	}
 
-        WebElement verifyBtn = wait.until(ExpectedConditions.presenceOfElementLocated(
-                By.xpath("//button[normalize-space()='VERIFY ACCOUNT']")
-        ));
+	public void clickRegister() {
 
-        // Scroll to center (CRITICAL FIX)
-        js.executeScript("arguments[0].scrollIntoView({block:'center'});", verifyBtn);
+		wait.until(ExpectedConditions.elementToBeClickable(btnRegister));
+		btnRegister.click();
+	}
 
-        // wait for UI stability
-        try { Thread.sleep(700); } catch (InterruptedException e) {}
+	public void enterOtp(String otp) {
+		wait.until(ExpectedConditions.visibilityOf(txtOtp)).sendKeys(otp);
+	}
 
-        // Wait until clickable
-        wait.until(ExpectedConditions.elementToBeClickable(verifyBtn));
+	public void clickVerify() {
 
-        // JS click (final reliable click)
-        js.executeScript("arguments[0].click();", verifyBtn);
-    }
-    
-    public String getSuccessMessage() {
-        return wait.until(ExpectedConditions.visibilityOf(successMessage)).getText();
-    }
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		WebElement verifyBtn = wait.until(
+				ExpectedConditions.presenceOfElementLocated(By.xpath("//button[normalize-space()='VERIFY ACCOUNT']")));
+
+		// Scroll to center (CRITICAL FIX)
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});", verifyBtn);
+
+		// wait for UI stability
+		try {
+			Thread.sleep(700);
+		} catch (InterruptedException e) {
+		}
+
+		// Wait until clickable
+		wait.until(ExpectedConditions.elementToBeClickable(verifyBtn));
+
+		// JS click (final reliable click)
+		js.executeScript("arguments[0].click();", verifyBtn);
+	}
+
+	public String getSuccessMessage() {
+
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+
+	    WebElement message = wait.until(ExpectedConditions.visibilityOfElementLocated(
+	        By.xpath("//div[contains(@class,'ant-notification-notice-message')]")
+	    ));
+
+	    return message.getText();
+	}
 }
