@@ -30,6 +30,9 @@ public class EuroLoginPage {
 	@FindBy(xpath = "//button[normalize-space()='LOG IN']")
 	WebElement btnLogin;
 
+	@FindBy(xpath = "//div[contains(@class,'ant-notification-notice-message')]")
+	private WebElement otpSentToastMessage;
+
 	// ================= ACTION METHODS ================= //
 
 	public void safeClick(WebElement element) {
@@ -46,6 +49,10 @@ public class EuroLoginPage {
 
 	public void enterPassword(String password) {
 		wait.until(ExpectedConditions.visibilityOf(txtPassword)).sendKeys(password);
+	}
+
+	public String getOtpSentToastMessage() {
+		return otpSentToastMessage.getText();
 	}
 
 	public void clickLogin() {

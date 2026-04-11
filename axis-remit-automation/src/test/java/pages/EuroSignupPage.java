@@ -16,9 +16,9 @@ public class EuroSignupPage {
 	public EuroSignupPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 	}
-
+	
 	@FindBy(id = "country")
 	WebElement drpCountry;
 

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Apr 04 00:33:56 IST 2026</td>
+<td>Started on:</td><td>Sat Apr 11 15:51:28 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>87 seconds (87816 ms)</td>
+<tr><td>Total time:</td><td>40 seconds (40341 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,15 +77,21 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User successfully signs up, verifies account and logs in", "Eurozone Corridor - Signup and Login End-to-End"</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pages.EuroLoginPage.enterEmail(String)&quot; because &quot;this.loginPage&quot; is null
-	at stepdefinitions.EuroLoginSteps.user_enters_registered_email(EuroLoginSteps.java:53)
-	at ✽.user enters registered email(file:///C:/Users/Omkar.Madav/git/Omkar_Github/axis-remit-automation/src/test/resources/features/EuroSignupLogin.feature:28)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1453959093", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1453959093'><pre>java.lang.NullPointerException: Cannot invoke &quot;pages.EuroLoginPage.enterEmail(String)&quot; because &quot;this.loginPage&quot; is null
-	at stepdefinitions.EuroLoginSteps.user_enters_registered_email(EuroLoginSteps.java:53)
-	at ✽.user enters registered email(file:///C:/Users/Omkar.Madav/git/Omkar_Github/axis-remit-automation/src/test/resources/features/EuroSignupLogin.feature:28)
+<td><div><pre>java.lang.AssertionError: OTP sent notification not displayed! expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepdefinitions.EuroSignupLoginSteps.user_should_receive_otp(EuroSignupLoginSteps.java:178)
+	at ✽.user should receive OTP(file:///C:/Users/Omkar.Madav/git/Omkar_Github/axis-remit-automation/src/test/resources/features/EuroSignupLogin.feature:31)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2028567885", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2028567885'><pre>java.lang.AssertionError: OTP sent notification not displayed! expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepdefinitions.EuroSignupLoginSteps.user_should_receive_otp(EuroSignupLoginSteps.java:178)
+	at ✽.user should receive OTP(file:///C:/Users/Omkar.Madav/git/Omkar_Github/axis-remit-automation/src/test/resources/features/EuroSignupLogin.feature:31)
 </pre></div></td>
-<td>87</td>
+<td>39</td>
 <td>runner.TestRunner@3eb91815</td></tr>
 </table><p>
 </body>

@@ -2,26 +2,26 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-04T00:33:56 IST" name="Default suite" finished-at="2026-04-04T00:35:24 IST" duration-ms="87816">
+  <suite started-at="2026-04-11T15:51:28 IST" name="Default suite" finished-at="2026-04-11T15:52:09 IST" duration-ms="40341">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@3eb91815]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-04-04T00:33:56 IST" name="Default test" finished-at="2026-04-04T00:35:24 IST" duration-ms="87816">
+    <test started-at="2026-04-11T15:51:28 IST" name="Default test" finished-at="2026-04-11T15:52:09 IST" duration-ms="40341">
       <class name="runner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@3eb91815]" started-at="2026-04-04T00:33:56 IST" name="setUpClass" finished-at="2026-04-04T00:33:57 IST" duration-ms="566" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@3eb91815]" started-at="2026-04-11T15:51:28 IST" name="setUpClass" finished-at="2026-04-11T15:51:29 IST" duration-ms="599" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@52035328]]>
+                <![CDATA[org.testng.TestRunner@fcd3a6f]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@3eb91815]" started-at="2026-04-04T00:33:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-04T00:35:24 IST" duration-ms="87044" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@3eb91815]" started-at="2026-04-11T15:51:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-11T15:52:09 IST" duration-ms="39509" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -34,21 +34,24 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Cannot invoke "pages.EuroLoginPage.enterEmail(String)" because "this.loginPage" is null]]>
+              <![CDATA[OTP sent notification not displayed! expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "pages.EuroLoginPage.enterEmail(String)" because "this.loginPage" is null
-at stepdefinitions.EuroLoginSteps.user_enters_registered_email(EuroLoginSteps.java:53)
-at ✽.user enters registered email(file:///C:/Users/Omkar.Madav/git/Omkar_Github/axis-remit-automation/src/test/resources/features/EuroSignupLogin.feature:28)
+              <![CDATA[java.lang.AssertionError: OTP sent notification not displayed! expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at stepdefinitions.EuroSignupLoginSteps.user_should_receive_otp(EuroSignupLoginSteps.java:178)
+at ✽.user should receive OTP(file:///C:/Users/Omkar.Madav/git/Omkar_Github/axis-remit-automation/src/test/resources/features/EuroSignupLogin.feature:31)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@3eb91815]" started-at="2026-04-04T00:35:24 IST" name="tearDownClass" finished-at="2026-04-04T00:35:24 IST" duration-ms="83" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@3eb91815]" started-at="2026-04-11T15:52:09 IST" name="tearDownClass" finished-at="2026-04-11T15:52:09 IST" duration-ms="87" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
