@@ -7,9 +7,7 @@ public class FakerUtils {
     static Faker faker = new Faker();
 
     public static String getName() {
-        String firstName = faker.name().firstName();
-        String lastName = faker.name().lastName();
-        return firstName + " " + lastName;
+        return faker.name().firstName() + " " + faker.name().lastName();
     }
 
     public static String getEmail() {
@@ -17,8 +15,11 @@ public class FakerUtils {
         return randomPrefix.toLowerCase() + "@yopmail.com";
     }
 
-    public static String getMobile() {
-        return faker.number().digits(10);
+    /**
+     * Generates mobile number with given digit length
+     */
+    public static String getMobile(int digits) {
+        return faker.number().digits(digits);
     }
 
     public static String getPassword() {

@@ -27,6 +27,7 @@ public class EuroSignupLoginSteps {
     private String registeredEmail;
     private String registeredPassword;
     private String registeredName;
+    private String registeredMobile;
 
     // ============================
     // 🔹 Global Wait
@@ -48,7 +49,7 @@ public class EuroSignupLoginSteps {
         String path = System.getProperty("user.dir") + "/src/test/resources/testdata/TestData.xlsx";
 
         ExcelUtils.loadExcel(path, "Sheet1");
-        testData = ExcelUtils.getTestData(1);
+        testData = ExcelUtils.getTestData(2);
 
         driver.get(testData.get("baseUrl"));
         signupPage = new EuroSignupPage(driver);
@@ -101,10 +102,6 @@ public class EuroSignupLoginSteps {
 //	public void user_selects_country() {
 //		signupPage.selectCountry(ConfigReader.get("country"));
 //	}
-    @When("user selects euro country")
-    public void user_selects_euro_country() {
-        signupPage.selectEuroCountry(testData.get("euroCountry"));
-    }
 
 //	Fetched from config.properties
 //	@When("user selects euro country")
@@ -139,7 +136,22 @@ public class EuroSignupLoginSteps {
 
     @When("user enters mobile number")
     public void user_enters_mobile_number() {
-        signupPage.enterMobileNo(FakerUtils.getMobile());
+
+        String country = testData.get("country");
+        String registeredMobile;
+
+        // ✅ Switzerland → 9 digits
+        if ("Switzerland".equalsIgnoreCase(country)) {
+            registeredMobile = FakerUtils.getMobile(9);
+            System.out.println("Swiss mobile (9 digits): " + registeredMobile);
+
+        } else {
+            // ✅ Default → 10 digits
+            registeredMobile = FakerUtils.getMobile(10);
+            System.out.println("Default mobile (10 digits): " + registeredMobile);
+        }
+
+        signupPage.enterMobileNo(registeredMobile);
     }
 
     @When("user selects option")
