@@ -1,4 +1,4 @@
-Feature: Eurozone Corridor - Signup and Login End-to-End
+Feature: Signup and Login End-to-End
 
   Scenario: User successfully signs up, verifies account and logs in
 
@@ -8,7 +8,6 @@ Feature: Eurozone Corridor - Signup and Login End-to-End
     # -------- SIGNUP FLOW --------
     When user clicks on signup button
     And user selects country
-    And user selects euro country
     And user enters name
     And user enters email
     And user enters password
