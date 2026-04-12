@@ -8,17 +8,17 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.*;
 
-public class EuroSignupPage {
+public class AxisSignupPage {
 
 	WebDriver driver;
 	WebDriverWait wait;
 
-	public EuroSignupPage(WebDriver driver) {
+	public AxisSignupPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 	}
-	
+
 	@FindBy(id = "country")
 	WebElement drpCountry;
 
@@ -126,6 +126,15 @@ public class EuroSignupPage {
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 	}
 
+	public boolean isOptionPresent(String optionText) {
+		try {
+			driver.findElement(By.xpath("//span[normalize-space()='" + optionText + "']"));
+			return true;
+		} catch (NoSuchElementException e) {
+			return false;
+		}
+	}
+
 	public void selectCitizenship(String citizenship) {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
@@ -197,12 +206,11 @@ public class EuroSignupPage {
 
 	public String getSuccessMessage() {
 
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-	    WebElement message = wait.until(ExpectedConditions.visibilityOfElementLocated(
-	        By.xpath("//div[contains(@class,'ant-notification-notice-message')]")
-	    ));
+		WebElement message = wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//div[contains(@class,'ant-notification-notice-message')]")));
 
-	    return message.getText();
+		return message.getText();
 	}
 }

@@ -8,12 +8,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.*;
 
-public class EuroLoginPage {
+public class AxisLoginPage {
 
 	WebDriver driver;
 	WebDriverWait wait;
 
-	public EuroLoginPage(WebDriver driver) {
+	public AxisLoginPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));

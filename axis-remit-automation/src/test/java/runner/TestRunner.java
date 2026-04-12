@@ -17,6 +17,7 @@ import io.cucumber.testng.CucumberOptions;
     	    "junit:target/cucumber.xml"
     }
 )
+
 public class TestRunner extends AbstractTestNGCucumberTests {
 	// This class serves as the test runner for Cucumber tests using TestNG.
 }

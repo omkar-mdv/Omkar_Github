@@ -6,19 +6,19 @@ import org.openqa.selenium.support.ui.*;
 
 public class WaitUtils {
 
-    WebDriver driver;
-    WebDriverWait wait;
+	WebDriver driver;
+	WebDriverWait wait;
 
-    public WaitUtils(WebDriver driver) {
-        this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    }
+	public WaitUtils(WebDriver driver) {
+		this.driver = driver;
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	}
 
-    public WebElement waitForElement(By locator) {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-    }
+	public WebElement waitForElement(By locator) {
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	}
 
-    public void click(By locator) {
-        wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
-    }
+	public void click(By locator) {
+		wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+	}
 }
