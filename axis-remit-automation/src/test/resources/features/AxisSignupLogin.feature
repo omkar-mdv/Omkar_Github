@@ -1,5 +1,9 @@
 Feature: Signup and Login End-to-End
 
+  As a new or registered user
+  I want to sign up and log in to the application
+  So that I can access the system and perform transactions securely
+
   Scenario: User successfully signs up, verifies account and logs in
 
     # Launch application
