@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 7 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,8 +38,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+            <a href="#" panel-name="suite-API_Suite" class="navigator-link">
+              <span class="suite-name border-failed">API Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,37 +49,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Omkar.Madav\AppData\Local\Temp\testng-eclipse--1412970770\testng-customsuite.xml</span>
+                  <a href="#" panel-name="test-xml-API_Suite" class="navigator-link ">
+                    <span>C:\Users\Omkar.Madav\git\Omkar_Github\axis-remit-automation\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="testlist-API_Suite" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="group-API_Suite" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="times-API_Suite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="reporter-API_Suite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-API_Suite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="chronological-API_Suite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -92,31 +92,140 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">23 methods, 7 failed,   16 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-API_Suite" class="hide-methods failed suite-API_Suite"> (hide)</a> <!-- hide-methods failed suite-API_Suite -->
+                      <a href="#" panel-name="suite-API_Suite" class="show-methods failed suite-API_Suite"> (show)</a> <!-- show-methods failed suite-API_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-API_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.GenerateTokenApi" class="method navigator-link" hash-for-method="verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted">verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.GenerateTokenApi" class="method navigator-link" hash-for-method="verifyGenerateTokenApiWithCRNBelowMinimumLength">verifyGenerateTokenApiWithCRNBelowMinimumLength</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.GenerateTokenApi" class="method navigator-link" hash-for-method="verifyGenerateTokenApiWithInvalidNonExistentCRN">verifyGenerateTokenApiWithInvalidNonExistentCRN</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifyOtpApiWithIncorrectOtp">verifyOtpApiWithIncorrectOtp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifyOtpApiWithoutAuthToken">verifyOtpApiWithoutAuthToken</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifySendOtpApiWithInvalidExpiredAuthToken">verifySendOtpApiWithInvalidExpiredAuthToken</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifySendOtpApiWithoutAuthTokenInHeader">verifySendOtpApiWithoutAuthTokenInHeader</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-API_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-API_Suite" class="hide-methods passed suite-API_Suite"> (hide)</a> <!-- hide-methods passed suite-API_Suite -->
+                      <a href="#" panel-name="suite-API_Suite" class="show-methods passed suite-API_Suite"> (show)</a> <!-- show-methods passed suite-API_Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content passed suite-API_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifyGenerateTokenApiWithValidCRNAndAccountNumber">verifyGenerateTokenApiWithValidCRNAndAccountNumber</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.GenerateTokenApi" class="method navigator-link" hash-for-method="verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi">verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifyOtpApiWithCorrectSixDigitOtp">verifyOtpApiWithCorrectSixDigitOtp</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.GenerateTokenApi" class="method navigator-link" hash-for-method="verifyGenerateTokenApiWhenAadharLinkIsN">verifyGenerateTokenApiWhenAadharLinkIsN</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber">verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.GenerateTokenApi" class="method navigator-link" hash-for-method="verifyGenerateTokenApiWithAlphabeticCharactersInCRN">verifyGenerateTokenApiWithAlphabeticCharactersInCRN</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.GenerateTokenApi" class="method navigator-link" hash-for-method="verifyGenerateTokenApiWithCRNAboveMaximumLength">verifyGenerateTokenApiWithCRNAboveMaximumLength</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.GenerateTokenApi" class="method navigator-link" hash-for-method="verifyGenerateTokenApiWithEmptyCRN">verifyGenerateTokenApiWithEmptyCRN</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.GenerateTokenApi" class="method navigator-link" hash-for-method="verifyGenerateTokenApiWithMissingClientCode">verifyGenerateTokenApiWithMissingClientCode</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.GenerateTokenApi" class="method navigator-link" hash-for-method="verifyGenerateTokenApiWithMissingMandatoryFieldAccNo">verifyGenerateTokenApiWithMissingMandatoryFieldAccNo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.GenerateTokenApi" class="method navigator-link" hash-for-method="verifyGenerateTokenApiWithSpecialCharactersInAccNo">verifyGenerateTokenApiWithSpecialCharactersInAccNo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifyGenerateTokenApiWithValidCRNAndAccountNumber">verifyGenerateTokenApiWithValidCRNAndAccountNumber</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.GenerateTokenApi" class="method navigator-link" hash-for-method="verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer">verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifyOtpApiWithAlphabeticCharactersInOtpField">verifyOtpApiWithAlphabeticCharactersInOtpField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifyOtpApiWithCorrectSixDigitOtp">verifyOtpApiWithCorrectSixDigitOtp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifyOtpApiWithLessThanSixDigits">verifyOtpApiWithLessThanSixDigits</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifyOtpApiWithMoreThanSixDigits">verifyOtpApiWithMoreThanSixDigits</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber">verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifySendOtpApiWithMissingMandatoryCRNField">verifySendOtpApiWithMissingMandatoryCRNField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-API_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -127,8 +236,182 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+        <div panel-name="suite-API_Suite" class="panel API_Suite">
+          <div class="suite-API_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">vestedApi.GenerateTokenApi</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted">
+                  </a> <!-- verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted -->
+                  <span class="method-name">verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [ERR7002] but found [ERR002]
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:39)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted(GenerateTokenApi.java:163)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyGenerateTokenApiWithCRNBelowMinimumLength">
+                  </a> <!-- verifyGenerateTokenApiWithCRNBelowMinimumLength -->
+                  <span class="method-name">verifyGenerateTokenApiWithCRNBelowMinimumLength</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [ERR1008] but found [ERR7007]
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:39)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithCRNBelowMinimumLength(GenerateTokenApi.java:173)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyGenerateTokenApiWithInvalidNonExistentCRN">
+                  </a> <!-- verifyGenerateTokenApiWithInvalidNonExistentCRN -->
+                  <span class="method-name">verifyGenerateTokenApiWithInvalidNonExistentCRN</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [ERR7002] but found [ERR002]
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:39)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithInvalidNonExistentCRN(GenerateTokenApi.java:183)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-API_Suite-class-failed -->
+          <div class="suite-API_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">vestedApi.OtpApi</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyOtpApiWithIncorrectOtp">
+                  </a> <!-- verifyOtpApiWithIncorrectOtp -->
+                  <span class="method-name">verifyOtpApiWithIncorrectOtp</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [ERR1009] but found [ERR1010]
+	at vestedApi.OtpApi.verifyOtpApiWithIncorrectOtp(OtpApi.java:110)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyOtpApiWithoutAuthToken">
+                  </a> <!-- verifyOtpApiWithoutAuthToken -->
+                  <span class="method-name">verifyOtpApiWithoutAuthToken</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Technical error] but found [Technical Decline]
+	at vestedApi.OtpApi.verifyOtpApiWithoutAuthToken(OtpApi.java:247)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySendOtpApiWithInvalidExpiredAuthToken">
+                  </a> <!-- verifySendOtpApiWithInvalidExpiredAuthToken -->
+                  <span class="method-name">verifySendOtpApiWithInvalidExpiredAuthToken</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Technical error] but found [Technical Decline]
+	at vestedApi.OtpApi.verifySendOtpApiWithInvalidExpiredAuthToken(OtpApi.java:292)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySendOtpApiWithoutAuthTokenInHeader">
+                  </a> <!-- verifySendOtpApiWithoutAuthTokenInHeader -->
+                  <span class="method-name">verifySendOtpApiWithoutAuthTokenInHeader</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Technical error] but found [Technical Decline]
+	at vestedApi.OtpApi.verifySendOtpApiWithoutAuthTokenInHeader(OtpApi.java:314)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-API_Suite-class-failed -->
+          <div class="suite-API_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">vestedApi.GenerateTokenApi</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi">
+                  </a> <!-- verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi -->
+                  <span class="method-name">verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyGenerateTokenApiWhenAadharLinkIsN">
+                  </a> <!-- verifyGenerateTokenApiWhenAadharLinkIsN -->
+                  <span class="method-name">verifyGenerateTokenApiWhenAadharLinkIsN</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyGenerateTokenApiWithAlphabeticCharactersInCRN">
+                  </a> <!-- verifyGenerateTokenApiWithAlphabeticCharactersInCRN -->
+                  <span class="method-name">verifyGenerateTokenApiWithAlphabeticCharactersInCRN</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyGenerateTokenApiWithCRNAboveMaximumLength">
+                  </a> <!-- verifyGenerateTokenApiWithCRNAboveMaximumLength -->
+                  <span class="method-name">verifyGenerateTokenApiWithCRNAboveMaximumLength</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyGenerateTokenApiWithEmptyCRN">
+                  </a> <!-- verifyGenerateTokenApiWithEmptyCRN -->
+                  <span class="method-name">verifyGenerateTokenApiWithEmptyCRN</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyGenerateTokenApiWithMissingClientCode">
+                  </a> <!-- verifyGenerateTokenApiWithMissingClientCode -->
+                  <span class="method-name">verifyGenerateTokenApiWithMissingClientCode</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyGenerateTokenApiWithMissingMandatoryFieldAccNo">
+                  </a> <!-- verifyGenerateTokenApiWithMissingMandatoryFieldAccNo -->
+                  <span class="method-name">verifyGenerateTokenApiWithMissingMandatoryFieldAccNo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyGenerateTokenApiWithSpecialCharactersInAccNo">
+                  </a> <!-- verifyGenerateTokenApiWithSpecialCharactersInAccNo -->
+                  <span class="method-name">verifyGenerateTokenApiWithSpecialCharactersInAccNo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer">
+                  </a> <!-- verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer -->
+                  <span class="method-name">verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-API_Suite-class-passed -->
+          <div class="suite-API_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">vestedApi.OtpApi</span>
@@ -143,9 +426,30 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="verifyOtpApiWithAlphabeticCharactersInOtpField">
+                  </a> <!-- verifyOtpApiWithAlphabeticCharactersInOtpField -->
+                  <span class="method-name">verifyOtpApiWithAlphabeticCharactersInOtpField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="verifyOtpApiWithCorrectSixDigitOtp">
                   </a> <!-- verifyOtpApiWithCorrectSixDigitOtp -->
                   <span class="method-name">verifyOtpApiWithCorrectSixDigitOtp</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyOtpApiWithLessThanSixDigits">
+                  </a> <!-- verifyOtpApiWithLessThanSixDigits -->
+                  <span class="method-name">verifyOtpApiWithLessThanSixDigits</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyOtpApiWithMoreThanSixDigits">
+                  </a> <!-- verifyOtpApiWithMoreThanSixDigits -->
+                  <span class="method-name">verifyOtpApiWithMoreThanSixDigits</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -155,119 +459,308 @@
                   <span class="method-name">verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySendOtpApiWithMissingMandatoryCRNField">
+                  </a> <!-- verifySendOtpApiWithMissingMandatoryCRNField -->
+                  <span class="method-name">verifySendOtpApiWithMissingMandatoryCRNField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-        </div> <!-- panel Default_suite -->
-        <div panel-name="test-xml-Default_suite" class="panel">
+          </div> <!-- suite-API_Suite-class-passed -->
+        </div> <!-- panel API_Suite -->
+        <div panel-name="test-xml-API_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Omkar.Madav\AppData\Local\Temp\testng-eclipse--1412970770\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Omkar.Madav\git\Omkar_Github\axis-remit-automation\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+&lt;suite name=&quot;API Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;API Tests&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;vestedApi.GenerateTokenApi&quot;/&gt;
       &lt;class name=&quot;vestedApi.OtpApi&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Default test --&gt;
-&lt;/suite&gt; &lt;!-- Default suite --&gt;
+  &lt;/test&gt; &lt;!-- API Tests --&gt;
+&lt;/suite&gt; &lt;!-- API Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Default_suite" class="panel">
+        <div panel-name="testlist-API_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Default suite</span>
+            <span class="header-content">Tests for API Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">API Tests (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Default_suite" class="panel">
+        <div panel-name="group-API_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Default suite</span>
+            <span class="header-content">Groups for API Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Default_suite" class="panel">
+        <div panel-name="times-API_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Default suite</span>
+            <span class="header-content">Times for API Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Default_suite');
-function tableData_Default_suite() {
+suiteTableInitFunctions.push('tableData_API_Suite');
+function tableData_API_Suite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(23);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyGenerateTokenApiWithValidCRNAndAccountNumber')
-data.setCell(0, 2, 'vestedApi.OtpApi')
-data.setCell(0, 3, 5012);
+data.setCell(0, 1, 'verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi')
+data.setCell(0, 2, 'vestedApi.GenerateTokenApi')
+data.setCell(0, 3, 7128);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber')
 data.setCell(1, 2, 'vestedApi.OtpApi')
-data.setCell(1, 3, 2619);
+data.setCell(1, 3, 3978);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyOtpApiWithCorrectSixDigitOtp')
-data.setCell(2, 2, 'vestedApi.OtpApi')
-data.setCell(2, 3, 608);
-window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+data.setCell(2, 1, 'verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer')
+data.setCell(2, 2, 'vestedApi.GenerateTokenApi')
+data.setCell(2, 3, 2421);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyGenerateTokenApiWithValidCRNAndAccountNumber')
+data.setCell(3, 2, 'vestedApi.OtpApi')
+data.setCell(3, 3, 1861);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifyGenerateTokenApiWhenAadharLinkIsN')
+data.setCell(4, 2, 'vestedApi.GenerateTokenApi')
+data.setCell(4, 3, 1687);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'verifyGenerateTokenApiWithCRNBelowMinimumLength')
+data.setCell(5, 2, 'vestedApi.GenerateTokenApi')
+data.setCell(5, 3, 1665);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted')
+data.setCell(6, 2, 'vestedApi.GenerateTokenApi')
+data.setCell(6, 3, 1429);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verifyGenerateTokenApiWithInvalidNonExistentCRN')
+data.setCell(7, 2, 'vestedApi.GenerateTokenApi')
+data.setCell(7, 3, 654);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'verifyOtpApiWithCorrectSixDigitOtp')
+data.setCell(8, 2, 'vestedApi.OtpApi')
+data.setCell(8, 3, 508);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'verifyOtpApiWithIncorrectOtp')
+data.setCell(9, 2, 'vestedApi.OtpApi')
+data.setCell(9, 3, 466);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'verifyGenerateTokenApiWithSpecialCharactersInAccNo')
+data.setCell(10, 2, 'vestedApi.GenerateTokenApi')
+data.setCell(10, 3, 354);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'verifyGenerateTokenApiWithMissingMandatoryFieldAccNo')
+data.setCell(11, 2, 'vestedApi.GenerateTokenApi')
+data.setCell(11, 3, 328);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'verifyGenerateTokenApiWithCRNAboveMaximumLength')
+data.setCell(12, 2, 'vestedApi.GenerateTokenApi')
+data.setCell(12, 3, 287);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'verifyGenerateTokenApiWithAlphabeticCharactersInCRN')
+data.setCell(13, 2, 'vestedApi.GenerateTokenApi')
+data.setCell(13, 3, 268);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'verifyGenerateTokenApiWithMissingClientCode')
+data.setCell(14, 2, 'vestedApi.GenerateTokenApi')
+data.setCell(14, 3, 237);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'verifySendOtpApiWithoutAuthTokenInHeader')
+data.setCell(15, 2, 'vestedApi.OtpApi')
+data.setCell(15, 3, 225);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'verifySendOtpApiWithInvalidExpiredAuthToken')
+data.setCell(16, 2, 'vestedApi.OtpApi')
+data.setCell(16, 3, 224);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'verifyOtpApiWithAlphabeticCharactersInOtpField')
+data.setCell(17, 2, 'vestedApi.OtpApi')
+data.setCell(17, 3, 223);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'verifyGenerateTokenApiWithEmptyCRN')
+data.setCell(18, 2, 'vestedApi.GenerateTokenApi')
+data.setCell(18, 3, 220);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'verifyOtpApiWithMoreThanSixDigits')
+data.setCell(19, 2, 'vestedApi.OtpApi')
+data.setCell(19, 3, 197);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'verifyOtpApiWithLessThanSixDigits')
+data.setCell(20, 2, 'vestedApi.OtpApi')
+data.setCell(20, 3, 180);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'verifySendOtpApiWithMissingMandatoryCRNField')
+data.setCell(21, 2, 'vestedApi.OtpApi')
+data.setCell(21, 3, 175);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'verifyOtpApiWithoutAuthToken')
+data.setCell(22, 2, 'vestedApi.OtpApi')
+data.setCell(22, 3, 158);
+window.suiteTableData['API_Suite']= { tableData: data, tableDiv: 'times-div-API_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
-              <div id="times-div-Default_suite">
-              </div> <!-- times-div-Default_suite -->
+              <span class="suite-total-time">Total running time: 24 seconds</span>
+              <div id="times-div-API_Suite">
+              </div> <!-- times-div-API_Suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Default_suite" class="panel">
+        <div panel-name="reporter-API_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Default suite</span>
+            <span class="header-content">Reporter output for API Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Default_suite" class="panel">
+        <div panel-name="ignored-methods-API_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Default_suite" class="panel">
+        <div panel-name="chronological-API_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">vestedApi.OtpApi</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">vestedApi.GenerateTokenApi</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <span class="method-name">verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi</span>
+                <span class="method-start">780 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyGenerateTokenApiWhenAadharLinkIsN</span>
+                <span class="method-start">8010 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted</span>
+                <span class="method-start">9705 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyGenerateTokenApiWithAlphabeticCharactersInCRN</span>
+                <span class="method-start">11145 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyGenerateTokenApiWithCRNAboveMaximumLength</span>
+                <span class="method-start">11420 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyGenerateTokenApiWithCRNBelowMinimumLength</span>
+                <span class="method-start">11711 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyGenerateTokenApiWithEmptyCRN</span>
+                <span class="method-start">13381 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyGenerateTokenApiWithInvalidNonExistentCRN</span>
+                <span class="method-start">13608 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyGenerateTokenApiWithMissingClientCode</span>
+                <span class="method-start">14269 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyGenerateTokenApiWithMissingMandatoryFieldAccNo</span>
+                <span class="method-start">14509 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyGenerateTokenApiWithSpecialCharactersInAccNo</span>
+                <span class="method-start">14843 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer</span>
+                <span class="method-start">15200 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">vestedApi.OtpApi</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">17625 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
                 <span class="method-name">verifyGenerateTokenApiWithValidCRNAndAccountNumber</span>
-                <span class="method-start">830 ms</span>
+                <span class="method-start">17627 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber</span>
-                <span class="method-start">5943 ms</span>
+                <span class="method-start">19496 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyOtpApiWithAlphabeticCharactersInOtpField</span>
+                <span class="method-start">23477 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyOtpApiWithCorrectSixDigitOtp</span>
-                <span class="method-start">8568 ms</span>
+                <span class="method-start">23705 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyOtpApiWithIncorrectOtp</span>
+                <span class="method-start">24216 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyOtpApiWithLessThanSixDigits</span>
+                <span class="method-start">24688 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyOtpApiWithMoreThanSixDigits</span>
+                <span class="method-start">24871 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyOtpApiWithoutAuthToken</span>
+                <span class="method-start">25072 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifySendOtpApiWithInvalidExpiredAuthToken</span>
+                <span class="method-start">25240 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifySendOtpApiWithMissingMandatoryCRNField</span>
+                <span class="method-start">25469 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifySendOtpApiWithoutAuthTokenInHeader</span>
+                <span class="method-start">25651 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

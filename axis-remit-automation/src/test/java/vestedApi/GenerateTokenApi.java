@@ -1,41 +1,49 @@
 package vestedApi;
 
-import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
-import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
-import io.restassured.specification.ResponseSpecification;
-import io.restassured.builder.ResponseSpecBuilder;
-import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-
 import base.ApiBaseTest;
+import io.restassured.response.Response;
+import org.testng.Assert;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
+@Listeners(listeners.TestListener.class)
 public class GenerateTokenApi extends ApiBaseTest {
 
-	private RequestSpecification requestSpec;
-	private ResponseSpecification responseSpec;
 	public static String generatedToken;
 
-	@BeforeClass
-	public void setup() {
-		RestAssured.baseURI = "https://kb.remit.in";
+	private Response hitGenerateTokenApi(Map<String, Object> requestBody) {
+		Response response = given().spec(requestSpec).body(requestBody).when()
+				.post("/services/api/partner/generateToken").then().log().all().extract().response();
 
-		requestSpec = given().contentType(ContentType.JSON).accept(ContentType.JSON);
+		listeners.TestListener.test.get().info("Request Body: " + requestBody);
+		listeners.TestListener.test.get().info("Response Body: " + response.asPrettyString());
 
-		responseSpec = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
+		return response;
 	}
 
-	@Test (priority = 1)
-	public void verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer() {
+	private void validateSuccessResponse(Response response) {
+		Assert.assertEquals(response.getStatusCode(), 200);
+		Assert.assertEquals(response.jsonPath().getString("status"), "S");
+		Assert.assertTrue(response.jsonPath().getBoolean("success"));
+		Assert.assertFalse(response.jsonPath().getBoolean("failure"));
+	}
 
-		// Request Body
+	private void validateFailureResponse(Response response, String errCode, String messageField, String messageValue) {
+		Assert.assertEquals(response.getStatusCode(), 200);
+		Assert.assertEquals(response.jsonPath().getString("status"), "F");
+		Assert.assertEquals(response.jsonPath().getString("errCode"), errCode);
+		Assert.assertEquals(response.jsonPath().getString(messageField), messageValue);
+		Assert.assertEquals(response.jsonPath().getString("token"), "");
+		Assert.assertFalse(response.jsonPath().getBoolean("success"));
+		Assert.assertTrue(response.jsonPath().getBoolean("failure"));
+	}
+
+	private Map<String, Object> getDefaultRequestBody() {
 		Map<String, Object> requestBody = new HashMap<>();
 		requestBody.put("requestId", "REQTEST002");
 		requestBody.put("crn", "100759017");
@@ -43,372 +51,135 @@ public class GenerateTokenApi extends ApiBaseTest {
 		requestBody.put("clientCode", "VESTED");
 		requestBody.put("groupId", "KB");
 		requestBody.put("channel", "WEB");
+		return requestBody;
+	}
+	
+	//1
+	@Test(priority = 1)
+	public void verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer() {
+		Map<String, Object> requestBody = getDefaultRequestBody();
 
-		// Execute API
-		Response response = requestSpec.body(requestBody).when().post("/services/api/partner/generateToken").then()
-				.log().ifValidationFails().extract().response();
+		Response response = hitGenerateTokenApi(requestBody);
+		validateSuccessResponse(response);
 
-		// HTTP Status Code Validation
-		Assert.assertEquals(response.getStatusCode(), 200);
+		generatedToken = response.jsonPath().getString("token");
 
-		// Response Body Validations
-		Assert.assertEquals(response.jsonPath().getString("status"), "S");
-		Assert.assertTrue(response.jsonPath().getBoolean("success"));
-		Assert.assertFalse(response.jsonPath().getBoolean("failure"));
-
-		// Token Validation
-		String token = response.jsonPath().getString("token");
-		Assert.assertNotNull(token, "Token should not be null");
-		Assert.assertFalse(token.isEmpty(), "Token should not be empty");
+		Assert.assertNotNull(generatedToken);
+		Assert.assertFalse(generatedToken.isEmpty());
 	}
 
+	//2
 	@Test
 	public void verifyGenerateTokenApiWithEmptyCRN() {
+		Map<String, Object> requestBody = getDefaultRequestBody();
+		requestBody.put("crn", "");
 
-		// Request body with EMPTY CRN
-		Map<String, Object> requestBody = new HashMap<>();
-		requestBody.put("requestId", "REQTEST002");
-		requestBody.put("crn", ""); // Mandatory field sent empty
-		requestBody.put("accNo", "7150157172");
-		requestBody.put("clientCode", "VESTED");
-		requestBody.put("groupId", "KB");
-		requestBody.put("channel", "WEB");
-
-		// Execute API
-		Response response = given().contentType(ContentType.JSON).accept(ContentType.JSON).body(requestBody).when()
-				.post("/services/api/partner/generateToken").then().log().ifValidationFails().extract().response();
-
-		// HTTP Status Code Validation
-		Assert.assertEquals(response.getStatusCode(), 200, "HTTP status should be 200 for business validation failure");
-
-		// Response Body Validations
-		Assert.assertEquals(response.jsonPath().getString("status"), "F");
-		Assert.assertEquals(response.jsonPath().getString("errCode"), "ERR1008");
-		Assert.assertEquals(response.jsonPath().getString("errorDescription"), "Technical Decline");
-
-		// Token should be empty on failure
-		Assert.assertEquals(response.jsonPath().getString("token"), "");
-
-		// Success & Failure flags
-		Assert.assertFalse(response.jsonPath().getBoolean("success"));
-		Assert.assertTrue(response.jsonPath().getBoolean("failure"));
+		Response response = hitGenerateTokenApi(requestBody);
+		validateFailureResponse(response, "ERR1008", "errorDescription", "Technical Decline");
 	}
 
+	//3
 	@Test
 	public void verifyGenerateTokenApiWhenAadharLinkIsN() {
-
-		// Request Body
-		Map<String, Object> requestBody = new HashMap<>();
-		requestBody.put("requestId", "REQTEST002");
+		Map<String, Object> requestBody = getDefaultRequestBody();
 		requestBody.put("crn", "27374059");
 		requestBody.put("accNo", "04221040003886");
-		requestBody.put("clientCode", "VESTED");
-		requestBody.put("groupId", "KB");
-		requestBody.put("channel", "WEB");
 
-		// Execute API
-		Response response = given().contentType(ContentType.JSON).accept(ContentType.JSON).body(requestBody).when()
-				.post("/services/api/partner/generateToken").then().log().ifValidationFails().extract().response();
-
-		// HTTP Status Code Validation
-		Assert.assertEquals(response.getStatusCode(), 200, "HTTP status should be 200 for business validation failure");
-
-		// Response Body Validations
-		Assert.assertEquals(response.jsonPath().getString("status"), "F");
-		Assert.assertEquals(response.jsonPath().getString("errCode"), "ERR7004");
-		Assert.assertEquals(response.jsonPath().getString("errorDescription"), "Business Decline");
-
-		// Token should be empty on failure
-		Assert.assertEquals(response.jsonPath().getString("token"), "");
-
-		// Success & Failure Flags
-		Assert.assertFalse(response.jsonPath().getBoolean("success"));
-		Assert.assertTrue(response.jsonPath().getBoolean("failure"));
+		Response response = hitGenerateTokenApi(requestBody);
+		validateFailureResponse(response, "ERR7004", "errorDescription", "Business Decline");
 	}
 
-	@Test
-	public void verifyGenerateTokenApiWithMissingMandatoryFieldCRN() {
-
-		// Request Body with missing CRN
-		Map<String, Object> requestBody = new HashMap<>();
-		requestBody.put("requestId", "REQTEST002");
-		requestBody.put("crn", ""); // Mandatory field missing
-		requestBody.put("accNo", "7150157172");
-		requestBody.put("clientCode", "VESTED");
-		requestBody.put("groupId", "KB");
-		requestBody.put("channel", "WEB");
-
-		// Execute API
-		Response response = given().contentType(ContentType.JSON).accept(ContentType.JSON).body(requestBody).when()
-				.post("/services/api/partner/generateToken").then().log().ifValidationFails().extract().response();
-
-		// HTTP Status Code Validation
-		Assert.assertEquals(response.getStatusCode(), 200, "HTTP status should be 200 for business validation failure");
-
-		// Response Body Validations
-		Assert.assertEquals(response.jsonPath().getString("status"), "F");
-		Assert.assertEquals(response.jsonPath().getString("errCode"), "ERR1008");
-		Assert.assertEquals(response.jsonPath().getString("errorDescription"), "Technical Decline");
-
-		// Token should be empty on failure
-		Assert.assertEquals(response.jsonPath().getString("token"), "");
-
-		// Success & Failure Flags
-		Assert.assertFalse(response.jsonPath().getBoolean("success"));
-		Assert.assertTrue(response.jsonPath().getBoolean("failure"));
-	}
-
+	//4
 	@Test
 	public void verifyGenerateTokenApiWithMissingMandatoryFieldAccNo() {
+		Map<String, Object> requestBody = getDefaultRequestBody();
+		requestBody.put("accNo", "");
 
-		// Request Body with missing accNo
-		Map<String, Object> requestBody = new HashMap<>();
-		requestBody.put("requestId", "REQTEST002");
-		requestBody.put("crn", "100759017");
-		requestBody.put("accNo", ""); // Mandatory field missing
-		requestBody.put("clientCode", "VESTED");
-		requestBody.put("groupId", "KB");
-		requestBody.put("channel", "WEB");
-
-		// Execute API
-		Response response = given().contentType(ContentType.JSON).accept(ContentType.JSON).body(requestBody).when()
-				.post("/services/api/partner/generateToken").then().log().ifValidationFails().extract().response();
-
-		// HTTP Status Code Validation
-		Assert.assertEquals(response.getStatusCode(), 200, "HTTP status should be 200 for business validation failure");
-
-		// Response Body Validations
-		Assert.assertEquals(response.jsonPath().getString("status"), "F");
-		Assert.assertEquals(response.jsonPath().getString("errCode"), "ERR1008");
-		Assert.assertEquals(response.jsonPath().getString("errorDescription"), "Technical Decline");
-
-		// Token should be empty on failure
-		Assert.assertEquals(response.jsonPath().getString("token"), "");
-
-		// Success & Failure Flags
-		Assert.assertFalse(response.jsonPath().getBoolean("success"));
-		Assert.assertTrue(response.jsonPath().getBoolean("failure"));
+		Response response = hitGenerateTokenApi(requestBody);
+		validateFailureResponse(response, "ERR1008", "errorDescription", "Technical Decline");
 	}
 
+	//5
 	@Test
 	public void verifyGenerateTokenApiWithMissingClientCode() {
+		Map<String, Object> requestBody = getDefaultRequestBody();
+		requestBody.put("clientCode", "");
 
-		// Request Body with missing clientCode
-		Map<String, Object> requestBody = new HashMap<>();
-		requestBody.put("requestId", "REQTEST002");
-		requestBody.put("crn", "100759017");
-		requestBody.put("accNo", "7150157172");
-		requestBody.put("clientCode", ""); // Mandatory field missing
-		requestBody.put("groupId", "KB");
-		requestBody.put("channel", "WEB");
-
-		// Execute API
-		Response response = given().contentType(ContentType.JSON).accept(ContentType.JSON).body(requestBody).when()
-				.post("/services/api/partner/generateToken").then().log().ifValidationFails().extract().response();
-
-		// HTTP Status Code Validation
-		Assert.assertEquals(response.getStatusCode(), 200, "HTTP status should be 200 for business validation failure");
-
-		// Response Body Validations
-		Assert.assertEquals(response.jsonPath().getString("status"), "F");
-		Assert.assertEquals(response.jsonPath().getString("errCode"), "ERR1008");
-		Assert.assertEquals(response.jsonPath().getString("errorDescription"), "Technical Decline");
-
-		// Token should be empty on failure
-		Assert.assertEquals(response.jsonPath().getString("token"), "");
-
-		// Success & Failure Flags
-		Assert.assertFalse(response.jsonPath().getBoolean("success"));
-		Assert.assertTrue(response.jsonPath().getBoolean("failure"));
+		Response response = hitGenerateTokenApi(requestBody);
+		validateFailureResponse(response, "ERR1008", "errorDescription", "Technical Decline");
 	}
 
+	//6
 	@Test
 	public void verifyGenerateTokenApiWithCRNAboveMaximumLength() {
-
-		// Request Body with CRN above maximum length
-		Map<String, Object> requestBody = new HashMap<>();
-		requestBody.put("requestId", "REQTEST002");
+		Map<String, Object> requestBody = getDefaultRequestBody();
 		requestBody.put("crn", "1234567890123456");
-		requestBody.put("accNo", "7150157172");
-		requestBody.put("clientCode", "VESTED");
-		requestBody.put("groupId", "KB");
-		requestBody.put("channel", "WEB");
 
-		// Execute API
-		Response response = given().contentType(ContentType.JSON).accept(ContentType.JSON).body(requestBody).when()
-				.post("/services/api/partner/generateToken").then().log().ifValidationFails().extract().response();
-
-		// HTTP Status Code Validation
-		Assert.assertEquals(response.getStatusCode(), 200, "HTTP status should be 200 for business validation failure");
-
-		// Response Body Validations
-		Assert.assertEquals(response.jsonPath().getString("status"), "F");
-		Assert.assertEquals(response.jsonPath().getString("errCode"), "ERR1008");
-		Assert.assertEquals(response.jsonPath().getString("errorDescription"), "Technical Decline");
-
-		// Token should be empty on failure
-		Assert.assertEquals(response.jsonPath().getString("token"), "");
-
-		// Success & Failure Flags
-		Assert.assertFalse(response.jsonPath().getBoolean("success"));
-		Assert.assertTrue(response.jsonPath().getBoolean("failure"));
+		Response response = hitGenerateTokenApi(requestBody);
+		validateFailureResponse(response, "ERR1008", "errorDescription", "Technical Decline");
 	}
 
+	//7
 	@Test
 	public void verifyGenerateTokenApiWithAlphabeticCharactersInCRN() {
-
-		// Request Body with alphabetic characters in CRN
-		Map<String, Object> requestBody = new HashMap<>();
-		requestBody.put("requestId", "REQTEST002");
+		Map<String, Object> requestBody = getDefaultRequestBody();
 		requestBody.put("crn", "ABCD59017");
-		requestBody.put("accNo", "7150157172");
-		requestBody.put("clientCode", "VESTED");
-		requestBody.put("groupId", "KB");
-		requestBody.put("channel", "WEB");
 
-		// Execute API
-		Response response = given().contentType(ContentType.JSON).accept(ContentType.JSON).body(requestBody).when()
-				.post("/services/api/partner/generateToken").then().log().ifValidationFails().extract().response();
-
-		// HTTP Status Code Validation
-		Assert.assertEquals(response.getStatusCode(), 200, "HTTP status should be 200 for business validation failure");
-
-		// Response Body Validations
-		Assert.assertEquals(response.jsonPath().getString("status"), "F");
-		Assert.assertEquals(response.jsonPath().getString("errCode"), "ERR1008");
-		Assert.assertEquals(response.jsonPath().getString("errorDescription"), "Technical Decline");
-
-		// Token should be empty on failure
-		Assert.assertEquals(response.jsonPath().getString("token"), "");
-
-		// Success & Failure Flags
-		Assert.assertFalse(response.jsonPath().getBoolean("success"));
-		Assert.assertTrue(response.jsonPath().getBoolean("failure"));
+		Response response = hitGenerateTokenApi(requestBody);
+		validateFailureResponse(response, "ERR1008", "errorDescription", "Technical Decline");
 	}
 
+	//8
 	@Test
 	public void verifyGenerateTokenApiWithSpecialCharactersInAccNo() {
-
-		// Request Body with special characters in accNo
-		Map<String, Object> requestBody = new HashMap<>();
-		requestBody.put("requestId", "REQTEST002");
-		requestBody.put("crn", "100759017");
+		Map<String, Object> requestBody = getDefaultRequestBody();
 		requestBody.put("accNo", "0958!@#$%");
-		requestBody.put("clientCode", "VESTED");
-		requestBody.put("groupId", "KB");
-		requestBody.put("channel", "WEB");
 
-		// Execute API
-		Response response = given().contentType(ContentType.JSON).accept(ContentType.JSON).body(requestBody).when()
-				.post("/services/api/partner/generateToken").then().log().ifValidationFails().extract().response();
-
-		// HTTP Status Code Validation
-		Assert.assertEquals(response.getStatusCode(), 200, "HTTP status should be 200 for business validation failure");
-
-		// Response Body Validations
-		Assert.assertEquals(response.jsonPath().getString("status"), "F");
-		Assert.assertEquals(response.jsonPath().getString("errCode"), "ERR1008");
-		Assert.assertEquals(response.jsonPath().getString("errorDescription"), "Technical Decline");
-
-		// Token should be empty on failure
-		Assert.assertEquals(response.jsonPath().getString("token"), "");
-
-		// Success & Failure Flags
-		Assert.assertFalse(response.jsonPath().getBoolean("success"));
-		Assert.assertTrue(response.jsonPath().getBoolean("failure"));
+		Response response = hitGenerateTokenApi(requestBody);
+		validateFailureResponse(response, "ERR1008", "errorDescription", "Technical Decline");
 	}
 
+	//9
 	@Test
 	public void verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi() {
+		Map<String, Object> requestBody = getDefaultRequestBody();
 
-		// Request Body
-		Map<String, Object> requestBody = new HashMap<>();
-		requestBody.put("requestId", "REQTEST002");
-		requestBody.put("crn", "100759017");
-		requestBody.put("accNo", "7150157172");
-		requestBody.put("clientCode", "VESTED");
-		requestBody.put("groupId", "KB");
-		requestBody.put("channel", "WEB");
+		Response response = hitGenerateTokenApi(requestBody);
+		validateSuccessResponse(response);
 
-		// Execute API
-		Response response = requestSpec.body(requestBody).when().post("/services/api/partner/generateToken").then()
-				.log().ifValidationFails().extract().response();
-
-		// HTTP Status Code Validation
-		Assert.assertEquals(response.getStatusCode(), 200);
-
-		// Response Body Validations
-		Assert.assertEquals(response.jsonPath().getString("status"), "S");
-		Assert.assertTrue(response.jsonPath().getBoolean("success"));
-		Assert.assertFalse(response.jsonPath().getBoolean("failure"));
-
-		// Token validation
 		String token = response.jsonPath().getString("token");
-		Assert.assertNotNull(token, "Token should not be null");
-		Assert.assertFalse(token.isEmpty(), "Token should not be empty");
+		Assert.assertNotNull(token);
+		Assert.assertFalse(token.isEmpty());
 	}
 
+	//10
 	@Test
 	public void verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted() {
-
-		// Request Body
-		Map<String, Object> requestBody = new HashMap<>();
-		requestBody.put("requestId", "REQTEST002");
+		Map<String, Object> requestBody = getDefaultRequestBody();
 		requestBody.put("crn", "8593560");
 		requestBody.put("accNo", "08160140009332");
-		requestBody.put("clientCode", "VESTED");
-		requestBody.put("groupId", "KB");
-		requestBody.put("channel", "WEB");
 
-		// Execute API
-		Response response = given().contentType(ContentType.JSON).accept(ContentType.JSON).body(requestBody).when()
-				.post("/services/api/partner/generateToken").then().log().ifValidationFails().extract().response();
-
-		// HTTP Status Code Validation
-		Assert.assertEquals(response.getStatusCode(), 200, "HTTP status should be 200 for business validation failure");
-
-		// Response Body Validations
-		Assert.assertEquals(response.jsonPath().getString("status"), "F");
-		Assert.assertEquals(response.jsonPath().getString("errCode"), "ERR7002");
-		Assert.assertEquals(response.jsonPath().getString("errorDescription"), "Business Decline");
-
-		// Token should be empty on failure
-		Assert.assertEquals(response.jsonPath().getString("token"), "");
-
-		// Success & Failure Flags
-		Assert.assertFalse(response.jsonPath().getBoolean("success"));
-		Assert.assertTrue(response.jsonPath().getBoolean("failure"));
+		Response response = hitGenerateTokenApi(requestBody);
+		validateFailureResponse(response, "ERR7002", "errorDescription", "Business Decline");
 	}
 
+	//11
 	@Test
 	public void verifyGenerateTokenApiWithCRNBelowMinimumLength() {
-
-		// Request Body with CRN below minimum length
-		Map<String, Object> requestBody = new HashMap<>();
-		requestBody.put("requestId", "REQTEST002");
+		Map<String, Object> requestBody = getDefaultRequestBody();
 		requestBody.put("crn", "1234567");
-		requestBody.put("accNo", "7150157172");
-		requestBody.put("clientCode", "VESTED");
-		requestBody.put("groupId", "KB");
-		requestBody.put("channel", "WEB");
 
-		// Execute API
-		Response response = given().contentType(ContentType.JSON).accept(ContentType.JSON).body(requestBody).when()
-				.post("/services/api/partner/generateToken").then().log().ifValidationFails().extract().response();
+		Response response = hitGenerateTokenApi(requestBody);
+		validateFailureResponse(response, "ERR1008", "errorDescription", "Technical Decline");
+	}
 
-		// HTTP Status Code Validation
-		Assert.assertEquals(response.getStatusCode(), 200, "HTTP status should be 200 for business validation failure");
+	//12
+	@Test
+	public void verifyGenerateTokenApiWithInvalidNonExistentCRN() {
+		Map<String, Object> requestBody = getDefaultRequestBody();
+		requestBody.put("crn", "99999999");
 
-		// Response Body Validations
-		Assert.assertEquals(response.jsonPath().getString("status"), "F");
-		Assert.assertEquals(response.jsonPath().getString("errCode"), "ERR1008");
-		Assert.assertEquals(response.jsonPath().getString("errorDescription"), "Technical Decline");
-
-		// Token should be empty on failure
-		Assert.assertEquals(response.jsonPath().getString("token"), "");
-
-		// Success & Failure Flags
-		Assert.assertFalse(response.jsonPath().getBoolean("success"));
-		Assert.assertTrue(response.jsonPath().getBoolean("failure"));
+		Response response = hitGenerateTokenApi(requestBody);
+		validateFailureResponse(response, "ERR7002", "message", "Business Decline");
 	}
 }

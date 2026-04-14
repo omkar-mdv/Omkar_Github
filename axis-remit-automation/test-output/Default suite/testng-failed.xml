@@ -5,10 +5,13 @@
     <classes>
       <class name="vestedApi.OtpApi">
         <methods>
-          <include name="setup"/>
+          <include name="verifyOtpApiWithIncorrectOtp"/>
           <include name="verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber"/>
+          <include name="setup"/>
           <include name="verifyGenerateTokenApiWithValidCRNAndAccountNumber"/>
-          <include name="verifyOtpApiWithCorrectSixDigitOtp"/>
+          <include name="verifySendOtpApiWithInvalidExpiredAuthToken"/>
+          <include name="verifyOtpApiWithoutAuthToken"/>
+          <include name="verifySendOtpApiWithoutAuthTokenInHeader"/>
         </methods>
       </class> <!-- vestedApi.OtpApi -->
     </classes>
