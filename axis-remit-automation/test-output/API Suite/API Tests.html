@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>API Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>16/7/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Apr 14 18:15:47 IST 2026</td>
+<td>Started on:</td><td>Tue Apr 14 18:51:54 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>25 seconds (25925 ms)</td>
+<tr><td>Total time:</td><td>19 seconds (19768 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,19 +76,21 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='vestedApi.OtpApi.verifySendOtpApiWithoutAuthTokenInHeader()'><b>verifySendOtpApiWithoutAuthTokenInHeader</b><br>Test class: vestedApi.OtpApi</td>
-<td><div><pre>java.lang.AssertionError: expected [Technical error] but found [Technical Decline]
-	at vestedApi.OtpApi.verifySendOtpApiWithoutAuthTokenInHeader(OtpApi.java:314)
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithCRNBelowMinimumLength()'><b>verifyGenerateTokenApiWithCRNBelowMinimumLength</b><br>Test class: vestedApi.GenerateTokenApi</td>
+<td><div><pre>java.lang.AssertionError: expected [ERR1008] but found [ERR7007]
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:39)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithCRNBelowMinimumLength(GenerateTokenApi.java:173)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1443030336", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1443030336'><pre>java.lang.AssertionError: expected [Technical error] but found [Technical Decline]
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1204383532", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1204383532'><pre>java.lang.AssertionError: expected [ERR1008] but found [ERR7007]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.OtpApi.verifySendOtpApiWithoutAuthTokenInHeader(OtpApi.java:314)
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:39)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithCRNBelowMinimumLength(GenerateTokenApi.java:173)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -116,145 +118,16 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>0</td>
-<td>vestedApi.OtpApi@c667f46</td></tr>
-<tr>
-<td title='vestedApi.OtpApi.verifyOtpApiWithIncorrectOtp()'><b>verifyOtpApiWithIncorrectOtp</b><br>Test class: vestedApi.OtpApi</td>
-<td><div><pre>java.lang.AssertionError: expected [ERR1009] but found [ERR1010]
-	at vestedApi.OtpApi.verifyOtpApiWithIncorrectOtp(OtpApi.java:110)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace492135521", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace492135521'><pre>java.lang.AssertionError: expected [ERR1009] but found [ERR1010]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.OtpApi.verifyOtpApiWithIncorrectOtp(OtpApi.java:110)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>vestedApi.OtpApi@c667f46</td></tr>
-<tr>
-<td title='vestedApi.OtpApi.verifySendOtpApiWithInvalidExpiredAuthToken()'><b>verifySendOtpApiWithInvalidExpiredAuthToken</b><br>Test class: vestedApi.OtpApi</td>
-<td><div><pre>java.lang.AssertionError: expected [Technical error] but found [Technical Decline]
-	at vestedApi.OtpApi.verifySendOtpApiWithInvalidExpiredAuthToken(OtpApi.java:292)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace292158973", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace292158973'><pre>java.lang.AssertionError: expected [Technical error] but found [Technical Decline]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.OtpApi.verifySendOtpApiWithInvalidExpiredAuthToken(OtpApi.java:292)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>vestedApi.OtpApi@c667f46</td></tr>
-<tr>
-<td title='vestedApi.OtpApi.verifyOtpApiWithoutAuthToken()'><b>verifyOtpApiWithoutAuthToken</b><br>Test class: vestedApi.OtpApi</td>
-<td><div><pre>java.lang.AssertionError: expected [Technical error] but found [Technical Decline]
-	at vestedApi.OtpApi.verifyOtpApiWithoutAuthToken(OtpApi.java:247)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1774316039", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1774316039'><pre>java.lang.AssertionError: expected [Technical error] but found [Technical Decline]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.OtpApi.verifyOtpApiWithoutAuthToken(OtpApi.java:247)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>vestedApi.OtpApi@c667f46</td></tr>
+<td>1</td>
+<td>vestedApi.GenerateTokenApi@35b74c5c</td></tr>
 <tr>
 <td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithInvalidNonExistentCRN()'><b>verifyGenerateTokenApiWithInvalidNonExistentCRN</b><br>Test class: vestedApi.GenerateTokenApi</td>
 <td><div><pre>java.lang.AssertionError: expected [ERR7002] but found [ERR002]
 	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:39)
 	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithInvalidNonExistentCRN(GenerateTokenApi.java:183)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1783242896", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1783242896'><pre>java.lang.AssertionError: expected [ERR7002] but found [ERR002]
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace111965547", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace111965547'><pre>java.lang.AssertionError: expected [ERR7002] but found [ERR002]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -290,61 +163,16 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>0</td>
-<td>vestedApi.GenerateTokenApi@72d6b3ba</td></tr>
-<tr>
-<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithCRNBelowMinimumLength()'><b>verifyGenerateTokenApiWithCRNBelowMinimumLength</b><br>Test class: vestedApi.GenerateTokenApi</td>
-<td><div><pre>java.lang.AssertionError: expected [ERR1008] but found [ERR7007]
-	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:39)
-	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithCRNBelowMinimumLength(GenerateTokenApi.java:173)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1617241368", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1617241368'><pre>java.lang.AssertionError: expected [ERR1008] but found [ERR7007]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:39)
-	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithCRNBelowMinimumLength(GenerateTokenApi.java:173)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>1</td>
-<td>vestedApi.GenerateTokenApi@72d6b3ba</td></tr>
+<td>2</td>
+<td>vestedApi.GenerateTokenApi@35b74c5c</td></tr>
 <tr>
 <td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted()'><b>verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted</b><br>Test class: vestedApi.GenerateTokenApi</td>
 <td><div><pre>java.lang.AssertionError: expected [ERR7002] but found [ERR002]
 	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:39)
 	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted(GenerateTokenApi.java:163)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace194277435", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace194277435'><pre>java.lang.AssertionError: expected [ERR7002] but found [ERR002]
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2045895214", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2045895214'><pre>java.lang.AssertionError: expected [ERR7002] but found [ERR002]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -381,7 +209,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>1</td>
-<td>vestedApi.GenerateTokenApi@72d6b3ba</td></tr>
+<td>vestedApi.GenerateTokenApi@35b74c5c</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -395,82 +223,47 @@ function toggleAllBoxes() {
 <td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenAadharLinkIsN()'><b>verifyGenerateTokenApiWhenAadharLinkIsN</b><br>Test class: vestedApi.GenerateTokenApi</td>
 <td></td>
 <td>1</td>
-<td>vestedApi.GenerateTokenApi@72d6b3ba</td></tr>
-<tr>
-<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer()'><b>verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer</b><br>Test class: vestedApi.GenerateTokenApi</td>
-<td></td>
-<td>2</td>
-<td>vestedApi.GenerateTokenApi@72d6b3ba</td></tr>
-<tr>
-<td title='vestedApi.OtpApi.verifyOtpApiWithAlphabeticCharactersInOtpField()'><b>verifyOtpApiWithAlphabeticCharactersInOtpField</b><br>Test class: vestedApi.OtpApi</td>
-<td></td>
-<td>0</td>
-<td>vestedApi.OtpApi@c667f46</td></tr>
-<tr>
-<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithCRNAboveMaximumLength()'><b>verifyGenerateTokenApiWithCRNAboveMaximumLength</b><br>Test class: vestedApi.GenerateTokenApi</td>
-<td></td>
-<td>0</td>
-<td>vestedApi.GenerateTokenApi@72d6b3ba</td></tr>
-<tr>
-<td title='vestedApi.OtpApi.verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber()'><b>verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber</b><br>Test class: vestedApi.OtpApi</td>
-<td></td>
-<td>3</td>
-<td>vestedApi.OtpApi@c667f46</td></tr>
-<tr>
-<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi()'><b>verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi</b><br>Test class: vestedApi.GenerateTokenApi</td>
-<td></td>
-<td>7</td>
-<td>vestedApi.GenerateTokenApi@72d6b3ba</td></tr>
-<tr>
-<td title='vestedApi.OtpApi.verifyGenerateTokenApiWithValidCRNAndAccountNumber()'><b>verifyGenerateTokenApiWithValidCRNAndAccountNumber</b><br>Test class: vestedApi.OtpApi</td>
-<td></td>
-<td>1</td>
-<td>vestedApi.OtpApi@c667f46</td></tr>
-<tr>
-<td title='vestedApi.OtpApi.verifyOtpApiWithCorrectSixDigitOtp()'><b>verifyOtpApiWithCorrectSixDigitOtp</b><br>Test class: vestedApi.OtpApi</td>
-<td></td>
-<td>0</td>
-<td>vestedApi.OtpApi@c667f46</td></tr>
-<tr>
-<td title='vestedApi.OtpApi.verifySendOtpApiWithMissingMandatoryCRNField()'><b>verifySendOtpApiWithMissingMandatoryCRNField</b><br>Test class: vestedApi.OtpApi</td>
-<td></td>
-<td>0</td>
-<td>vestedApi.OtpApi@c667f46</td></tr>
-<tr>
-<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithEmptyCRN()'><b>verifyGenerateTokenApiWithEmptyCRN</b><br>Test class: vestedApi.GenerateTokenApi</td>
-<td></td>
-<td>0</td>
-<td>vestedApi.GenerateTokenApi@72d6b3ba</td></tr>
-<tr>
-<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithAlphabeticCharactersInCRN()'><b>verifyGenerateTokenApiWithAlphabeticCharactersInCRN</b><br>Test class: vestedApi.GenerateTokenApi</td>
-<td></td>
-<td>0</td>
-<td>vestedApi.GenerateTokenApi@72d6b3ba</td></tr>
+<td>vestedApi.GenerateTokenApi@35b74c5c</td></tr>
 <tr>
 <td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithMissingClientCode()'><b>verifyGenerateTokenApiWithMissingClientCode</b><br>Test class: vestedApi.GenerateTokenApi</td>
 <td></td>
 <td>0</td>
-<td>vestedApi.GenerateTokenApi@72d6b3ba</td></tr>
+<td>vestedApi.GenerateTokenApi@35b74c5c</td></tr>
+<tr>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithAlphabeticCharactersInCRN()'><b>verifyGenerateTokenApiWithAlphabeticCharactersInCRN</b><br>Test class: vestedApi.GenerateTokenApi</td>
+<td></td>
+<td>0</td>
+<td>vestedApi.GenerateTokenApi@35b74c5c</td></tr>
 <tr>
 <td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithSpecialCharactersInAccNo()'><b>verifyGenerateTokenApiWithSpecialCharactersInAccNo</b><br>Test class: vestedApi.GenerateTokenApi</td>
 <td></td>
 <td>0</td>
-<td>vestedApi.GenerateTokenApi@72d6b3ba</td></tr>
+<td>vestedApi.GenerateTokenApi@35b74c5c</td></tr>
 <tr>
-<td title='vestedApi.OtpApi.verifyOtpApiWithMoreThanSixDigits()'><b>verifyOtpApiWithMoreThanSixDigits</b><br>Test class: vestedApi.OtpApi</td>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi()'><b>verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi</b><br>Test class: vestedApi.GenerateTokenApi</td>
+<td></td>
+<td>8</td>
+<td>vestedApi.GenerateTokenApi@35b74c5c</td></tr>
+<tr>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithEmptyCRN()'><b>verifyGenerateTokenApiWithEmptyCRN</b><br>Test class: vestedApi.GenerateTokenApi</td>
 <td></td>
 <td>0</td>
-<td>vestedApi.OtpApi@c667f46</td></tr>
+<td>vestedApi.GenerateTokenApi@35b74c5c</td></tr>
+<tr>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithCRNAboveMaximumLength()'><b>verifyGenerateTokenApiWithCRNAboveMaximumLength</b><br>Test class: vestedApi.GenerateTokenApi</td>
+<td></td>
+<td>0</td>
+<td>vestedApi.GenerateTokenApi@35b74c5c</td></tr>
+<tr>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer()'><b>verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer</b><br>Test class: vestedApi.GenerateTokenApi</td>
+<td></td>
+<td>1</td>
+<td>vestedApi.GenerateTokenApi@35b74c5c</td></tr>
 <tr>
 <td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithMissingMandatoryFieldAccNo()'><b>verifyGenerateTokenApiWithMissingMandatoryFieldAccNo</b><br>Test class: vestedApi.GenerateTokenApi</td>
 <td></td>
 <td>0</td>
-<td>vestedApi.GenerateTokenApi@72d6b3ba</td></tr>
-<tr>
-<td title='vestedApi.OtpApi.verifyOtpApiWithLessThanSixDigits()'><b>verifyOtpApiWithLessThanSixDigits</b><br>Test class: vestedApi.OtpApi</td>
-<td></td>
-<td>0</td>
-<td>vestedApi.OtpApi@c667f46</td></tr>
+<td>vestedApi.GenerateTokenApi@35b74c5c</td></tr>
 </table><p>
 </body>
 </html>

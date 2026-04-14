@@ -3,17 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="vestedApi.OtpApi">
+      <class name="runner.TestRunner">
         <methods>
-          <include name="verifyOtpApiWithIncorrectOtp"/>
-          <include name="verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber"/>
-          <include name="setup"/>
-          <include name="verifyGenerateTokenApiWithValidCRNAndAccountNumber"/>
-          <include name="verifySendOtpApiWithInvalidExpiredAuthToken"/>
-          <include name="verifyOtpApiWithoutAuthToken"/>
-          <include name="verifySendOtpApiWithoutAuthTokenInHeader"/>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="1"/>
+          <include name="tearDownClass"/>
         </methods>
-      </class> <!-- vestedApi.OtpApi -->
+      </class> <!-- runner.TestRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

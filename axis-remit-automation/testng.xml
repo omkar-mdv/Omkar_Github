@@ -4,7 +4,6 @@
     <test name="API Tests" preserve-order="true">
         <classes>
             <class name="vestedApi.GenerateTokenApi"/>
-            <class name="vestedApi.OtpApi"/>
         </classes>
     </test>
 

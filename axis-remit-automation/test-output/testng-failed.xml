@@ -11,17 +11,6 @@
           <include name="verifyGenerateTokenApiWithCRNBelowMinimumLength"/>
         </methods>
       </class> <!-- vestedApi.GenerateTokenApi -->
-      <class name="vestedApi.OtpApi">
-        <methods>
-          <include name="setup"/>
-          <include name="verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber"/>
-          <include name="verifyOtpApiWithIncorrectOtp"/>
-          <include name="verifyGenerateTokenApiWithValidCRNAndAccountNumber"/>
-          <include name="verifySendOtpApiWithInvalidExpiredAuthToken"/>
-          <include name="verifyOtpApiWithoutAuthToken"/>
-          <include name="verifySendOtpApiWithoutAuthTokenInHeader"/>
-        </methods>
-      </class> <!-- vestedApi.OtpApi -->
     </classes>
   </test> <!-- API Tests(failed) -->
 </suite> <!-- Failed suite [API Suite] -->
