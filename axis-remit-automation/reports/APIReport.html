@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">API Automation Execution Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">May 1, 2026 01:49:29 pm</span></a>
+<a href="#"><span class="badge badge-primary">May 1, 2026 04:54:31 pm</span></a>
 </li>
 </ul>
 </div>
@@ -76,8 +76,8 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
 <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -85,234 +85,20 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">OtpApi</a>
+<a class="dropdown-item" href="#">QuoteApi</a>
 </ul>
 </li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
-          tag="OtpApi"
+          tag="QuoteApi"
           device="">
           <div class="test-detail">
-            <p class="name">Verify Generate Token API With Valid CRN AND Account Number</p>
+            <p class="name">Verify Generate Token Api Returns Success With Valid Request</p>
             <p class="text-sm">
-              <span>1:49:30 pm</span> / <span>00:00:05:138</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Verify Generate Token API With Valid CRN AND Account Number</h5>
-<span class='badge badge-success'>05.01.2026 1:49:30 pm</span>
-<span class='badge badge-danger'>05.01.2026 1:49:35 pm</span>
-<span class='badge badge-default'>00:00:05:138</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">OtpApi</span></div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:30 pm</td>
-        <td>
-          Test Class: OtpApi
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:34 pm</td>
-        <td>
-          Request Body: {requestId=REQ1777623570829, clientCode=VESTED, accNo=0050303922, groupId=KB, channel=WEB, crn=1000100644}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:34 pm</td>
-        <td>
-          Response Body: {
-    "requestId": "REQ1777623570829",
-    "responseId": "RES_1777623623145_0a11b051",
-    "status": "S",
-    "errorDescription": "",
-    "errCode": "",
-    "token": "r75ZmF+3xzrIeB7yCpgSfavg+ici8FuYh1QL9lNDjjdF6lQAXeCuczrArCNgiHpFOh0wCqXe9TfI0oCnmFTDWWKs2sg6VsXZeWGO+egQXs8lTVhKoQa4/GjhfUuw+VGZWosKNdyrQa31SutMrV0Q8mn1WeeBEAn0+V3xsCkhfZM=",
-    "success": true,
-    "failure": false
-}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:49:35 pm</td>
-        <td>
-          Test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="2"
-          author=""
-          tag="OtpApi"
-          device="">
-          <div class="test-detail">
-            <p class="name">Verify Send OTP API Triggers SMS TO Customer Registered Mobile Number</p>
-            <p class="text-sm">
-              <span>1:49:35 pm</span> / <span>00:00:03:159</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Verify Send OTP API Triggers SMS TO Customer Registered Mobile Number</h5>
-<span class='badge badge-success'>05.01.2026 1:49:35 pm</span>
-<span class='badge badge-danger'>05.01.2026 1:49:39 pm</span>
-<span class='badge badge-default'>00:00:03:159</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">OtpApi</span></div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:35 pm</td>
-        <td>
-          Test Class: OtpApi
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:38 pm</td>
-        <td>
-          Request Body: {requestId=REQ1777623570829, panNo=, clientCode=VESTED, accNo=0050303922, groupId=KB, channel=WEB, otpType=SMS, crn=1000100644}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:38 pm</td>
-        <td>
-          Response Body: {
-    "requestId": "REQ1777623570829",
-    "responseId": "RES_1777623626100_f7bc2f95",
-    "status": "S",
-    "errorDescription": null,
-    "errCode": null,
-    "success": true,
-    "failure": false
-}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:49:39 pm</td>
-        <td>
-          Test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="3"
-          author=""
-          tag="OtpApi"
-          device="">
-          <div class="test-detail">
-            <p class="name">Verify OTP API With Alphabetic Characters IN OTP Field</p>
-            <p class="text-sm">
-              <span>1:49:39 pm</span> / <span>00:00:00:130</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Verify OTP API With Alphabetic Characters IN OTP Field</h5>
-<span class='badge badge-success'>05.01.2026 1:49:39 pm</span>
-<span class='badge badge-danger'>05.01.2026 1:49:39 pm</span>
-<span class='badge badge-default'>00:00:00:130</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">OtpApi</span></div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:39 pm</td>
-        <td>
-          Test Class: OtpApi
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:39 pm</td>
-        <td>
-          Request Body: {requestId=REQ1777623570829, panNo=, clientCode=VESTED, accNo=0050303922, groupId=KB, channel=WEB, otp=ABCDEF, otpType=SMS, crn=1000100644}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:39 pm</td>
-        <td>
-          Response Body: {
-    "requestId": "REQ1777623570829",
-    "responseId": "RES_1777623629225_aca442ed",
-    "status": "F",
-    "errorDescription": "Technical Decline",
-    "errCode": "ERR1008",
-    "success": false,
-    "failure": true
-}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:49:39 pm</td>
-        <td>
-          Test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="fail" test-id="4"
-          author=""
-          tag="OtpApi"
-          device="">
-          <div class="test-detail">
-            <p class="name">Verify OTP API With Incorrect OTP</p>
-            <p class="text-sm">
-              <span>1:49:39 pm</span> / <span>00:00:00:522</span>
+              <span>4:54:32 pm</span> / <span>00:00:06:555</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -320,16 +106,16 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Verify OTP API With Incorrect OTP</h5>
-<span class='badge badge-success'>05.01.2026 1:49:39 pm</span>
-<span class='badge badge-danger'>05.01.2026 1:49:39 pm</span>
-<span class='badge badge-default'>00:00:00:522</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<h5 class="test-status text-fail">Verify Generate Token Api Returns Success With Valid Request</h5>
+<span class='badge badge-success'>05.01.2026 4:54:32 pm</span>
+<span class='badge badge-danger'>05.01.2026 4:54:38 pm</span>
+<span class='badge badge-default'>00:00:06:555</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">OtpApi</span></div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QuoteApi</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -337,28 +123,29 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:39 pm</td>
+        <td>4:54:32 pm</td>
         <td>
-          Test Class: OtpApi
+          Test Class: QuoteApi
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:39 pm</td>
+        <td>4:54:37 pm</td>
         <td>
-          Request Body: {requestId=REQ1777623570829, panNo=, clientCode=VESTED, accNo=0050303922, groupId=KB, channel=WEB, otp=999999, otpType=SMS, crn=1000100644}
+          Request Body: {requestId=REQ1777634672315, clientCode=VESTED, accNo=0050303922, groupId=KB, channel=WEB, crn=1000100644}
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:39 pm</td>
+        <td>4:54:37 pm</td>
         <td>
           Response Body: {
-    "requestId": "REQ1777623570829",
-    "responseId": "RES_1777623629357_eacfe638",
+    "requestId": "REQ1777634672315",
+    "responseId": "RES_1777634725253_4952c06a",
     "status": "F",
-    "errorDescription": "Invalid OTP",
-    "errCode": "ERR1009",
+    "errorDescription": "Technical Error",
+    "errCode": "ERR500",
+    "token": "",
     "success": false,
     "failure": true
 }
@@ -366,30 +153,30 @@
       </tr>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>1:49:39 pm</td>
+        <td>4:54:38 pm</td>
         <td>
           Test Failed
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>1:49:39 pm</td>
+        <td>4:54:38 pm</td>
         <td>
-          Reason: expected [OTP is incorrect] but found [Invalid OTP]
+          Reason: expected [S] but found [F]
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>1:49:39 pm</td>
+        <td>4:54:38 pm</td>
         <td>
-          <textarea readonly class="code-block">java.lang.AssertionError: expected [OTP is incorrect] but found [Invalid OTP]
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [S] but found [F]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.OtpApi.verifyOtpApiWithIncorrectOtp(OtpApi.java:126)
+	at vestedApi.QuoteApi.verifyGenerateTokenApiReturnsSuccessWithValidRequest(QuoteApi.java:97)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -425,31 +212,253 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="5"
+        <li class="test-item"  status="fail" test-id="2"
           author=""
-          tag="OtpApi"
+          tag="QuoteApi"
           device="">
           <div class="test-detail">
-            <p class="name">Verify OTP API With Less Than SIX Digits</p>
+            <p class="name">Verify Quote Api Returns Error 1007 When Auth Token Is Invalid</p>
             <p class="text-sm">
-              <span>1:49:39 pm</span> / <span>00:00:00:318</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>4:54:38 pm</span> / <span>00:00:00:301</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Verify OTP API With Less Than SIX Digits</h5>
-<span class='badge badge-success'>05.01.2026 1:49:39 pm</span>
-<span class='badge badge-danger'>05.01.2026 1:49:39 pm</span>
-<span class='badge badge-default'>00:00:00:318</span>
+<h5 class="test-status text-fail">Verify Quote Api Returns Error 1007 When Auth Token Is Invalid</h5>
+<span class='badge badge-success'>05.01.2026 4:54:38 pm</span>
+<span class='badge badge-danger'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-default'>00:00:00:301</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QuoteApi</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:54:38 pm</td>
+        <td>
+          Test Class: QuoteApi
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:54:38 pm</td>
+        <td>
+          Request Body: {purposedescription=LRS EQUITY, Req date n time=2026-01-06T15:30:00Z, send currency in FCY=USD, partnerName=VESTED, requestId=REQ1777634672315, clientCode=VESTED, groupId=KB, fc_amt=10, channel=WEB, beneCountrycode=US, sourceOfFunds=funds, CRN=1000100644}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:54:38 pm</td>
+        <td>
+          Response Body: {
+    "requestId": "REQ1777634672315",
+    "responseId": "RES_1777634728971_4e1b847b",
+    "status": "F",
+    "errorDescription": "Technical Decline",
+    "errCode": "ERR1007",
+    "success": false,
+    "failure": true,
+    "genbill voucher no": null,
+    "getQuoteDetails": null,
+    "senderDetails": null,
+    "transactionDetails": null
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>4:54:39 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>4:54:39 pm</td>
+        <td>
+          Reason: expected [Technical error] but found [Technical Decline]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>4:54:39 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [Technical error] but found [Technical Decline]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.QuoteApi.verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid(QuoteApi.java:297)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="3"
+          author=""
+          tag="QuoteApi"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Quote Api Without Otp Verification</p>
+            <p class="text-sm">
+              <span>4:54:39 pm</span> / <span>00:00:00:010</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verify Quote Api Without Otp Verification</h5>
+<span class='badge badge-success'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-danger'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-default'>00:00:00:010</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QuoteApi</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:54:39 pm</td>
+        <td>
+          Test Class: QuoteApi
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:54:39 pm</td>
+        <td>
+          Test Skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="4"
+          author=""
+          tag="QuoteApi"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Send Otp Api Returns Success With Valid Token</p>
+            <p class="text-sm">
+              <span>4:54:39 pm</span> / <span>00:00:00:006</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verify Send Otp Api Returns Success With Valid Token</h5>
+<span class='badge badge-success'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-danger'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-default'>00:00:00:006</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QuoteApi</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:54:39 pm</td>
+        <td>
+          Test Class: QuoteApi
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:54:39 pm</td>
+        <td>
+          Test Skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="5"
+          author=""
+          tag="QuoteApi"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Verify Otp Api Returns Success With Valid Otp</p>
+            <p class="text-sm">
+              <span>4:54:39 pm</span> / <span>00:00:00:008</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verify Verify Otp Api Returns Success With Valid Otp</h5>
+<span class='badge badge-success'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-danger'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-default'>00:00:00:008</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">OtpApi</span></div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QuoteApi</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -457,38 +466,16 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:39 pm</td>
+        <td>4:54:39 pm</td>
         <td>
-          Test Class: OtpApi
+          Test Class: QuoteApi
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:39 pm</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:54:39 pm</td>
         <td>
-          Request Body: {requestId=REQ1777623570829, panNo=, clientCode=VESTED, accNo=0050303922, groupId=KB, channel=WEB, otp=12345, otpType=SMS, crn=1000100644}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:39 pm</td>
-        <td>
-          Response Body: {
-    "requestId": "REQ1777623570829",
-    "responseId": "RES_1777623630029_8847feb7",
-    "status": "F",
-    "errorDescription": "Technical Decline",
-    "errCode": "ERR1008",
-    "success": false,
-    "failure": true
-}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:49:39 pm</td>
-        <td>
-          Test Passed
+          Test Skipped
         </td>
       </tr>
   </tbody>
@@ -496,31 +483,31 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="6"
+        <li class="test-item"  status="skip" test-id="6"
           author=""
-          tag="OtpApi"
+          tag="QuoteApi"
           device="">
           <div class="test-detail">
-            <p class="name">Verify OTP API With More Than SIX Digits</p>
+            <p class="name">Verify Get Quote Api Returns Success When Source Of Funds Is Gift</p>
             <p class="text-sm">
-              <span>1:49:39 pm</span> / <span>00:00:00:364</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>4:54:39 pm</span> / <span>00:00:00:010</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Verify OTP API With More Than SIX Digits</h5>
-<span class='badge badge-success'>05.01.2026 1:49:39 pm</span>
-<span class='badge badge-danger'>05.01.2026 1:49:40 pm</span>
-<span class='badge badge-default'>00:00:00:364</span>
+<h5 class="test-status text-skip">Verify Get Quote Api Returns Success When Source Of Funds Is Gift</h5>
+<span class='badge badge-success'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-danger'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-default'>00:00:00:010</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">OtpApi</span></div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QuoteApi</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -528,38 +515,16 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:39 pm</td>
+        <td>4:54:39 pm</td>
         <td>
-          Test Class: OtpApi
+          Test Class: QuoteApi
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:40 pm</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:54:39 pm</td>
         <td>
-          Request Body: {requestId=REQ1777623570829, panNo=, clientCode=VESTED, accNo=0050303922, groupId=KB, channel=WEB, otp=1234567, otpType=SMS, crn=1000100644}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:40 pm</td>
-        <td>
-          Response Body: {
-    "requestId": "REQ1777623570829",
-    "responseId": "RES_1777623630382_063ff233",
-    "status": "F",
-    "errorDescription": "Technical Decline",
-    "errCode": "ERR1008",
-    "success": false,
-    "failure": true
-}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:49:40 pm</td>
-        <td>
-          Test Passed
+          Test Skipped
         </td>
       </tr>
   </tbody>
@@ -567,31 +532,31 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="7"
+        <li class="test-item"  status="skip" test-id="7"
           author=""
-          tag="OtpApi"
+          tag="QuoteApi"
           device="">
           <div class="test-detail">
-            <p class="name">Verify OTP API Without Auth Token</p>
+            <p class="name">Verify Get Quote Api Returns Success When Source Of Funds Is Owned Funds</p>
             <p class="text-sm">
-              <span>1:49:40 pm</span> / <span>00:00:00:212</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>4:54:39 pm</span> / <span>00:00:00:009</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Verify OTP API Without Auth Token</h5>
-<span class='badge badge-success'>05.01.2026 1:49:40 pm</span>
-<span class='badge badge-danger'>05.01.2026 1:49:40 pm</span>
-<span class='badge badge-default'>00:00:00:212</span>
+<h5 class="test-status text-skip">Verify Get Quote Api Returns Success When Source Of Funds Is Owned Funds</h5>
+<span class='badge badge-success'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-danger'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-default'>00:00:00:009</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">OtpApi</span></div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QuoteApi</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -599,38 +564,16 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:40 pm</td>
+        <td>4:54:39 pm</td>
         <td>
-          Test Class: OtpApi
+          Test Class: QuoteApi
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:40 pm</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:54:39 pm</td>
         <td>
-          Request Body: {requestId=REQ1777623570829, panNo=, clientCode=VESTED, accNo=0050303922, groupId=KB, channel=WEB, otp=123456, otpType=SMS, crn=1000100644}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:40 pm</td>
-        <td>
-          Response Body: {
-    "requestId": "REQ1777623570829",
-    "responseId": "RES_1777623630582_358cade4",
-    "status": "F",
-    "errorDescription": "Technical error",
-    "errCode": "ERR1007",
-    "success": false,
-    "failure": true
-}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:49:40 pm</td>
-        <td>
-          Test Passed
+          Test Skipped
         </td>
       </tr>
   </tbody>
@@ -638,31 +581,31 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="8"
+        <li class="test-item"  status="skip" test-id="8"
           author=""
-          tag="OtpApi"
+          tag="QuoteApi"
           device="">
           <div class="test-detail">
-            <p class="name">Verify Send OTP API With Invalid Expired Auth Token</p>
+            <p class="name">Verify Get Quote Api Returns Success With Valid Token And Verified Otp</p>
             <p class="text-sm">
-              <span>1:49:40 pm</span> / <span>00:00:00:338</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>4:54:39 pm</span> / <span>00:00:00:009</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Verify Send OTP API With Invalid Expired Auth Token</h5>
-<span class='badge badge-success'>05.01.2026 1:49:40 pm</span>
-<span class='badge badge-danger'>05.01.2026 1:49:40 pm</span>
-<span class='badge badge-default'>00:00:00:338</span>
+<h5 class="test-status text-skip">Verify Get Quote Api Returns Success With Valid Token And Verified Otp</h5>
+<span class='badge badge-success'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-danger'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-default'>00:00:00:009</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">OtpApi</span></div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QuoteApi</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -670,38 +613,16 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:40 pm</td>
+        <td>4:54:39 pm</td>
         <td>
-          Test Class: OtpApi
+          Test Class: QuoteApi
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:40 pm</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:54:39 pm</td>
         <td>
-          Request Body: {requestId=REQ1777623570829, panNo=, clientCode=VESTED, accNo=0050303922, groupId=KB, channel=WEB, otpType=SMS, crn=1000100644}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:40 pm</td>
-        <td>
-          Response Body: {
-    "requestId": "REQ1777623570829",
-    "responseId": "RES_1777623630891_bf186c1d",
-    "status": "F",
-    "errorDescription": "Technical error",
-    "errCode": "ERR1007",
-    "success": false,
-    "failure": true
-}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:49:40 pm</td>
-        <td>
-          Test Passed
+          Test Skipped
         </td>
       </tr>
   </tbody>
@@ -709,31 +630,31 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="9"
+        <li class="test-item"  status="skip" test-id="9"
           author=""
-          tag="OtpApi"
+          tag="QuoteApi"
           device="">
           <div class="test-detail">
-            <p class="name">Verify Send OTP API With Missing Mandatory CRN Field</p>
+            <p class="name">Verify Quote Api Returns Error 1001 When Lrs Limit Exceeded</p>
             <p class="text-sm">
-              <span>1:49:40 pm</span> / <span>00:00:00:233</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>4:54:39 pm</span> / <span>00:00:00:017</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Verify Send OTP API With Missing Mandatory CRN Field</h5>
-<span class='badge badge-success'>05.01.2026 1:49:40 pm</span>
-<span class='badge badge-danger'>05.01.2026 1:49:41 pm</span>
-<span class='badge badge-default'>00:00:00:233</span>
+<h5 class="test-status text-skip">Verify Quote Api Returns Error 1001 When Lrs Limit Exceeded</h5>
+<span class='badge badge-success'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-danger'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-default'>00:00:00:017</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">OtpApi</span></div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QuoteApi</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -741,38 +662,16 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:40 pm</td>
+        <td>4:54:39 pm</td>
         <td>
-          Test Class: OtpApi
+          Test Class: QuoteApi
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:41 pm</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:54:39 pm</td>
         <td>
-          Request Body: {requestId=REQ1777623570829, panNo=, clientCode=VESTED, accNo=0050303922, groupId=KB, channel=WEB, otpType=SMS, crn=}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:41 pm</td>
-        <td>
-          Response Body: {
-    "requestId": "REQ1777623570829",
-    "responseId": "RES_1777623631178_5d4df6cb",
-    "status": "F",
-    "errorDescription": "Technical Decline",
-    "errCode": "ERR1008",
-    "success": false,
-    "failure": true
-}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:49:41 pm</td>
-        <td>
-          Test Passed
+          Test Skipped
         </td>
       </tr>
   </tbody>
@@ -780,31 +679,31 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="10"
+        <li class="test-item"  status="skip" test-id="10"
           author=""
-          tag="OtpApi"
+          tag="QuoteApi"
           device="">
           <div class="test-detail">
-            <p class="name">Verify Send OTP API Without Auth Token IN Header</p>
+            <p class="name">Verify Quote Api Returns Error 1002 When Insufficient Bank Balance</p>
             <p class="text-sm">
-              <span>1:49:41 pm</span> / <span>00:00:00:179</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>4:54:39 pm</span> / <span>00:00:00:007</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Verify Send OTP API Without Auth Token IN Header</h5>
-<span class='badge badge-success'>05.01.2026 1:49:41 pm</span>
-<span class='badge badge-danger'>05.01.2026 1:49:41 pm</span>
-<span class='badge badge-default'>00:00:00:179</span>
+<h5 class="test-status text-skip">Verify Quote Api Returns Error 1002 When Insufficient Bank Balance</h5>
+<span class='badge badge-success'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-danger'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-default'>00:00:00:007</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">OtpApi</span></div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QuoteApi</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -812,38 +711,408 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:41 pm</td>
+        <td>4:54:39 pm</td>
         <td>
-          Test Class: OtpApi
+          Test Class: QuoteApi
         </td>
       </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:54:39 pm</td>
+        <td>
+          Test Skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="11"
+          author=""
+          tag="QuoteApi"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Quote Api Returns Error 1003 When Purpose Mismatch</p>
+            <p class="text-sm">
+              <span>4:54:39 pm</span> / <span>00:00:00:007</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verify Quote Api Returns Error 1003 When Purpose Mismatch</h5>
+<span class='badge badge-success'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-danger'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-default'>00:00:00:007</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QuoteApi</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:41 pm</td>
+        <td>4:54:39 pm</td>
         <td>
-          Request Body: {requestId=REQ1777623570829, panNo=, clientCode=VESTED, accNo=0050303922, groupId=KB, channel=WEB, otpType=SMS, crn=1000100644}
+          Test Class: QuoteApi
         </td>
       </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:54:39 pm</td>
+        <td>
+          Test Skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="12"
+          author=""
+          tag="QuoteApi"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Quote Api Returns Error 1008 When Currency Code Exceeds Three Characters</p>
+            <p class="text-sm">
+              <span>4:54:39 pm</span> / <span>00:00:00:006</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verify Quote Api Returns Error 1008 When Currency Code Exceeds Three Characters</h5>
+<span class='badge badge-success'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-danger'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-default'>00:00:00:006</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QuoteApi</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>1:49:41 pm</td>
+        <td>4:54:39 pm</td>
         <td>
-          Response Body: {
-    "requestId": "REQ1777623570829",
-    "responseId": "RES_1777623631358_f15928ae",
-    "status": "F",
-    "errorDescription": "Technical error",
-    "errCode": "ERR1007",
-    "success": false,
-    "failure": true
-}
+          Test Class: QuoteApi
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:49:41 pm</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:54:39 pm</td>
         <td>
-          Test Passed
+          Test Skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="13"
+          author=""
+          tag="QuoteApi"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Quote Api Returns Error 1008 When Fc Amt Has More Than Two Decimal Places</p>
+            <p class="text-sm">
+              <span>4:54:39 pm</span> / <span>00:00:00:007</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verify Quote Api Returns Error 1008 When Fc Amt Has More Than Two Decimal Places</h5>
+<span class='badge badge-success'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-danger'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-default'>00:00:00:007</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QuoteApi</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:54:39 pm</td>
+        <td>
+          Test Class: QuoteApi
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:54:39 pm</td>
+        <td>
+          Test Skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="14"
+          author=""
+          tag="QuoteApi"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Quote Api Returns Error 1008 When Fc Amt Is Blank</p>
+            <p class="text-sm">
+              <span>4:54:39 pm</span> / <span>00:00:00:010</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verify Quote Api Returns Error 1008 When Fc Amt Is Blank</h5>
+<span class='badge badge-success'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-danger'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-default'>00:00:00:010</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QuoteApi</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:54:39 pm</td>
+        <td>
+          Test Class: QuoteApi
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:54:39 pm</td>
+        <td>
+          Test Skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="15"
+          author=""
+          tag="QuoteApi"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Quote Api Returns Error 1008 When Purpose Description Is Blank</p>
+            <p class="text-sm">
+              <span>4:54:39 pm</span> / <span>00:00:00:010</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verify Quote Api Returns Error 1008 When Purpose Description Is Blank</h5>
+<span class='badge badge-success'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-danger'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-default'>00:00:00:010</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QuoteApi</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:54:39 pm</td>
+        <td>
+          Test Class: QuoteApi
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:54:39 pm</td>
+        <td>
+          Test Skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="16"
+          author=""
+          tag="QuoteApi"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Quote Api Returns Error 1008 When Purpose Description Is Missing</p>
+            <p class="text-sm">
+              <span>4:54:39 pm</span> / <span>00:00:00:008</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verify Quote Api Returns Error 1008 When Purpose Description Is Missing</h5>
+<span class='badge badge-success'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-danger'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-default'>00:00:00:008</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QuoteApi</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:54:39 pm</td>
+        <td>
+          Test Class: QuoteApi
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:54:39 pm</td>
+        <td>
+          Test Skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="17"
+          author=""
+          tag="QuoteApi"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Quote Api Returns Is Doc Required N When Account Age Greater Than Or Equal To One Year</p>
+            <p class="text-sm">
+              <span>4:54:39 pm</span> / <span>00:00:00:010</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verify Quote Api Returns Is Doc Required N When Account Age Greater Than Or Equal To One Year</h5>
+<span class='badge badge-success'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-danger'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-default'>00:00:00:010</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QuoteApi</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:54:39 pm</td>
+        <td>
+          Test Class: QuoteApi
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:54:39 pm</td>
+        <td>
+          Test Skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="18"
+          author=""
+          tag="QuoteApi"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Quote Api Returns Success When Purpose Matches Kr Master</p>
+            <p class="text-sm">
+              <span>4:54:39 pm</span> / <span>00:00:00:008</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verify Quote Api Returns Success When Purpose Matches Kr Master</h5>
+<span class='badge badge-success'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-danger'>05.01.2026 4:54:39 pm</span>
+<span class='badge badge-default'>00:00:00:008</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QuoteApi</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:54:39 pm</td>
+        <td>
+          Test Class: QuoteApi
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:54:39 pm</td>
+        <td>
+          Test Skipped
         </td>
       </tr>
   </tbody>
@@ -871,15 +1140,15 @@
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>1</span>
+<span class='badge log badge-danger'>2</span>
 </span>
 <p class="name">java.lang.AssertionError</p>
-<p class="duration text-sm">1 tests</p>
+<p class="duration text-sm">2 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
 <h4>java.lang.AssertionError</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -892,9 +1161,16 @@
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>13:49:39 pm</td>
+<td>16:54:32 pm</td>
 <td>
-<a href="#" class="linked" test-id='4' id='4'>Verify OTP API With Incorrect OTP</a>
+<a href="#" class="linked" test-id='1' id='1'>Verify Generate Token Api Returns Success With Valid Request</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:54:38 pm</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>Verify Quote Api Returns Error 1007 When Auth Token Is Invalid</a>
 </td>
 </tr>
 </tbody>
@@ -920,17 +1196,17 @@
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>9</span>
-<span class='badge log badge-danger'>1</span>
+<span class='badge log badge-danger'>2</span>
+<span class='badge log badge-skip'>16</span>
 </span>
-<p class="name">OtpApi</p>
-<p class="duration text-sm">10 tests</p>
+<p class="name">QuoteApi</p>
+<p class="duration text-sm">18 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>OtpApi</h4>
-<span status="pass" class='badge log pass-bg'>9 passed</span>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
+<h4>QuoteApi</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+<span status="skip" class='badge log badge-skip'>16 skipped</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -941,74 +1217,130 @@
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:49:30 pm</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:54:32 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='1'>Verify Generate Token API With Valid CRN AND Account Number</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:49:35 pm</td>
-<td>
-<a href="#" class="linked" test-id='2' id='2'>Verify Send OTP API Triggers SMS TO Customer Registered Mobile Number</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:49:39 pm</td>
-<td>
-<a href="#" class="linked" test-id='3' id='3'>Verify OTP API With Alphabetic Characters IN OTP Field</a>
+<a href="#" class="linked" test-id='1' id='1'>Verify Generate Token Api Returns Success With Valid Request</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>13:49:39 pm</td>
+<td>16:54:38 pm</td>
 <td>
-<a href="#" class="linked" test-id='4' id='4'>Verify OTP API With Incorrect OTP</a>
+<a href="#" class="linked" test-id='2' id='2'>Verify Quote Api Returns Error 1007 When Auth Token Is Invalid</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:49:39 pm</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:54:39 pm</td>
 <td>
-<a href="#" class="linked" test-id='5' id='5'>Verify OTP API With Less Than SIX Digits</a>
+<a href="#" class="linked" test-id='3' id='3'>Verify Quote Api Without Otp Verification</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:49:39 pm</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:54:39 pm</td>
 <td>
-<a href="#" class="linked" test-id='6' id='6'>Verify OTP API With More Than SIX Digits</a>
+<a href="#" class="linked" test-id='4' id='4'>Verify Send Otp Api Returns Success With Valid Token</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:49:40 pm</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:54:39 pm</td>
 <td>
-<a href="#" class="linked" test-id='7' id='7'>Verify OTP API Without Auth Token</a>
+<a href="#" class="linked" test-id='5' id='5'>Verify Verify Otp Api Returns Success With Valid Otp</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:49:40 pm</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:54:39 pm</td>
 <td>
-<a href="#" class="linked" test-id='8' id='8'>Verify Send OTP API With Invalid Expired Auth Token</a>
+<a href="#" class="linked" test-id='6' id='6'>Verify Get Quote Api Returns Success When Source Of Funds Is Gift</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:49:40 pm</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:54:39 pm</td>
 <td>
-<a href="#" class="linked" test-id='9' id='9'>Verify Send OTP API With Missing Mandatory CRN Field</a>
+<a href="#" class="linked" test-id='7' id='7'>Verify Get Quote Api Returns Success When Source Of Funds Is Owned Funds</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:49:41 pm</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:54:39 pm</td>
 <td>
-<a href="#" class="linked" test-id='10' id='10'>Verify Send OTP API Without Auth Token IN Header</a>
+<a href="#" class="linked" test-id='8' id='8'>Verify Get Quote Api Returns Success With Valid Token And Verified Otp</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:54:39 pm</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>Verify Quote Api Returns Error 1001 When Lrs Limit Exceeded</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:54:39 pm</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>Verify Quote Api Returns Error 1002 When Insufficient Bank Balance</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:54:39 pm</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>Verify Quote Api Returns Error 1003 When Purpose Mismatch</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:54:39 pm</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>Verify Quote Api Returns Error 1008 When Currency Code Exceeds Three Characters</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:54:39 pm</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>Verify Quote Api Returns Error 1008 When Fc Amt Has More Than Two Decimal Places</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:54:39 pm</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>Verify Quote Api Returns Error 1008 When Fc Amt Is Blank</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:54:39 pm</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>Verify Quote Api Returns Error 1008 When Purpose Description Is Blank</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:54:39 pm</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>Verify Quote Api Returns Error 1008 When Purpose Description Is Missing</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:54:39 pm</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>Verify Quote Api Returns Is Doc Required N When Account Age Greater Than Or Equal To One Year</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:54:39 pm</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>Verify Quote Api Returns Success When Purpose Matches Kr Master</a>
 </td>
 </tr>
 </tbody>
@@ -1028,25 +1360,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>May 1, 2026 01:49:29 pm</h3>
+<h3>May 1, 2026 04:54:31 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>May 1, 2026 01:49:41 pm</h3>
+<h3>May 1, 2026 04:54:39 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>9</h3>
+<h3>0</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>1</h3>
+<h3>2</h3>
 </div></div>
 </div>
 </div>
@@ -1062,13 +1394,13 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='90%'>
-<b>9</b> tests passed
+<div><small data-tooltip='0%'>
+<b>0</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='10%'><b>1</b> tests failed,
-<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+<small data-tooltip='11%'><b>2</b> tests failed,
+<b>16</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
 </div>
@@ -1085,10 +1417,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='21%'><b>9</b> events passed</small></div>
+<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
 <div>
-<small data-tooltip='7%'><b>3</b> events failed,
-<b data-tooltip='%'>30</b> others
+<small data-tooltip='13%'><b>6</b> events failed,
+<b data-tooltip='%'>38</b> others
 </small>
 </div>
 </div>
@@ -1104,7 +1436,7 @@
 </div></div>
 <script>
 var timeline = {
-"Verify Generate Token API With Valid CRN AND Account Number":5.138,"Verify Send OTP API Triggers SMS TO Customer Registered Mobile Number":3.159,"Verify OTP API With Alphabetic Characters IN OTP Field":0.13,"Verify OTP API With Incorrect OTP":0.522,"Verify OTP API With Less Than SIX Digits":0.318,"Verify OTP API With More Than SIX Digits":0.364,"Verify OTP API Without Auth Token":0.212,"Verify Send OTP API With Invalid Expired Auth Token":0.338,"Verify Send OTP API With Missing Mandatory CRN Field":0.233,"Verify Send OTP API Without Auth Token IN Header":0.179
+"Verify Generate Token Api Returns Success With Valid Request":6.555,"Verify Quote Api Returns Error 1007 When Auth Token Is Invalid":0.301,"Verify Quote Api Without Otp Verification":0.01,"Verify Send Otp Api Returns Success With Valid Token":0.006,"Verify Verify Otp Api Returns Success With Valid Otp":0.008,"Verify Get Quote Api Returns Success When Source Of Funds Is Gift":0.01,"Verify Get Quote Api Returns Success When Source Of Funds Is Owned Funds":0.009,"Verify Get Quote Api Returns Success With Valid Token And Verified Otp":0.009,"Verify Quote Api Returns Error 1001 When Lrs Limit Exceeded":0.017,"Verify Quote Api Returns Error 1002 When Insufficient Bank Balance":0.007,"Verify Quote Api Returns Error 1003 When Purpose Mismatch":0.007,"Verify Quote Api Returns Error 1008 When Currency Code Exceeds Three Characters":0.006,"Verify Quote Api Returns Error 1008 When Fc Amt Has More Than Two Decimal Places":0.007,"Verify Quote Api Returns Error 1008 When Fc Amt Is Blank":0.01,"Verify Quote Api Returns Error 1008 When Purpose Description Is Blank":0.01,"Verify Quote Api Returns Error 1008 When Purpose Description Is Missing":0.008,"Verify Quote Api Returns Is Doc Required N When Account Age Greater Than Or Equal To One Year":0.01,"Verify Quote Api Returns Success When Purpose Matches Kr Master":0.008
 };
 </script>
 <div class="row">
@@ -1114,12 +1446,12 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>OtpApi</td>
-<td>9</td>
-<td>1</td>
+<td>QuoteApi</td>
 <td>0</td>
+<td>2</td>
+<td>16</td>
 <td>0</td>
-<td>90%</td>
+<td>0%</td>
 </tr>
 </tbody>
 </table></div>
@@ -1152,10 +1484,10 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 9,
-failParent: 1,
+passParent: 0,
+failParent: 2,
 warningParent: 0,
-skipParent: 0,
+skipParent: 16,
 childCount: 5,
 passChild: 0,
 failChild: 0,
@@ -1169,11 +1501,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 9,
-failEvents: 3,
+passEvents: 0,
+failEvents: 6,
 warningEvents: 0,
-skipEvents: 0,
-infoEvents: 30
+skipEvents: 16,
+infoEvents: 22
 };
 </script>        </div>
       </div>

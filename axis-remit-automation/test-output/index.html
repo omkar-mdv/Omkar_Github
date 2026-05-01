@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Omkar.Madav\AppData\Local\Temp\testng-eclipse-1296441507\testng-customsuite.xml</span>
+                    <span>C:\Users\Omkar.Madav\AppData\Local\Temp\testng-eclipse--422329608\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods, 1 failed,   9 passed</span>
+                    <span class="method-stats">18 methods, 2 failed,  16 skipped,  </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,64 +103,104 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifyOtpApiWithIncorrectOtp">verifyOtpApiWithIncorrectOtp</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.QuoteApi" class="method navigator-link" hash-for-method="verifyGenerateTokenApiReturnsSuccessWithValidRequest">verifyGenerateTokenApiReturnsSuccessWithValidRequest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.QuoteApi" class="method navigator-link" hash-for-method="verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid">verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods skipped suite-Default_suite"> (hide)</a> <!-- hide-methods skipped suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods skipped suite-Default_suite"> (show)</a> <!-- show-methods skipped suite-Default_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content skipped suite-Default_suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifyGenerateTokenApiWithValidCRNAndAccountNumber">verifyGenerateTokenApiWithValidCRNAndAccountNumber</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.QuoteApi" class="method navigator-link" hash-for-method="verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsGift">verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsGift</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifyOtpApiWithAlphabeticCharactersInOtpField">verifyOtpApiWithAlphabeticCharactersInOtpField</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.QuoteApi" class="method navigator-link" hash-for-method="verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsOwnedFunds">verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsOwnedFunds</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifyOtpApiWithLessThanSixDigits">verifyOtpApiWithLessThanSixDigits</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.QuoteApi" class="method navigator-link" hash-for-method="verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp">verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifyOtpApiWithMoreThanSixDigits">verifyOtpApiWithMoreThanSixDigits</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.QuoteApi" class="method navigator-link" hash-for-method="verifyQuoteApiReturnsError1001WhenLrsLimitExceeded">verifyQuoteApiReturnsError1001WhenLrsLimitExceeded</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifyOtpApiWithoutAuthToken">verifyOtpApiWithoutAuthToken</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.QuoteApi" class="method navigator-link" hash-for-method="verifyQuoteApiReturnsError1002WhenInsufficientBankBalance">verifyQuoteApiReturnsError1002WhenInsufficientBankBalance</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber">verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.QuoteApi" class="method navigator-link" hash-for-method="verifyQuoteApiReturnsError1003WhenPurposeMismatch">verifyQuoteApiReturnsError1003WhenPurposeMismatch</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifySendOtpApiWithInvalidExpiredAuthToken">verifySendOtpApiWithInvalidExpiredAuthToken</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.QuoteApi" class="method navigator-link" hash-for-method="verifyQuoteApiReturnsError1008WhenCurrencyCodeExceedsThreeCharacters">verifyQuoteApiReturnsError1008WhenCurrencyCodeExceedsThreeCharacters</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifySendOtpApiWithMissingMandatoryCRNField">verifySendOtpApiWithMissingMandatoryCRNField</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.QuoteApi" class="method navigator-link" hash-for-method="verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces">verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.OtpApi" class="method navigator-link" hash-for-method="verifySendOtpApiWithoutAuthTokenInHeader">verifySendOtpApiWithoutAuthTokenInHeader</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.QuoteApi" class="method navigator-link" hash-for-method="verifyQuoteApiReturnsError1008WhenFcAmtIsBlank">verifyQuoteApiReturnsError1008WhenFcAmtIsBlank</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.QuoteApi" class="method navigator-link" hash-for-method="verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsBlank">verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsBlank</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.QuoteApi" class="method navigator-link" hash-for-method="verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsMissing">verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsMissing</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.QuoteApi" class="method navigator-link" hash-for-method="verifyQuoteApiReturnsIsDocRequiredNWhenAccountAgeGreaterThanOrEqualToOneYear">verifyQuoteApiReturnsIsDocRequiredNWhenAccountAgeGreaterThanOrEqualToOneYear</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.QuoteApi" class="method navigator-link" hash-for-method="verifyQuoteApiReturnsSuccessWhenPurposeMatchesKrMaster">verifyQuoteApiReturnsSuccessWhenPurposeMatchesKrMaster</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.QuoteApi" class="method navigator-link" hash-for-method="verifyQuoteApiWithoutOtpVerification">verifyQuoteApiWithoutOtpVerification</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.QuoteApi" class="method navigator-link" hash-for-method="verifySendOtpApiReturnsSuccessWithValidToken">verifySendOtpApiReturnsSuccessWithValidToken</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="vestedApi.QuoteApi" class="method navigator-link" hash-for-method="verifyVerifyOtpApiReturnsSuccessWithValidOtp">verifyVerifyOtpApiReturnsSuccessWithValidOtp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -175,22 +215,22 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">vestedApi.OtpApi</span>
+              <span class="class-name">vestedApi.QuoteApi</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyOtpApiWithIncorrectOtp">
-                  </a> <!-- verifyOtpApiWithIncorrectOtp -->
-                  <span class="method-name">verifyOtpApiWithIncorrectOtp</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [OTP is incorrect] but found [Invalid OTP]
+                  <a name="verifyGenerateTokenApiReturnsSuccessWithValidRequest">
+                  </a> <!-- verifyGenerateTokenApiReturnsSuccessWithValidRequest -->
+                  <span class="method-name">verifyGenerateTokenApiReturnsSuccessWithValidRequest</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [S] but found [F]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.OtpApi.verifyOtpApiWithIncorrectOtp(OtpApi.java:126)
+	at vestedApi.QuoteApi.verifyGenerateTokenApiReturnsSuccessWithValidRequest(QuoteApi.java:97)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -220,104 +260,580 @@
 
 </div> <!-- stack-trace -->
                   <em>
-(Verify API returns error when incorrect OTP is provided)                  </em>
+(Verify token is generated successfully)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid">
+                  </a> <!-- verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid -->
+                  <span class="method-name">verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Technical error] but found [Technical Decline]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.QuoteApi.verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid(QuoteApi.java:297)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Verify Quote API returns error 1007 when auth token is invalid)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-failed -->
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">vestedApi.OtpApi</span>
+              <img src="skipped.png"/>
+              <span class="class-name">vestedApi.QuoteApi</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyGenerateTokenApiWithValidCRNAndAccountNumber">
-                  </a> <!-- verifyGenerateTokenApiWithValidCRNAndAccountNumber -->
-                  <span class="method-name">verifyGenerateTokenApiWithValidCRNAndAccountNumber</span>
+                  <a name="verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsGift">
+                  </a> <!-- verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsGift -->
+                  <span class="method-name">verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsGift</span>
+                  <div class="stack-trace">java.lang.Throwable: Method vestedApi.QuoteApi.verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsGift() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
                   <em>
-(Verify token is generated successfully for valid CRN and account number)                  </em>
+(Verify Get Quote API returns success when sourceOfFunds is Gift)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyOtpApiWithAlphabeticCharactersInOtpField">
-                  </a> <!-- verifyOtpApiWithAlphabeticCharactersInOtpField -->
-                  <span class="method-name">verifyOtpApiWithAlphabeticCharactersInOtpField</span>
+                  <a name="verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsOwnedFunds">
+                  </a> <!-- verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsOwnedFunds -->
+                  <span class="method-name">verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsOwnedFunds</span>
+                  <div class="stack-trace">java.lang.Throwable: Method vestedApi.QuoteApi.verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsOwnedFunds() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
                   <em>
-(Verify API returns error when OTP contains alphabetic characters)                  </em>
+(Verify Get Quote API returns success when sourceOfFunds is Owned Funds)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyOtpApiWithLessThanSixDigits">
-                  </a> <!-- verifyOtpApiWithLessThanSixDigits -->
-                  <span class="method-name">verifyOtpApiWithLessThanSixDigits</span>
+                  <a name="verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp">
+                  </a> <!-- verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp -->
+                  <span class="method-name">verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp</span>
+                  <div class="stack-trace">java.lang.Throwable: Method vestedApi.QuoteApi.verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
                   <em>
-(Verify API returns error when OTP is less than 6 digits)                  </em>
+(Verify Quote API returns FX rate, charges and TCS after successful OTP verification using valid auth token)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyOtpApiWithMoreThanSixDigits">
-                  </a> <!-- verifyOtpApiWithMoreThanSixDigits -->
-                  <span class="method-name">verifyOtpApiWithMoreThanSixDigits</span>
+                  <a name="verifyQuoteApiReturnsError1001WhenLrsLimitExceeded">
+                  </a> <!-- verifyQuoteApiReturnsError1001WhenLrsLimitExceeded -->
+                  <span class="method-name">verifyQuoteApiReturnsError1001WhenLrsLimitExceeded</span>
+                  <div class="stack-trace">java.lang.Throwable: Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1001WhenLrsLimitExceeded() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
                   <em>
-(Verify API returns error when OTP is more than 6 digits)                  </em>
+(Verify Quote API returns error 1001 when LRS limit is exceeded)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyOtpApiWithoutAuthToken">
-                  </a> <!-- verifyOtpApiWithoutAuthToken -->
-                  <span class="method-name">verifyOtpApiWithoutAuthToken</span>
+                  <a name="verifyQuoteApiReturnsError1002WhenInsufficientBankBalance">
+                  </a> <!-- verifyQuoteApiReturnsError1002WhenInsufficientBankBalance -->
+                  <span class="method-name">verifyQuoteApiReturnsError1002WhenInsufficientBankBalance</span>
+                  <div class="stack-trace">java.lang.Throwable: Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1002WhenInsufficientBankBalance() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
                   <em>
-(Verify API returns error when authToken is missing)                  </em>
+(Verify Quote API returns error 1002 when bank balance is insufficient)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber">
-                  </a> <!-- verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber -->
-                  <span class="method-name">verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber</span>
+                  <a name="verifyQuoteApiReturnsError1003WhenPurposeMismatch">
+                  </a> <!-- verifyQuoteApiReturnsError1003WhenPurposeMismatch -->
+                  <span class="method-name">verifyQuoteApiReturnsError1003WhenPurposeMismatch</span>
+                  <div class="stack-trace">java.lang.Throwable: Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1003WhenPurposeMismatch() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
                   <em>
-(Verify OTP is sent successfully to customer's registered mobile number)                  </em>
+(Verify Quote API returns error 1003 when purpose description is invalid)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifySendOtpApiWithInvalidExpiredAuthToken">
-                  </a> <!-- verifySendOtpApiWithInvalidExpiredAuthToken -->
-                  <span class="method-name">verifySendOtpApiWithInvalidExpiredAuthToken</span>
+                  <a name="verifyQuoteApiReturnsError1008WhenCurrencyCodeExceedsThreeCharacters">
+                  </a> <!-- verifyQuoteApiReturnsError1008WhenCurrencyCodeExceedsThreeCharacters -->
+                  <span class="method-name">verifyQuoteApiReturnsError1008WhenCurrencyCodeExceedsThreeCharacters</span>
+                  <div class="stack-trace">java.lang.Throwable: Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1008WhenCurrencyCodeExceedsThreeCharacters() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
                   <em>
-(Verify API returns error when authToken is invalid or expired)                  </em>
+(Verify Quote API returns error 1008 when currency code is more than 3 characters)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifySendOtpApiWithMissingMandatoryCRNField">
-                  </a> <!-- verifySendOtpApiWithMissingMandatoryCRNField -->
-                  <span class="method-name">verifySendOtpApiWithMissingMandatoryCRNField</span>
+                  <a name="verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces">
+                  </a> <!-- verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces -->
+                  <span class="method-name">verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces</span>
+                  <div class="stack-trace">java.lang.Throwable: Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
                   <em>
-(Verify API returns error when CRN is missing in Send OTP request)                  </em>
+(Verify Quote API returns error 1008 when fc_amt has more than 2 decimal places)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifySendOtpApiWithoutAuthTokenInHeader">
-                  </a> <!-- verifySendOtpApiWithoutAuthTokenInHeader -->
-                  <span class="method-name">verifySendOtpApiWithoutAuthTokenInHeader</span>
+                  <a name="verifyQuoteApiReturnsError1008WhenFcAmtIsBlank">
+                  </a> <!-- verifyQuoteApiReturnsError1008WhenFcAmtIsBlank -->
+                  <span class="method-name">verifyQuoteApiReturnsError1008WhenFcAmtIsBlank</span>
+                  <div class="stack-trace">java.lang.Throwable: Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1008WhenFcAmtIsBlank() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
                   <em>
-(Verify API returns error when authToken is not provided in header)                  </em>
+(Verify Quote API returns error 1008 when fc_amt is blank)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsBlank">
+                  </a> <!-- verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsBlank -->
+                  <span class="method-name">verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsBlank</span>
+                  <div class="stack-trace">java.lang.Throwable: Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsBlank() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Verify Quote API returns error 1008 when purposeDescription is blank)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsMissing">
+                  </a> <!-- verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsMissing -->
+                  <span class="method-name">verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsMissing</span>
+                  <div class="stack-trace">java.lang.Throwable: Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsMissing() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Verify Quote API returns error 1008 when purposedescription is missing)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyQuoteApiReturnsIsDocRequiredNWhenAccountAgeGreaterThanOrEqualToOneYear">
+                  </a> <!-- verifyQuoteApiReturnsIsDocRequiredNWhenAccountAgeGreaterThanOrEqualToOneYear -->
+                  <span class="method-name">verifyQuoteApiReturnsIsDocRequiredNWhenAccountAgeGreaterThanOrEqualToOneYear</span>
+                  <div class="stack-trace">java.lang.Throwable: Method vestedApi.QuoteApi.verifyQuoteApiReturnsIsDocRequiredNWhenAccountAgeGreaterThanOrEqualToOneYear() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Verify Quote API returns document requirement message when documents are required)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyQuoteApiReturnsSuccessWhenPurposeMatchesKrMaster">
+                  </a> <!-- verifyQuoteApiReturnsSuccessWhenPurposeMatchesKrMaster -->
+                  <span class="method-name">verifyQuoteApiReturnsSuccessWhenPurposeMatchesKrMaster</span>
+                  <div class="stack-trace">java.lang.Throwable: Method vestedApi.QuoteApi.verifyQuoteApiReturnsSuccessWhenPurposeMatchesKrMaster() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Verify Quote API returns success when purpose matches KR master for predefined beneficiary)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyQuoteApiWithoutOtpVerification">
+                  </a> <!-- verifyQuoteApiWithoutOtpVerification -->
+                  <span class="method-name">verifyQuoteApiWithoutOtpVerification</span>
+                  <div class="stack-trace">java.lang.Throwable: Method vestedApi.QuoteApi.verifyQuoteApiWithoutOtpVerification() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyGenerateTokenApiReturnsSuccessWithValidRequest() on instance vestedApi.QuoteApi@72d6b3ba]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Verify Quote API fails if OTP is not verified)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySendOtpApiReturnsSuccessWithValidToken">
+                  </a> <!-- verifySendOtpApiReturnsSuccessWithValidToken -->
+                  <span class="method-name">verifySendOtpApiReturnsSuccessWithValidToken</span>
+                  <div class="stack-trace">java.lang.Throwable: Method vestedApi.QuoteApi.verifySendOtpApiReturnsSuccessWithValidToken() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyGenerateTokenApiReturnsSuccessWithValidRequest() on instance vestedApi.QuoteApi@72d6b3ba]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Verify OTP is sent successfully)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyVerifyOtpApiReturnsSuccessWithValidOtp">
+                  </a> <!-- verifyVerifyOtpApiReturnsSuccessWithValidOtp -->
+                  <span class="method-name">verifyVerifyOtpApiReturnsSuccessWithValidOtp</span>
+                  <div class="stack-trace">java.lang.Throwable: Method vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifySendOtpApiReturnsSuccessWithValidToken() on instance vestedApi.QuoteApi@72d6b3ba]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Verify OTP is validated successfully)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
+          </div> <!-- suite-Default_suite-class-skipped -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Omkar.Madav\AppData\Local\Temp\testng-eclipse-1296441507\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Omkar.Madav\AppData\Local\Temp\testng-eclipse--422329608\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -326,7 +842,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;vestedApi.OtpApi&quot;/&gt;
+      &lt;class name=&quot;vestedApi.QuoteApi&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -366,52 +882,84 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(10);
+data.addRows(18);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyGenerateTokenApiWithValidCRNAndAccountNumber')
-data.setCell(0, 2, 'vestedApi.OtpApi')
-data.setCell(0, 3, 5058);
+data.setCell(0, 1, 'verifyGenerateTokenApiReturnsSuccessWithValidRequest')
+data.setCell(0, 2, 'vestedApi.QuoteApi')
+data.setCell(0, 3, 6479);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber')
-data.setCell(1, 2, 'vestedApi.OtpApi')
-data.setCell(1, 3, 3154);
+data.setCell(1, 1, 'verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid')
+data.setCell(1, 2, 'vestedApi.QuoteApi')
+data.setCell(1, 3, 297);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyOtpApiWithIncorrectOtp')
-data.setCell(2, 2, 'vestedApi.OtpApi')
-data.setCell(2, 3, 514);
+data.setCell(2, 1, 'verifyQuoteApiWithoutOtpVerification')
+data.setCell(2, 2, 'vestedApi.QuoteApi')
+data.setCell(2, 3, 1);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyOtpApiWithMoreThanSixDigits')
-data.setCell(3, 2, 'vestedApi.OtpApi')
-data.setCell(3, 3, 347);
+data.setCell(3, 1, 'verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsMissing')
+data.setCell(3, 2, 'vestedApi.QuoteApi')
+data.setCell(3, 3, 1);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifySendOtpApiWithInvalidExpiredAuthToken')
-data.setCell(4, 2, 'vestedApi.OtpApi')
-data.setCell(4, 3, 336);
+data.setCell(4, 1, 'verifyQuoteApiReturnsError1003WhenPurposeMismatch')
+data.setCell(4, 2, 'vestedApi.QuoteApi')
+data.setCell(4, 3, 1);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyOtpApiWithLessThanSixDigits')
-data.setCell(5, 2, 'vestedApi.OtpApi')
-data.setCell(5, 3, 315);
+data.setCell(5, 1, 'verifyQuoteApiReturnsError1008WhenCurrencyCodeExceedsThreeCharacters')
+data.setCell(5, 2, 'vestedApi.QuoteApi')
+data.setCell(5, 3, 0);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifySendOtpApiWithMissingMandatoryCRNField')
-data.setCell(6, 2, 'vestedApi.OtpApi')
-data.setCell(6, 3, 228);
+data.setCell(6, 1, 'verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces')
+data.setCell(6, 2, 'vestedApi.QuoteApi')
+data.setCell(6, 3, 0);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'verifyOtpApiWithoutAuthToken')
-data.setCell(7, 2, 'vestedApi.OtpApi')
-data.setCell(7, 3, 208);
+data.setCell(7, 1, 'verifySendOtpApiReturnsSuccessWithValidToken')
+data.setCell(7, 2, 'vestedApi.QuoteApi')
+data.setCell(7, 3, 0);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifySendOtpApiWithoutAuthTokenInHeader')
-data.setCell(8, 2, 'vestedApi.OtpApi')
-data.setCell(8, 3, 175);
+data.setCell(8, 1, 'verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsOwnedFunds')
+data.setCell(8, 2, 'vestedApi.QuoteApi')
+data.setCell(8, 3, 0);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'verifyOtpApiWithAlphabeticCharactersInOtpField')
-data.setCell(9, 2, 'vestedApi.OtpApi')
-data.setCell(9, 3, 123);
+data.setCell(9, 1, 'verifyQuoteApiReturnsError1008WhenFcAmtIsBlank')
+data.setCell(9, 2, 'vestedApi.QuoteApi')
+data.setCell(9, 3, 0);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'verifyQuoteApiReturnsError1002WhenInsufficientBankBalance')
+data.setCell(10, 2, 'vestedApi.QuoteApi')
+data.setCell(10, 3, 0);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsBlank')
+data.setCell(11, 2, 'vestedApi.QuoteApi')
+data.setCell(11, 3, 0);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'verifyVerifyOtpApiReturnsSuccessWithValidOtp')
+data.setCell(12, 2, 'vestedApi.QuoteApi')
+data.setCell(12, 3, 0);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'verifyQuoteApiReturnsSuccessWhenPurposeMatchesKrMaster')
+data.setCell(13, 2, 'vestedApi.QuoteApi')
+data.setCell(13, 3, 0);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsGift')
+data.setCell(14, 2, 'vestedApi.QuoteApi')
+data.setCell(14, 3, 0);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'verifyQuoteApiReturnsError1001WhenLrsLimitExceeded')
+data.setCell(15, 2, 'vestedApi.QuoteApi')
+data.setCell(15, 3, 0);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'verifyQuoteApiReturnsIsDocRequiredNWhenAccountAgeGreaterThanOrEqualToOneYear')
+data.setCell(16, 2, 'vestedApi.QuoteApi')
+data.setCell(16, 3, 0);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp')
+data.setCell(17, 2, 'vestedApi.QuoteApi')
+data.setCell(17, 3, 0);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -437,52 +985,86 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">vestedApi.OtpApi</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">vestedApi.QuoteApi</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">verifyGenerateTokenApiWithValidCRNAndAccountNumber</span>
-                <span class="method-start">720 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber</span>
-                <span class="method-start">5868 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyOtpApiWithAlphabeticCharactersInOtpField</span>
-                <span class="method-start">9031 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyGenerateTokenApiReturnsSuccessWithValidRequest</span>
+                <span class="method-start">710 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">verifyOtpApiWithIncorrectOtp</span>
-                <span class="method-start">9162 ms</span>
+                <span class="method-name">verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid</span>
+                <span class="method-start">7273 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">verifyOtpApiWithLessThanSixDigits</span>
-                <span class="method-start">9688 ms</span>
+                <span class="method-name">verifyQuoteApiWithoutOtpVerification</span>
+                <span class="method-start">7578 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">verifyOtpApiWithMoreThanSixDigits</span>
-                <span class="method-start">10009 ms</span>
+                <span class="method-name">verifySendOtpApiReturnsSuccessWithValidToken</span>
+                <span class="method-start">7590 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">verifyOtpApiWithoutAuthToken</span>
-                <span class="method-start">10375 ms</span>
+                <span class="method-name">verifyVerifyOtpApiReturnsSuccessWithValidOtp</span>
+                <span class="method-start">7598 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">verifySendOtpApiWithInvalidExpiredAuthToken</span>
-                <span class="method-start">10589 ms</span>
+                <span class="method-name">verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsGift</span>
+                <span class="method-start">7612 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">verifySendOtpApiWithMissingMandatoryCRNField</span>
-                <span class="method-start">10928 ms</span>
+                <span class="method-name">verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsOwnedFunds</span>
+                <span class="method-start">7624 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">verifySendOtpApiWithoutAuthTokenInHeader</span>
-                <span class="method-start">11164 ms</span>
+                <span class="method-name">verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp</span>
+                <span class="method-start">7634 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyQuoteApiReturnsError1001WhenLrsLimitExceeded</span>
+                <span class="method-start">7644 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyQuoteApiReturnsError1002WhenInsufficientBankBalance</span>
+                <span class="method-start">7662 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyQuoteApiReturnsError1003WhenPurposeMismatch</span>
+                <span class="method-start">7671 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyQuoteApiReturnsError1008WhenCurrencyCodeExceedsThreeCharacters</span>
+                <span class="method-start">7680 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces</span>
+                <span class="method-start">7688 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyQuoteApiReturnsError1008WhenFcAmtIsBlank</span>
+                <span class="method-start">7698 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsBlank</span>
+                <span class="method-start">7709 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsMissing</span>
+                <span class="method-start">7719 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyQuoteApiReturnsIsDocRequiredNWhenAccountAgeGreaterThanOrEqualToOneYear</span>
+                <span class="method-start">7730 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyQuoteApiReturnsSuccessWhenPurposeMatchesKrMaster</span>
+                <span class="method-start">7741 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

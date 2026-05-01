@@ -62,19 +62,32 @@ public class TestListener implements ITestListener {
 
 	private String formatTestName(String methodName) {
 
-		// Step 1: Split camel case (handles CRNAnd, APIResponse, etc.)
-		String[] words = methodName.replaceAll("([a-z])([A-Z])", "$1 $2").replaceAll("([A-Z]+)([A-Z][a-z])", "$1 $2")
-				.split(" ");
+		String name = methodName
+				// Split camelCase
+				.replaceAll("([a-z])([A-Z])", "$1 $2")
+				// Split uppercase sequences like CRNAnd → CRN And
+				.replaceAll("([A-Z]+)([A-Z][a-z])", "$1 $2")
+				// Split letters and numbers
+				.replaceAll("([a-zA-Z])([0-9])", "$1 $2").replaceAll("([0-9])([a-zA-Z])", "$1 $2");
 
+		String[] words = name.split(" ");
 		StringBuilder formatted = new StringBuilder();
 
 		for (String word : words) {
 
-			// Step 2: If already uppercase OR short word → treat as abbreviation
-			if (word.equals(word.toUpperCase()) || word.length() <= 3) {
-				formatted.append(word.toUpperCase());
-			} else {
-				// Normal word → capitalize first letter
+			if (word.isEmpty())
+				continue;
+
+			// Keep numbers as is
+			if (word.matches("\\d+")) {
+				formatted.append(word);
+			}
+			// Abbreviations (all caps OR short words like API, OTP, CRN)
+			else if (word.equals(word.toUpperCase()) && word.length() > 1) {
+				formatted.append(word);
+			}
+			// Normal words
+			else {
 				formatted.append(word.substring(0, 1).toUpperCase()).append(word.substring(1).toLowerCase());
 			}
 

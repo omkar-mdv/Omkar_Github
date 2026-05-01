@@ -3,14 +3,29 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="vestedApi.OtpApi">
+      <class name="vestedApi.QuoteApi">
         <methods>
-          <include name="verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber"/>
-          <include name="verifyOtpApiWithIncorrectOtp"/>
+          <include name="verifyQuoteApiReturnsError1001WhenLrsLimitExceeded"/>
+          <include name="verifyQuoteApiReturnsError1003WhenPurposeMismatch"/>
+          <include name="verifyQuoteApiReturnsError1008WhenCurrencyCodeExceedsThreeCharacters"/>
           <include name="setup"/>
-          <include name="verifyGenerateTokenApiWithValidCRNAndAccountNumber"/>
+          <include name="verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp"/>
+          <include name="verifyQuoteApiReturnsIsDocRequiredNWhenAccountAgeGreaterThanOrEqualToOneYear"/>
+          <include name="verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsOwnedFunds"/>
+          <include name="verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsMissing"/>
+          <include name="verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsBlank"/>
+          <include name="verifyGenerateTokenApiReturnsSuccessWithValidRequest"/>
+          <include name="verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces"/>
+          <include name="verifyVerifyOtpApiReturnsSuccessWithValidOtp"/>
+          <include name="verifyQuoteApiReturnsError1002WhenInsufficientBankBalance"/>
+          <include name="verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid"/>
+          <include name="verifySendOtpApiReturnsSuccessWithValidToken"/>
+          <include name="verifyQuoteApiWithoutOtpVerification"/>
+          <include name="verifyQuoteApiReturnsSuccessWhenPurposeMatchesKrMaster"/>
+          <include name="verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsGift"/>
+          <include name="verifyQuoteApiReturnsError1008WhenFcAmtIsBlank"/>
         </methods>
-      </class> <!-- vestedApi.OtpApi -->
+      </class> <!-- vestedApi.QuoteApi -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

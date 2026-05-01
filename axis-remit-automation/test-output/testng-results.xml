@@ -1,42 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="9" failed="1" skipped="0">
+<testng-results ignored="0" total="18" passed="0" failed="2" skipped="16">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-01T13:49:29 IST" name="Default suite" finished-at="2026-05-01T13:49:41 IST" duration-ms="11382">
+  <suite started-at="2026-05-01T16:54:31 IST" name="Default suite" finished-at="2026-05-01T16:54:39 IST" duration-ms="7785">
     <groups>
     </groups>
-    <test started-at="2026-05-01T13:49:29 IST" name="Default test" finished-at="2026-05-01T13:49:41 IST" duration-ms="11382">
-      <class name="vestedApi.OtpApi">
-        <test-method is-config="true" signature="setup()[pri:0, instance:vestedApi.OtpApi@747f281]" started-at="2026-05-01T13:49:29 IST" name="setup" finished-at="2026-05-01T13:49:30 IST" duration-ms="703" status="PASS">
+    <test started-at="2026-05-01T16:54:31 IST" name="Default test" finished-at="2026-05-01T16:54:39 IST" duration-ms="7785">
+      <class name="vestedApi.QuoteApi">
+        <test-method is-config="true" signature="setup()[pri:0, instance:vestedApi.QuoteApi@72d6b3ba]" started-at="2026-05-01T16:54:31 IST" name="setup" finished-at="2026-05-01T16:54:32 IST" duration-ms="689" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyGenerateTokenApiWithValidCRNAndAccountNumber()[pri:0, instance:vestedApi.OtpApi@747f281]" started-at="2026-05-01T13:49:30 IST" name="verifyGenerateTokenApiWithValidCRNAndAccountNumber" description="Verify token is generated successfully for valid CRN and account number" finished-at="2026-05-01T13:49:35 IST" duration-ms="5058" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWithValidCRNAndAccountNumber -->
-        <test-method signature="verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber()[pri:0, instance:vestedApi.OtpApi@747f281]" started-at="2026-05-01T13:49:35 IST" name="verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber" description="Verify OTP is sent successfully to customer&#039;s registered mobile number" finished-at="2026-05-01T13:49:38 IST" depends-on-methods="vestedApi.OtpApi.verifyGenerateTokenApiWithValidCRNAndAccountNumber" duration-ms="3154" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber -->
-        <test-method signature="verifyOtpApiWithAlphabeticCharactersInOtpField()[pri:0, instance:vestedApi.OtpApi@747f281]" started-at="2026-05-01T13:49:39 IST" name="verifyOtpApiWithAlphabeticCharactersInOtpField" description="Verify API returns error when OTP contains alphabetic characters" finished-at="2026-05-01T13:49:39 IST" depends-on-methods="vestedApi.OtpApi.verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber" duration-ms="123" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyOtpApiWithAlphabeticCharactersInOtpField -->
-        <test-method signature="verifyOtpApiWithIncorrectOtp()[pri:0, instance:vestedApi.OtpApi@747f281]" started-at="2026-05-01T13:49:39 IST" name="verifyOtpApiWithIncorrectOtp" description="Verify API returns error when incorrect OTP is provided" finished-at="2026-05-01T13:49:39 IST" depends-on-methods="vestedApi.OtpApi.verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber" duration-ms="514" status="FAIL">
+        <test-method signature="verifyGenerateTokenApiReturnsSuccessWithValidRequest()[pri:0, instance:vestedApi.QuoteApi@72d6b3ba]" started-at="2026-05-01T16:54:32 IST" name="verifyGenerateTokenApiReturnsSuccessWithValidRequest" description="Verify token is generated successfully" finished-at="2026-05-01T16:54:38 IST" duration-ms="6479" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [OTP is incorrect] but found [Invalid OTP]]]>
+              <![CDATA[expected [S] but found [F]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [OTP is incorrect] but found [Invalid OTP]
+              <![CDATA[java.lang.AssertionError: expected [S] but found [F]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:656)
 at org.testng.Assert.assertEquals(Assert.java:666)
-at vestedApi.OtpApi.verifyOtpApiWithIncorrectOtp(OtpApi.java:126)
+at vestedApi.QuoteApi.verifyGenerateTokenApiReturnsSuccessWithValidRequest(QuoteApi.java:97)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -68,32 +56,598 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyOtpApiWithIncorrectOtp -->
-        <test-method signature="verifyOtpApiWithLessThanSixDigits()[pri:0, instance:vestedApi.OtpApi@747f281]" started-at="2026-05-01T13:49:39 IST" name="verifyOtpApiWithLessThanSixDigits" description="Verify API returns error when OTP is less than 6 digits" finished-at="2026-05-01T13:49:39 IST" depends-on-methods="vestedApi.OtpApi.verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber" duration-ms="315" status="PASS">
+        </test-method> <!-- verifyGenerateTokenApiReturnsSuccessWithValidRequest -->
+        <test-method signature="verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid()[pri:0, instance:vestedApi.QuoteApi@72d6b3ba]" started-at="2026-05-01T16:54:38 IST" name="verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid" description="Verify Quote API returns error 1007 when auth token is invalid" finished-at="2026-05-01T16:54:39 IST" duration-ms="297" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Technical error] but found [Technical Decline]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Technical error] but found [Technical Decline]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at vestedApi.QuoteApi.verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid(QuoteApi.java:297)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyOtpApiWithLessThanSixDigits -->
-        <test-method signature="verifyOtpApiWithMoreThanSixDigits()[pri:0, instance:vestedApi.OtpApi@747f281]" started-at="2026-05-01T13:49:39 IST" name="verifyOtpApiWithMoreThanSixDigits" description="Verify API returns error when OTP is more than 6 digits" finished-at="2026-05-01T13:49:40 IST" depends-on-methods="vestedApi.OtpApi.verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber" duration-ms="347" status="PASS">
+        </test-method> <!-- verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid -->
+        <test-method signature="verifyQuoteApiWithoutOtpVerification()[pri:0, instance:vestedApi.QuoteApi@72d6b3ba]" started-at="2026-05-01T16:54:39 IST" name="verifyQuoteApiWithoutOtpVerification" description="Verify Quote API fails if OTP is not verified" finished-at="2026-05-01T16:54:39 IST" depends-on-methods="vestedApi.QuoteApi.verifyGenerateTokenApiReturnsSuccessWithValidRequest" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method vestedApi.QuoteApi.verifyQuoteApiWithoutOtpVerification() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyGenerateTokenApiReturnsSuccessWithValidRequest() on instance vestedApi.QuoteApi@72d6b3ba]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method vestedApi.QuoteApi.verifyQuoteApiWithoutOtpVerification() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyGenerateTokenApiReturnsSuccessWithValidRequest() on instance vestedApi.QuoteApi@72d6b3ba]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyOtpApiWithMoreThanSixDigits -->
-        <test-method signature="verifyOtpApiWithoutAuthToken()[pri:0, instance:vestedApi.OtpApi@747f281]" started-at="2026-05-01T13:49:40 IST" name="verifyOtpApiWithoutAuthToken" description="Verify API returns error when authToken is missing" finished-at="2026-05-01T13:49:40 IST" depends-on-methods="vestedApi.OtpApi.verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber" duration-ms="208" status="PASS">
+        </test-method> <!-- verifyQuoteApiWithoutOtpVerification -->
+        <test-method signature="verifySendOtpApiReturnsSuccessWithValidToken()[pri:0, instance:vestedApi.QuoteApi@72d6b3ba]" started-at="2026-05-01T16:54:39 IST" name="verifySendOtpApiReturnsSuccessWithValidToken" description="Verify OTP is sent successfully" finished-at="2026-05-01T16:54:39 IST" depends-on-methods="vestedApi.QuoteApi.verifyGenerateTokenApiReturnsSuccessWithValidRequest" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method vestedApi.QuoteApi.verifySendOtpApiReturnsSuccessWithValidToken() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyGenerateTokenApiReturnsSuccessWithValidRequest() on instance vestedApi.QuoteApi@72d6b3ba]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method vestedApi.QuoteApi.verifySendOtpApiReturnsSuccessWithValidToken() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyGenerateTokenApiReturnsSuccessWithValidRequest() on instance vestedApi.QuoteApi@72d6b3ba]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyOtpApiWithoutAuthToken -->
-        <test-method signature="verifySendOtpApiWithInvalidExpiredAuthToken()[pri:0, instance:vestedApi.OtpApi@747f281]" started-at="2026-05-01T13:49:40 IST" name="verifySendOtpApiWithInvalidExpiredAuthToken" description="Verify API returns error when authToken is invalid or expired" finished-at="2026-05-01T13:49:40 IST" depends-on-methods="vestedApi.OtpApi.verifyGenerateTokenApiWithValidCRNAndAccountNumber" duration-ms="336" status="PASS">
+        </test-method> <!-- verifySendOtpApiReturnsSuccessWithValidToken -->
+        <test-method signature="verifyVerifyOtpApiReturnsSuccessWithValidOtp()[pri:0, instance:vestedApi.QuoteApi@72d6b3ba]" started-at="2026-05-01T16:54:39 IST" name="verifyVerifyOtpApiReturnsSuccessWithValidOtp" description="Verify OTP is validated successfully" finished-at="2026-05-01T16:54:39 IST" depends-on-methods="vestedApi.QuoteApi.verifySendOtpApiReturnsSuccessWithValidToken" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifySendOtpApiReturnsSuccessWithValidToken() on instance vestedApi.QuoteApi@72d6b3ba]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifySendOtpApiReturnsSuccessWithValidToken() on instance vestedApi.QuoteApi@72d6b3ba]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySendOtpApiWithInvalidExpiredAuthToken -->
-        <test-method signature="verifySendOtpApiWithMissingMandatoryCRNField()[pri:0, instance:vestedApi.OtpApi@747f281]" started-at="2026-05-01T13:49:40 IST" name="verifySendOtpApiWithMissingMandatoryCRNField" description="Verify API returns error when CRN is missing in Send OTP request" finished-at="2026-05-01T13:49:41 IST" depends-on-methods="vestedApi.OtpApi.verifyGenerateTokenApiWithValidCRNAndAccountNumber" duration-ms="228" status="PASS">
+        </test-method> <!-- verifyVerifyOtpApiReturnsSuccessWithValidOtp -->
+        <test-method signature="verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsGift()[pri:0, instance:vestedApi.QuoteApi@72d6b3ba]" started-at="2026-05-01T16:54:39 IST" name="verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsGift" description="Verify Get Quote API returns success when sourceOfFunds is Gift" finished-at="2026-05-01T16:54:39 IST" depends-on-methods="vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method vestedApi.QuoteApi.verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsGift() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method vestedApi.QuoteApi.verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsGift() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySendOtpApiWithMissingMandatoryCRNField -->
-        <test-method signature="verifySendOtpApiWithoutAuthTokenInHeader()[pri:0, instance:vestedApi.OtpApi@747f281]" started-at="2026-05-01T13:49:41 IST" name="verifySendOtpApiWithoutAuthTokenInHeader" description="Verify API returns error when authToken is not provided in header" finished-at="2026-05-01T13:49:41 IST" depends-on-methods="vestedApi.OtpApi.verifyGenerateTokenApiWithValidCRNAndAccountNumber" duration-ms="175" status="PASS">
+        </test-method> <!-- verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsGift -->
+        <test-method signature="verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsOwnedFunds()[pri:0, instance:vestedApi.QuoteApi@72d6b3ba]" started-at="2026-05-01T16:54:39 IST" name="verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsOwnedFunds" description="Verify Get Quote API returns success when sourceOfFunds is Owned Funds" finished-at="2026-05-01T16:54:39 IST" depends-on-methods="vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method vestedApi.QuoteApi.verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsOwnedFunds() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method vestedApi.QuoteApi.verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsOwnedFunds() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySendOtpApiWithoutAuthTokenInHeader -->
-      </class> <!-- vestedApi.OtpApi -->
+        </test-method> <!-- verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsOwnedFunds -->
+        <test-method signature="verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp()[pri:0, instance:vestedApi.QuoteApi@72d6b3ba]" started-at="2026-05-01T16:54:39 IST" name="verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp" description="Verify Quote API returns FX rate, charges and TCS after successful OTP verification using valid auth token" finished-at="2026-05-01T16:54:39 IST" depends-on-methods="vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method vestedApi.QuoteApi.verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method vestedApi.QuoteApi.verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp -->
+        <test-method signature="verifyQuoteApiReturnsError1001WhenLrsLimitExceeded()[pri:0, instance:vestedApi.QuoteApi@72d6b3ba]" started-at="2026-05-01T16:54:39 IST" name="verifyQuoteApiReturnsError1001WhenLrsLimitExceeded" description="Verify Quote API returns error 1001 when LRS limit is exceeded" finished-at="2026-05-01T16:54:39 IST" depends-on-methods="vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1001WhenLrsLimitExceeded() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1001WhenLrsLimitExceeded() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyQuoteApiReturnsError1001WhenLrsLimitExceeded -->
+        <test-method signature="verifyQuoteApiReturnsError1002WhenInsufficientBankBalance()[pri:0, instance:vestedApi.QuoteApi@72d6b3ba]" started-at="2026-05-01T16:54:39 IST" name="verifyQuoteApiReturnsError1002WhenInsufficientBankBalance" description="Verify Quote API returns error 1002 when bank balance is insufficient" finished-at="2026-05-01T16:54:39 IST" depends-on-methods="vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1002WhenInsufficientBankBalance() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1002WhenInsufficientBankBalance() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyQuoteApiReturnsError1002WhenInsufficientBankBalance -->
+        <test-method signature="verifyQuoteApiReturnsError1003WhenPurposeMismatch()[pri:0, instance:vestedApi.QuoteApi@72d6b3ba]" started-at="2026-05-01T16:54:39 IST" name="verifyQuoteApiReturnsError1003WhenPurposeMismatch" description="Verify Quote API returns error 1003 when purpose description is invalid" finished-at="2026-05-01T16:54:39 IST" depends-on-methods="vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1003WhenPurposeMismatch() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1003WhenPurposeMismatch() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyQuoteApiReturnsError1003WhenPurposeMismatch -->
+        <test-method signature="verifyQuoteApiReturnsError1008WhenCurrencyCodeExceedsThreeCharacters()[pri:0, instance:vestedApi.QuoteApi@72d6b3ba]" started-at="2026-05-01T16:54:39 IST" name="verifyQuoteApiReturnsError1008WhenCurrencyCodeExceedsThreeCharacters" description="Verify Quote API returns error 1008 when currency code is more than 3 characters" finished-at="2026-05-01T16:54:39 IST" depends-on-methods="vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1008WhenCurrencyCodeExceedsThreeCharacters() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1008WhenCurrencyCodeExceedsThreeCharacters() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyQuoteApiReturnsError1008WhenCurrencyCodeExceedsThreeCharacters -->
+        <test-method signature="verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces()[pri:0, instance:vestedApi.QuoteApi@72d6b3ba]" started-at="2026-05-01T16:54:39 IST" name="verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces" description="Verify Quote API returns error 1008 when fc_amt has more than 2 decimal places" finished-at="2026-05-01T16:54:39 IST" depends-on-methods="vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces -->
+        <test-method signature="verifyQuoteApiReturnsError1008WhenFcAmtIsBlank()[pri:0, instance:vestedApi.QuoteApi@72d6b3ba]" started-at="2026-05-01T16:54:39 IST" name="verifyQuoteApiReturnsError1008WhenFcAmtIsBlank" description="Verify Quote API returns error 1008 when fc_amt is blank" finished-at="2026-05-01T16:54:39 IST" depends-on-methods="vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1008WhenFcAmtIsBlank() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1008WhenFcAmtIsBlank() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyQuoteApiReturnsError1008WhenFcAmtIsBlank -->
+        <test-method signature="verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsBlank()[pri:0, instance:vestedApi.QuoteApi@72d6b3ba]" started-at="2026-05-01T16:54:39 IST" name="verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsBlank" description="Verify Quote API returns error 1008 when purposeDescription is blank" finished-at="2026-05-01T16:54:39 IST" depends-on-methods="vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsBlank() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsBlank() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsBlank -->
+        <test-method signature="verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsMissing()[pri:0, instance:vestedApi.QuoteApi@72d6b3ba]" started-at="2026-05-01T16:54:39 IST" name="verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsMissing" description="Verify Quote API returns error 1008 when purposedescription is missing" finished-at="2026-05-01T16:54:39 IST" depends-on-methods="vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsMissing() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method vestedApi.QuoteApi.verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsMissing() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsMissing -->
+        <test-method signature="verifyQuoteApiReturnsIsDocRequiredNWhenAccountAgeGreaterThanOrEqualToOneYear()[pri:0, instance:vestedApi.QuoteApi@72d6b3ba]" started-at="2026-05-01T16:54:39 IST" name="verifyQuoteApiReturnsIsDocRequiredNWhenAccountAgeGreaterThanOrEqualToOneYear" description="Verify Quote API returns document requirement message when documents are required" finished-at="2026-05-01T16:54:39 IST" depends-on-methods="vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method vestedApi.QuoteApi.verifyQuoteApiReturnsIsDocRequiredNWhenAccountAgeGreaterThanOrEqualToOneYear() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method vestedApi.QuoteApi.verifyQuoteApiReturnsIsDocRequiredNWhenAccountAgeGreaterThanOrEqualToOneYear() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyQuoteApiReturnsIsDocRequiredNWhenAccountAgeGreaterThanOrEqualToOneYear -->
+        <test-method signature="verifyQuoteApiReturnsSuccessWhenPurposeMatchesKrMaster()[pri:0, instance:vestedApi.QuoteApi@72d6b3ba]" started-at="2026-05-01T16:54:39 IST" name="verifyQuoteApiReturnsSuccessWhenPurposeMatchesKrMaster" description="Verify Quote API returns success when purpose matches KR master for predefined beneficiary" finished-at="2026-05-01T16:54:39 IST" depends-on-methods="vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method vestedApi.QuoteApi.verifyQuoteApiReturnsSuccessWhenPurposeMatchesKrMaster() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method vestedApi.QuoteApi.verifyQuoteApiReturnsSuccessWhenPurposeMatchesKrMaster() on instance vestedApi.QuoteApi@72d6b3ba depends on not successfully finished methods 
+[vestedApi.QuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp() on instance vestedApi.QuoteApi@72d6b3ba]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyQuoteApiReturnsSuccessWhenPurposeMatchesKrMaster -->
+      </class> <!-- vestedApi.QuoteApi -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
