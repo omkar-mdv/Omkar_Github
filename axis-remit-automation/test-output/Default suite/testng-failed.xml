@@ -3,13 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="runner.TestRunner">
+      <class name="vestedApi.GenerateTokenApi">
         <methods>
-          <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="1"/>
-          <include name="tearDownClass"/>
+          <include name="verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted"/>
+          <include name="verifyGenerateTokenApiWhenAccNoDoesNotMatchApacInBCIF"/>
+          <include name="setup"/>
+          <include name="verifyGenerateTokenApiWhenCustomerCRNStatusIsSuspended"/>
+          <include name="verifyGenerateTokenApiWhenAccountStatusIsCreditFreeze"/>
+          <include name="verifyGenerateTokenApiWhenSchemeCodeIsNotAllowed"/>
+          <include name="verifyGenerateTokenApiWithInvalidNonExistentCRN"/>
+          <include name="verifyGenerateTokenApiWhenAccountStatusIsTotalFreeze"/>
         </methods>
-      </class> <!-- runner.TestRunner -->
+      </class> <!-- vestedApi.GenerateTokenApi -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

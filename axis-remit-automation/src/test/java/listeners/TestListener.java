@@ -11,52 +11,65 @@ import utils.ExtentManager;
 
 public class TestListener implements ITestListener {
 
-    public static ExtentReports extent = ExtentManager.getInstance();
-    public static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
+	public static ExtentReports extent = ExtentManager.getInstance();
+	public static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
 
-    @Override
-    public void onTestStart(ITestResult result) {
+	@Override
+	public void onTestStart(ITestResult result) {
 
-        String methodName = result.getMethod().getMethodName();
-        String className = result.getTestClass().getRealClass().getSimpleName();
+		String methodName = result.getMethod().getMethodName();
+		String className = result.getTestClass().getRealClass().getSimpleName();
 
-        String formattedName = formatTestName(methodName);
+		String formattedName = formatTestName(methodName);
 
-        ExtentTest extentTest = extent.createTest(formattedName);
+		ExtentTest extentTest = extent.createTest(formattedName);
+		extentTest.assignCategory(className);
+		extentTest.info("Test Class: " + className);
 
-        // Show class name in report
-        extentTest.assignCategory(className);
+		test.set(extentTest);
+	}
 
-        // Optional extra info
-        extentTest.info("Test Class: " + className);
+	@Override
+	public void onTestSuccess(ITestResult result) {
+		if (test.get() != null) {
+			test.get().pass("Test Passed");
+		}
+	}
 
-        test.set(extentTest);
-    }
+	@Override
+	public void onTestFailure(ITestResult result) {
+		if (test.get() != null) {
 
-    @Override
-    public void onTestSuccess(ITestResult result) {
-        test.get().pass("Test Passed");
-    }
+			String errorMessage = result.getThrowable() != null ? result.getThrowable().getMessage() : "Unknown Error";
 
-    @Override
-    public void onTestFailure(ITestResult result) {
-        test.get().fail(result.getThrowable());
-    }
+			test.get().fail("Test Failed");
+			test.get().fail("Reason: " + errorMessage);
+			test.get().fail(result.getThrowable());
+		}
+	}
 
-    @Override
-    public void onFinish(ITestContext context) {
-        extent.flush();
-    }
+	@Override
+	public void onTestSkipped(ITestResult result) {
+		if (test.get() != null) {
+			test.get().skip("Test Skipped");
+		}
+	}
 
-    private String formatTestName(String methodName) {
+	@Override
+	public void onFinish(ITestContext context) {
+		extent.flush();
+	}
 
-        String name = methodName.replaceAll("([a-z])([A-Z])", "$1 $2");
+	private String formatTestName(String methodName) {
 
-        name = name.replace("Api", "API");
-        name = name.replace("Otp", "OTP");
-        name = name.replace("Crn", "CRN");
-        name = name.replace("Acc", "Account");
+		String name = methodName.replaceAll("([a-z])([A-Z])", "$1 $2");
 
-        return name.substring(0, 1).toUpperCase() + name.substring(1);
-    }
+		name = name.replace("Api", "API");
+		name = name.replace("Otp", "OTP");
+		name = name.replace("Crn", "CRN");
+		name = name.replace("Fx", "FX");
+		name = name.replace("Tcs", "TCS");
+
+		return name.substring(0, 1).toUpperCase() + name.substring(1);
+	}
 }

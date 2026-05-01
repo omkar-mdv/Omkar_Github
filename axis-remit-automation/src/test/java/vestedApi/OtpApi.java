@@ -24,8 +24,8 @@ public class OtpApi extends ApiBaseTest {
 
 		Map<String, Object> requestBody = new HashMap<>();
 		requestBody.put("requestId", requestId);
-		requestBody.put("crn", "100759017");
-		requestBody.put("accNo", "7150157172");
+		requestBody.put("crn", "1000100644");
+		requestBody.put("accNo", "0050303922");
 		requestBody.put("clientCode", "VESTED");
 		requestBody.put("groupId", "KB");
 		requestBody.put("channel", "WEB");

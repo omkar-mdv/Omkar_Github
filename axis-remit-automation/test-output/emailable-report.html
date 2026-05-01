@@ -8,34 +8,279 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">API Suite</th></tr>
-<tr><td><a href="#t0">API Tests</a></td><td class="num">9</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">19,768</td><td></td><td></td></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">17</td><td class="num">0</td><td class="num">0</td><td class="num attn">7</td><td class="num">36,479</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">API Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">API Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">vestedApi.GenerateTokenApi</td><td><a href="#m0">verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted</a></td><td rowspan="1">1776172924878</td><td rowspan="1">1494</td></tr><tr class="failedeven"><td><a href="#m1">verifyGenerateTokenApiWithCRNBelowMinimumLength</a></td><td rowspan="1">1776172926947</td><td rowspan="1">1708</td></tr><tr class="failedeven"><td><a href="#m2">verifyGenerateTokenApiWithInvalidNonExistentCRN</a></td><td rowspan="1">1776172928971</td><td rowspan="1">2138</td></tr><tr><th colspan="4">API Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="9">vestedApi.GenerateTokenApi</td><td><a href="#m3">verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi</a></td><td rowspan="1">1776172915014</td><td rowspan="1">8041</td></tr><tr class="passedeven"><td><a href="#m4">verifyGenerateTokenApiWhenAadharLinkIsN</a></td><td rowspan="1">1776172923148</td><td rowspan="1">1721</td></tr><tr class="passedeven"><td><a href="#m5">verifyGenerateTokenApiWithAlphabeticCharactersInCRN</a></td><td rowspan="1">1776172926381</td><td rowspan="1">241</td></tr><tr class="passedeven"><td><a href="#m6">verifyGenerateTokenApiWithCRNAboveMaximumLength</a></td><td rowspan="1">1776172926625</td><td rowspan="1">303</td></tr><tr class="passedeven"><td><a href="#m7">verifyGenerateTokenApiWithEmptyCRN</a></td><td rowspan="1">1776172928660</td><td rowspan="1">308</td></tr><tr class="passedeven"><td><a href="#m8">verifyGenerateTokenApiWithMissingClientCode</a></td><td rowspan="1">1776172931113</td><td rowspan="1">201</td></tr><tr class="passedeven"><td><a href="#m9">verifyGenerateTokenApiWithMissingMandatoryFieldAccNo</a></td><td rowspan="1">1776172931318</td><td rowspan="1">266</td></tr><tr class="passedeven"><td><a href="#m10">verifyGenerateTokenApiWithSpecialCharactersInAccNo</a></td><td rowspan="1">1776172931591</td><td rowspan="1">247</td></tr><tr class="passedeven"><td><a href="#m11">verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer</a></td><td rowspan="1">1776172931845</td><td rowspan="1">1935</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="7">vestedApi.GenerateTokenApi</td><td><a href="#m0">verifyGenerateTokenApiWhenAccNoDoesNotMatchApacInBCIF</a></td><td rowspan="1">1777621395345</td><td rowspan="1">1304</td></tr><tr class="failedeven"><td><a href="#m1">verifyGenerateTokenApiWhenAccountStatusIsCreditFreeze</a></td><td rowspan="1">1777621396665</td><td rowspan="1">1776</td></tr><tr class="failedeven"><td><a href="#m2">verifyGenerateTokenApiWhenAccountStatusIsTotalFreeze</a></td><td rowspan="1">1777621401926</td><td rowspan="1">2250</td></tr><tr class="failedeven"><td><a href="#m3">verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted</a></td><td rowspan="1">1777621404184</td><td rowspan="1">1445</td></tr><tr class="failedeven"><td><a href="#m4">verifyGenerateTokenApiWhenCustomerCRNStatusIsSuspended</a></td><td rowspan="1">1777621405645</td><td rowspan="1">1867</td></tr><tr class="failedeven"><td><a href="#m5">verifyGenerateTokenApiWhenSchemeCodeIsNotAllowed</a></td><td rowspan="1">1777621412797</td><td rowspan="1">3551</td></tr><tr class="failedeven"><td><a href="#m6">verifyGenerateTokenApiWithInvalidNonExistentCRN</a></td><td rowspan="1">1777621419034</td><td rowspan="1">544</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="17">vestedApi.GenerateTokenApi</td><td><a href="#m7">verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi</a></td><td rowspan="1">1777621386143</td><td rowspan="1">6856</td></tr><tr class="passedeven"><td><a href="#m8">verifyGenerateTokenApiWhenAadharLinkIsN</a></td><td rowspan="1">1777621393169</td><td rowspan="1">2171</td></tr><tr class="passedeven"><td><a href="#m9">verifyGenerateTokenApiWhenAccountStatusIsDebitFreeze</a></td><td rowspan="1">1777621398452</td><td rowspan="1">1620</td></tr><tr class="passedeven"><td><a href="#m10">verifyGenerateTokenApiWhenAccountStatusIsDormant</a></td><td rowspan="1">1777621400085</td><td rowspan="1">1838</td></tr><tr class="passedeven"><td><a href="#m11">verifyGenerateTokenApiWhenITTypeIsNotAllowed</a></td><td rowspan="1">1777621407517</td><td rowspan="1">1736</td></tr><tr class="passedeven"><td><a href="#m12">verifyGenerateTokenApiWhenPartyTypeIsCorporate</a></td><td rowspan="1">1777621409256</td><td rowspan="1">1665</td></tr><tr class="passedeven"><td><a href="#m13">verifyGenerateTokenApiWhenRelationTypeIsNotAllowed</a></td><td rowspan="1">1777621410938</td><td rowspan="1">1855</td></tr><tr class="passedeven"><td><a href="#m14">verifyGenerateTokenApiWithAlphabeticCharactersInCRN</a></td><td rowspan="1">1777621416354</td><td rowspan="1">153</td></tr><tr class="passedeven"><td><a href="#m15">verifyGenerateTokenApiWithCRNAboveMaximumLength</a></td><td rowspan="1">1777621416520</td><td rowspan="1">199</td></tr><tr class="passedeven"><td><a href="#m16">verifyGenerateTokenApiWithCrnAboveMaximumLength</a></td><td rowspan="1">1777621416722</td><td rowspan="1">207</td></tr><tr class="passedeven"><td><a href="#m17">verifyGenerateTokenApiWithCrnAtMaximumLength</a></td><td rowspan="1">1777621416935</td><td rowspan="1">1700</td></tr><tr class="passedeven"><td><a href="#m18">verifyGenerateTokenApiWithCrnAtMinimumLengthFourDigits</a></td><td rowspan="1">1777621418637</td><td rowspan="1">197</td></tr><tr class="passedeven"><td><a href="#m19">verifyGenerateTokenApiWithEmptyCRN</a></td><td rowspan="1">1777621418848</td><td rowspan="1">182</td></tr><tr class="passedeven"><td><a href="#m20">verifyGenerateTokenApiWithMissingClientCode</a></td><td rowspan="1">1777621419582</td><td rowspan="1">158</td></tr><tr class="passedeven"><td><a href="#m21">verifyGenerateTokenApiWithMissingMandatoryFieldAccNo</a></td><td rowspan="1">1777621419745</td><td rowspan="1">222</td></tr><tr class="passedeven"><td><a href="#m22">verifyGenerateTokenApiWithSpecialCharactersInAccNo</a></td><td rowspan="1">1777621419985</td><td rowspan="1">177</td></tr><tr class="passedeven"><td><a href="#m23">verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer</a></td><td rowspan="1">1777621420164</td><td rowspan="1">1640</td></tr></tbody>
 </table>
-<h2>API Tests</h2><h3 id="m0">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [ERR7002] but found [ERR002]
-	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:39)
-	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted(GenerateTokenApi.java:163)
+<h2>Default test</h2><h3 id="m0">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWhenAccNoDoesNotMatchApacInBCIF</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [ERR7007] but found [ERR002]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:48)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenAccNoDoesNotMatchApacInBCIF(GenerateTokenApi.java:334)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWithCRNBelowMinimumLength</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [ERR1008] but found [ERR7007]
-	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:39)
-	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithCRNBelowMinimumLength(GenerateTokenApi.java:173)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWhenAccountStatusIsCreditFreeze</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [ERR7010] but found [ERR7007]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:48)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenAccountStatusIsCreditFreeze(GenerateTokenApi.java:347)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWithInvalidNonExistentCRN</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [ERR7002] but found [ERR002]
-	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:39)
-	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithInvalidNonExistentCRN(GenerateTokenApi.java:183)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWhenAccountStatusIsTotalFreeze</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [ERR7010] but found [ERR7007]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:48)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenAccountStatusIsTotalFreeze(GenerateTokenApi.java:360)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">vestedApi.GenerateTokenApi#verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWhenAadharLinkIsN</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWithAlphabeticCharactersInCRN</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWithCRNAboveMaximumLength</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWithEmptyCRN</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWithMissingClientCode</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWithMissingMandatoryFieldAccNo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWithSpecialCharactersInAccNo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [ERR7002] but found [ERR002]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:48)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted(GenerateTokenApi.java:192)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWhenCustomerCRNStatusIsSuspended</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [F] but found [S]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:47)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenCustomerCRNStatusIsSuspended(GenerateTokenApi.java:321)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWhenSchemeCodeIsNotAllowed</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [F] but found [S]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:47)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenSchemeCodeIsNotAllowed(GenerateTokenApi.java:373)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWithInvalidNonExistentCRN</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [ERR7002] but found [ERR002]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:48)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithInvalidNonExistentCRN(GenerateTokenApi.java:204)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">vestedApi.GenerateTokenApi#verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWhenAadharLinkIsN</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWhenAccountStatusIsDebitFreeze</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWhenAccountStatusIsDormant</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWhenITTypeIsNotAllowed</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWhenPartyTypeIsCorporate</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWhenRelationTypeIsNotAllowed</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWithAlphabeticCharactersInCRN</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWithCRNAboveMaximumLength</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWithCrnAboveMaximumLength</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWithCrnAtMaximumLength</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWithCrnAtMinimumLengthFourDigits</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m19">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWithEmptyCRN</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m20">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWithMissingClientCode</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m21">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWithMissingMandatoryFieldAccNo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m22">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWithSpecialCharactersInAccNo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m23">vestedApi.GenerateTokenApi#verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
