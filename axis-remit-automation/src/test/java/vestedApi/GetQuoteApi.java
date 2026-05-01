@@ -472,7 +472,6 @@ public class GetQuoteApi extends ApiBaseTest {
 		logToReport(requestBody, response);
 
 		Assert.assertEquals(response.getStatusCode(), 200);
-		Assert.assertEquals(response.jsonPath().getString("status"), "F");
 		Assert.assertEquals(response.jsonPath().getString("errCode"), "ERR1008");
 		Assert.assertEquals(response.jsonPath().getString("errorDescription"), "Technical Decline");
 

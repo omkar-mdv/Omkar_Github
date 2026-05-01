@@ -1,31 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [API Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+  </listeners>
+  <test thread-count="5" name="Generate Token API(failed)">
     <classes>
-      <class name="vestedApi.QuoteApi">
+      <class name="vestedApi.GenerateTokenApi">
         <methods>
-          <include name="verifyQuoteApiReturnsError1001WhenLrsLimitExceeded"/>
-          <include name="verifyQuoteApiReturnsError1003WhenPurposeMismatch"/>
-          <include name="verifyQuoteApiReturnsError1008WhenCurrencyCodeExceedsThreeCharacters"/>
+          <include name="verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted"/>
+          <include name="verifyGenerateTokenApiWhenAccNoDoesNotMatchApacInBCIF"/>
           <include name="setup"/>
-          <include name="verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp"/>
-          <include name="verifyQuoteApiReturnsIsDocRequiredNWhenAccountAgeGreaterThanOrEqualToOneYear"/>
-          <include name="verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsOwnedFunds"/>
-          <include name="verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsMissing"/>
-          <include name="verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsBlank"/>
-          <include name="verifyGenerateTokenApiReturnsSuccessWithValidRequest"/>
-          <include name="verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces"/>
+          <include name="verifyGenerateTokenApiWhenCustomerCRNStatusIsSuspended"/>
+          <include name="verifyGenerateTokenApiWhenAccountStatusIsCreditFreeze"/>
+          <include name="verifyGenerateTokenApiWhenSchemeCodeIsNotAllowed"/>
+          <include name="verifyGenerateTokenApiWithInvalidNonExistentCRN"/>
+          <include name="verifyGenerateTokenApiWhenAccountStatusIsTotalFreeze"/>
+        </methods>
+      </class> <!-- vestedApi.GenerateTokenApi -->
+    </classes>
+  </test> <!-- Generate Token API(failed) -->
+  <test thread-count="5" name="OTP APIs(failed)">
+    <classes>
+      <class name="vestedApi.SendVerifyOtpApi">
+        <methods>
+          <include name="setup"/>
+          <include name="verifyOtpApiWithIncorrectOtp"/>
+          <include name="verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber"/>
+          <include name="verifyGenerateTokenApiWithValidCRNAndAccountNumber"/>
+        </methods>
+      </class> <!-- vestedApi.SendVerifyOtpApi -->
+    </classes>
+  </test> <!-- OTP APIs(failed) -->
+  <test thread-count="5" name="Get Quote API(failed)">
+    <classes>
+      <class name="vestedApi.GetQuoteApi">
+        <methods>
           <include name="verifyVerifyOtpApiReturnsSuccessWithValidOtp"/>
-          <include name="verifyQuoteApiReturnsError1002WhenInsufficientBankBalance"/>
+          <include name="verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces"/>
+          <include name="setup"/>
+          <include name="verifyGenerateTokenApiReturnsSuccessWithValidRequest"/>
           <include name="verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid"/>
           <include name="verifySendOtpApiReturnsSuccessWithValidToken"/>
-          <include name="verifyQuoteApiWithoutOtpVerification"/>
-          <include name="verifyQuoteApiReturnsSuccessWhenPurposeMatchesKrMaster"/>
-          <include name="verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsGift"/>
-          <include name="verifyQuoteApiReturnsError1008WhenFcAmtIsBlank"/>
+          <include name="verifyQuoteApiReturnsError1002WhenInsufficientBankBalance"/>
+          <include name="verifyQuoteApiReturnsError1001WhenLrsLimitExceeded"/>
+          <include name="verifyQuoteApiReturnsError1003WhenPurposeMismatch"/>
         </methods>
-      </class> <!-- vestedApi.QuoteApi -->
+      </class> <!-- vestedApi.GetQuoteApi -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Get Quote API(failed) -->
+</suite> <!-- Failed suite [API Suite] -->

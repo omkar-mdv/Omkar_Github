@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>TestNG:  Default test</title>
+<title>TestNG:  Generate Token API</title>
 <link href="../testng.css" rel="stylesheet" type="text/css" />
 <link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
@@ -53,13 +53,13 @@ function toggleAllBoxes() {
 
 </head>
 <body>
-<h2 align='center'>Default test</h2><table border='1' align="center">
+<h2 align='center'>Generate Token API</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>13/5/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>17/7/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri May 01 17:07:57 IST 2026</td>
+<td>Started on:</td><td>Fri May 01 17:15:17 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>76 seconds (76941 ms)</td>
+<tr><td>Total time:</td><td>75 seconds (75437 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,50 +76,21 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1003WhenPurposeMismatch()'><b>verifyQuoteApiReturnsError1003WhenPurposeMismatch</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns error 1003 when purpose description is invalid</td>
-<td><div><pre>java.lang.AssertionError: expected [Purpose mismatch] but found [Business Decline]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1003WhenPurposeMismatch(GetQuoteApi.java:254)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenAccountStatusIsTotalFreeze()'><b>verifyGenerateTokenApiWhenAccountStatusIsTotalFreeze</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API returns business decline when account status is Total Freeze (T)</td>
+<td><div><pre>java.lang.AssertionError: expected [ERR7010] but found [ERR7007]
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:48)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenAccountStatusIsTotalFreeze(GenerateTokenApi.java:360)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace304406966", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace304406966'><pre>java.lang.AssertionError: expected [Purpose mismatch] but found [Business Decline]
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace208300334", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace208300334'><pre>java.lang.AssertionError: expected [ERR7010] but found [ERR7007]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1003WhenPurposeMismatch(GetQuoteApi.java:254)
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:48)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenAccountStatusIsTotalFreeze(GenerateTokenApi.java:360)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -147,53 +118,24 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>0</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
+<td>18</td>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
 <tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1001WhenLrsLimitExceeded()'><b>verifyQuoteApiReturnsError1001WhenLrsLimitExceeded</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns error 1001 when LRS limit is exceeded</td>
-<td><div><pre>java.lang.AssertionError: expected [ERR1001] but found [ERR1005]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1001WhenLrsLimitExceeded(GetQuoteApi.java:231)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenSchemeCodeIsNotAllowed()'><b>verifyGenerateTokenApiWhenSchemeCodeIsNotAllowed</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API returns business decline when SchemeCode is not in allowed list</td>
+<td><div><pre>java.lang.AssertionError: expected [F] but found [S]
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:47)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenSchemeCodeIsNotAllowed(GenerateTokenApi.java:373)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace922887623", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace922887623'><pre>java.lang.AssertionError: expected [ERR1001] but found [ERR1005]
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace812666757", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace812666757'><pre>java.lang.AssertionError: expected [F] but found [S]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1001WhenLrsLimitExceeded(GetQuoteApi.java:231)
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:47)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenSchemeCodeIsNotAllowed(GenerateTokenApi.java:373)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -221,53 +163,24 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>4</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
+<td>2</td>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
 <tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces()'><b>verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns error 1008 when fc_amt has more than 2 decimal places</td>
-<td><div><pre>java.lang.AssertionError: expected [ERR1008] but found []
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces(GetQuoteApi.java:475)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenCustomerCRNStatusIsSuspended()'><b>verifyGenerateTokenApiWhenCustomerCRNStatusIsSuspended</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API returns business decline when customer CRN status is Suspended</td>
+<td><div><pre>java.lang.AssertionError: expected [F] but found [S]
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:47)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenCustomerCRNStatusIsSuspended(GenerateTokenApi.java:321)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1383942363", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1383942363'><pre>java.lang.AssertionError: expected [ERR1008] but found []
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace131146793", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace131146793'><pre>java.lang.AssertionError: expected [F] but found [S]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces(GetQuoteApi.java:475)
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:47)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenCustomerCRNStatusIsSuspended(GenerateTokenApi.java:321)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -295,53 +208,24 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>7</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
+<td>2</td>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
 <tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid()'><b>verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns error 1007 when auth token is invalid</td>
-<td><div><pre>java.lang.AssertionError: expected [Technical error] but found [Technical Decline]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid(GetQuoteApi.java:297)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenAccountStatusIsCreditFreeze()'><b>verifyGenerateTokenApiWhenAccountStatusIsCreditFreeze</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API returns business decline when account status is Credit Freeze (C)</td>
+<td><div><pre>java.lang.AssertionError: expected [ERR7010] but found [ERR7007]
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:48)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenAccountStatusIsCreditFreeze(GenerateTokenApi.java:347)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace140163428", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace140163428'><pre>java.lang.AssertionError: expected [Technical error] but found [Technical Decline]
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace345865414", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace345865414'><pre>java.lang.AssertionError: expected [ERR7010] but found [ERR7007]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid(GetQuoteApi.java:297)
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:48)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenAccountStatusIsCreditFreeze(GenerateTokenApi.java:347)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -369,53 +253,24 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>0</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
+<td>2</td>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
 <tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1002WhenInsufficientBankBalance()'><b>verifyQuoteApiReturnsError1002WhenInsufficientBankBalance</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns error 1002 when bank balance is insufficient</td>
-<td><div><pre>java.lang.AssertionError: expected [Insufficient funds] but found [Business Decline]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1002WhenInsufficientBankBalance(GetQuoteApi.java:276)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted()'><b>verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API returns business decline when customer CRN is blacklisted</td>
+<td><div><pre>java.lang.AssertionError: expected [ERR7002] but found [ERR002]
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:48)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted(GenerateTokenApi.java:192)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1114221271", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1114221271'><pre>java.lang.AssertionError: expected [Insufficient funds] but found [Business Decline]
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace937777177", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace937777177'><pre>java.lang.AssertionError: expected [ERR7002] but found [ERR002]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1002WhenInsufficientBankBalance(GetQuoteApi.java:276)
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:48)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted(GenerateTokenApi.java:192)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -443,8 +298,98 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>7</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
+<td>11</td>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
+<tr>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithInvalidNonExistentCRN()'><b>verifyGenerateTokenApiWithInvalidNonExistentCRN</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API returns business decline for non-existent CRN</td>
+<td><div><pre>java.lang.AssertionError: expected [ERR7002] but found [ERR002]
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:48)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithInvalidNonExistentCRN(GenerateTokenApi.java:204)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace962507619", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace962507619'><pre>java.lang.AssertionError: expected [ERR7002] but found [ERR002]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:48)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithInvalidNonExistentCRN(GenerateTokenApi.java:204)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>1</td>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
+<tr>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenAccNoDoesNotMatchApacInBCIF()'><b>verifyGenerateTokenApiWhenAccNoDoesNotMatchApacInBCIF</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API returns business decline when account number does not match any APAC in BCIF response</td>
+<td><div><pre>java.lang.AssertionError: expected [ERR7007] but found [ERR002]
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:48)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenAccNoDoesNotMatchApacInBCIF(GenerateTokenApi.java:334)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace383882703", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace383882703'><pre>java.lang.AssertionError: expected [ERR7007] but found [ERR002]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:48)
+	at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenAccNoDoesNotMatchApacInBCIF(GenerateTokenApi.java:334)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>6</td>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -455,70 +400,90 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiWithoutOtpVerification()'><b>verifyQuoteApiWithoutOtpVerification</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API fails if OTP is not verified</td>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithCrnAtMaximumLength()'><b>verifyGenerateTokenApiWithCrnAtMaximumLength</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API works successfully when CRN is at maximum allowed length</td>
+<td></td>
+<td>2</td>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
+<tr>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi()'><b>verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API successfully validates customer via CRN and Account Inquiry APIs</td>
+<td></td>
+<td>6</td>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
+<tr>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenAccountStatusIsDebitFreeze()'><b>verifyGenerateTokenApiWhenAccountStatusIsDebitFreeze</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API returns business decline when account status is Debit Freeze</td>
+<td></td>
+<td>1</td>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
+<tr>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenPartyTypeIsCorporate()'><b>verifyGenerateTokenApiWhenPartyTypeIsCorporate</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API returns business decline when party type is corporate</td>
+<td></td>
+<td>1</td>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
+<tr>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer()'><b>verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify token is generated successfully for valid CRN and account number (Eligible ETB customer)</td>
+<td></td>
+<td>2</td>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
+<tr>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenRelationTypeIsNotAllowed()'><b>verifyGenerateTokenApiWhenRelationTypeIsNotAllowed</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API returns business decline when relation type is not allowed</td>
+<td></td>
+<td>2</td>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
+<tr>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenAadharLinkIsN()'><b>verifyGenerateTokenApiWhenAadharLinkIsN</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API returns business decline when Aadhaar link status is 'N'</td>
+<td></td>
+<td>5</td>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
+<tr>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithCRNAboveMaximumLength()'><b>verifyGenerateTokenApiWithCRNAboveMaximumLength</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API returns error when CRN exceeds maximum length</td>
 <td></td>
 <td>0</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
 <tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1008WhenCurrencyCodeExceedsThreeCharacters()'><b>verifyQuoteApiReturnsError1008WhenCurrencyCodeExceedsThreeCharacters</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns error 1008 when currency code is more than 3 characters</td>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenAccountStatusIsDormant()'><b>verifyGenerateTokenApiWhenAccountStatusIsDormant</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API returns business decline when account status is Dormant</td>
+<td></td>
+<td>1</td>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
+<tr>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithCrnAboveMaximumLength()'><b>verifyGenerateTokenApiWithCrnAboveMaximumLength</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API returns failure when CRN exceeds maximum allowed length (16 digits)</td>
 <td></td>
 <td>0</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
 <tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsBlank()'><b>verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsBlank</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns error 1008 when purposeDescription is blank</td>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithSpecialCharactersInAccNo()'><b>verifyGenerateTokenApiWithSpecialCharactersInAccNo</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API returns error when account number contains special characters</td>
 <td></td>
 <td>0</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
 <tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiReturnsSuccessWhenPurposeMatchesKrMaster()'><b>verifyQuoteApiReturnsSuccessWhenPurposeMatchesKrMaster</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns success when purpose matches KR master for predefined beneficiary</td>
-<td></td>
-<td>7</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
-<tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1008WhenFcAmtIsBlank()'><b>verifyQuoteApiReturnsError1008WhenFcAmtIsBlank</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns error 1008 when fc_amt is blank</td>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithMissingClientCode()'><b>verifyGenerateTokenApiWithMissingClientCode</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API returns error when client code is missing</td>
 <td></td>
 <td>0</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
 <tr>
-<td title='vestedApi.GetQuoteApi.verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsOwnedFunds()'><b>verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsOwnedFunds</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Get Quote API returns success when sourceOfFunds is Owned Funds</td>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenITTypeIsNotAllowed()'><b>verifyGenerateTokenApiWhenITTypeIsNotAllowed</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API returns business decline when IT type is not allowed</td>
 <td></td>
-<td>7</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
+<td>2</td>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
 <tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiReturnsIsDocRequiredNWhenAccountAgeGreaterThanOrEqualToOneYear()'><b>verifyQuoteApiReturnsIsDocRequiredNWhenAccountAgeGreaterThanOrEqualToOneYear</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns document requirement message when documents are required</td>
-<td></td>
-<td>9</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
-<tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsMissing()'><b>verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsMissing</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns error 1008 when purposedescription is missing</td>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithEmptyCRN()'><b>verifyGenerateTokenApiWithEmptyCRN</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API returns error when CRN is empty</td>
 <td></td>
 <td>0</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
 <tr>
-<td title='vestedApi.GetQuoteApi.verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp()'><b>verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns FX rate, charges and TCS after successful OTP verification using valid auth token</td>
-<td></td>
-<td>7</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
-<tr>
-<td title='vestedApi.GetQuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp()'><b>verifyVerifyOtpApiReturnsSuccessWithValidOtp</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify OTP is validated successfully</td>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithCrnAtMinimumLengthFourDigits()'><b>verifyGenerateTokenApiWithCrnAtMinimumLengthFourDigits</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API returns failure when CRN is exactly 4 digits (minimum length boundary case)</td>
 <td></td>
 <td>0</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
 <tr>
-<td title='vestedApi.GetQuoteApi.verifySendOtpApiReturnsSuccessWithValidToken()'><b>verifySendOtpApiReturnsSuccessWithValidToken</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify OTP is sent successfully</td>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithAlphabeticCharactersInCRN()'><b>verifyGenerateTokenApiWithAlphabeticCharactersInCRN</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API returns error when CRN contains alphabetic characters</td>
 <td></td>
-<td>4</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
+<td>0</td>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
 <tr>
-<td title='vestedApi.GetQuoteApi.verifyGenerateTokenApiReturnsSuccessWithValidRequest()'><b>verifyGenerateTokenApiReturnsSuccessWithValidRequest</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify token is generated successfully</td>
+<td title='vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithMissingMandatoryFieldAccNo()'><b>verifyGenerateTokenApiWithMissingMandatoryFieldAccNo</b><br>Test class: vestedApi.GenerateTokenApi<br>Test method: Verify API returns error when account number is missing</td>
 <td></td>
-<td>7</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
-<tr>
-<td title='vestedApi.GetQuoteApi.verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsGift()'><b>verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsGift</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Get Quote API returns success when sourceOfFunds is Gift</td>
-<td></td>
-<td>9</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
+<td>0</td>
+<td>vestedApi.GenerateTokenApi@4149c063</td></tr>
 </table><p>
 </body>
 </html>
