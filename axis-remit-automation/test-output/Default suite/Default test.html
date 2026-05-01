@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>13/5/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri May 01 17:07:57 IST 2026</td>
+<td>Started on:</td><td>Fri May 01 18:03:52 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>76 seconds (76941 ms)</td>
+<tr><td>Total time:</td><td>43 seconds (43674 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,385 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1003WhenPurposeMismatch()'><b>verifyQuoteApiReturnsError1003WhenPurposeMismatch</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns error 1003 when purpose description is invalid</td>
-<td><div><pre>java.lang.AssertionError: expected [Purpose mismatch] but found [Business Decline]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1003WhenPurposeMismatch(GetQuoteApi.java:254)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace304406966", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace304406966'><pre>java.lang.AssertionError: expected [Purpose mismatch] but found [Business Decline]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1003WhenPurposeMismatch(GetQuoteApi.java:254)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
-<tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1001WhenLrsLimitExceeded()'><b>verifyQuoteApiReturnsError1001WhenLrsLimitExceeded</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns error 1001 when LRS limit is exceeded</td>
-<td><div><pre>java.lang.AssertionError: expected [ERR1001] but found [ERR1005]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1001WhenLrsLimitExceeded(GetQuoteApi.java:231)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace922887623", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace922887623'><pre>java.lang.AssertionError: expected [ERR1001] but found [ERR1005]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1001WhenLrsLimitExceeded(GetQuoteApi.java:231)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>4</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
-<tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces()'><b>verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns error 1008 when fc_amt has more than 2 decimal places</td>
-<td><div><pre>java.lang.AssertionError: expected [ERR1008] but found []
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces(GetQuoteApi.java:475)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1383942363", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1383942363'><pre>java.lang.AssertionError: expected [ERR1008] but found []
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces(GetQuoteApi.java:475)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>7</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
-<tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid()'><b>verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns error 1007 when auth token is invalid</td>
-<td><div><pre>java.lang.AssertionError: expected [Technical error] but found [Technical Decline]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid(GetQuoteApi.java:297)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace140163428", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace140163428'><pre>java.lang.AssertionError: expected [Technical error] but found [Technical Decline]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid(GetQuoteApi.java:297)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
-<tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1002WhenInsufficientBankBalance()'><b>verifyQuoteApiReturnsError1002WhenInsufficientBankBalance</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns error 1002 when bank balance is insufficient</td>
-<td><div><pre>java.lang.AssertionError: expected [Insufficient funds] but found [Business Decline]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1002WhenInsufficientBankBalance(GetQuoteApi.java:276)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1114221271", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1114221271'><pre>java.lang.AssertionError: expected [Insufficient funds] but found [Business Decline]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1002WhenInsufficientBankBalance(GetQuoteApi.java:276)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>7</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -455,70 +76,30 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiWithoutOtpVerification()'><b>verifyQuoteApiWithoutOtpVerification</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API fails if OTP is not verified</td>
+<td title='vestedApi.BookTransactionApi.verifyGenerateTokenApiReturnsSuccessWithValidRequest()'><b>verifyGenerateTokenApiReturnsSuccessWithValidRequest</b><br>Test class: vestedApi.BookTransactionApi<br>Test method: Verify token is generated successfully</td>
+<td></td>
+<td>6</td>
+<td>vestedApi.BookTransactionApi@68878f6d</td></tr>
+<tr>
+<td title='vestedApi.BookTransactionApi.verifyBookTransactionApiReturnsSuccessWithValidQuoteData()'><b>verifyBookTransactionApiReturnsSuccessWithValidQuoteData</b><br>Test class: vestedApi.BookTransactionApi<br>Test method: Verify Book Transaction API returns success using quote response data</td>
+<td></td>
+<td>13</td>
+<td>vestedApi.BookTransactionApi@68878f6d</td></tr>
+<tr>
+<td title='vestedApi.BookTransactionApi.verifySendOtpApiReturnsSuccessWithValidToken()'><b>verifySendOtpApiReturnsSuccessWithValidToken</b><br>Test class: vestedApi.BookTransactionApi<br>Test method: Verify OTP is sent successfully</td>
+<td></td>
+<td>6</td>
+<td>vestedApi.BookTransactionApi@68878f6d</td></tr>
+<tr>
+<td title='vestedApi.BookTransactionApi.verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp()'><b>verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp</b><br>Test class: vestedApi.BookTransactionApi<br>Test method: Verify Quote API returns success and capture values for Book Transaction</td>
+<td></td>
+<td>15</td>
+<td>vestedApi.BookTransactionApi@68878f6d</td></tr>
+<tr>
+<td title='vestedApi.BookTransactionApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp()'><b>verifyVerifyOtpApiReturnsSuccessWithValidOtp</b><br>Test class: vestedApi.BookTransactionApi<br>Test method: Verify OTP is validated successfully</td>
 <td></td>
 <td>0</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
-<tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1008WhenCurrencyCodeExceedsThreeCharacters()'><b>verifyQuoteApiReturnsError1008WhenCurrencyCodeExceedsThreeCharacters</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns error 1008 when currency code is more than 3 characters</td>
-<td></td>
-<td>0</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
-<tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsBlank()'><b>verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsBlank</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns error 1008 when purposeDescription is blank</td>
-<td></td>
-<td>0</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
-<tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiReturnsSuccessWhenPurposeMatchesKrMaster()'><b>verifyQuoteApiReturnsSuccessWhenPurposeMatchesKrMaster</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns success when purpose matches KR master for predefined beneficiary</td>
-<td></td>
-<td>7</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
-<tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1008WhenFcAmtIsBlank()'><b>verifyQuoteApiReturnsError1008WhenFcAmtIsBlank</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns error 1008 when fc_amt is blank</td>
-<td></td>
-<td>0</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
-<tr>
-<td title='vestedApi.GetQuoteApi.verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsOwnedFunds()'><b>verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsOwnedFunds</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Get Quote API returns success when sourceOfFunds is Owned Funds</td>
-<td></td>
-<td>7</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
-<tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiReturnsIsDocRequiredNWhenAccountAgeGreaterThanOrEqualToOneYear()'><b>verifyQuoteApiReturnsIsDocRequiredNWhenAccountAgeGreaterThanOrEqualToOneYear</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns document requirement message when documents are required</td>
-<td></td>
-<td>9</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
-<tr>
-<td title='vestedApi.GetQuoteApi.verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsMissing()'><b>verifyQuoteApiReturnsError1008WhenPurposeDescriptionIsMissing</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns error 1008 when purposedescription is missing</td>
-<td></td>
-<td>0</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
-<tr>
-<td title='vestedApi.GetQuoteApi.verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp()'><b>verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Quote API returns FX rate, charges and TCS after successful OTP verification using valid auth token</td>
-<td></td>
-<td>7</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
-<tr>
-<td title='vestedApi.GetQuoteApi.verifyVerifyOtpApiReturnsSuccessWithValidOtp()'><b>verifyVerifyOtpApiReturnsSuccessWithValidOtp</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify OTP is validated successfully</td>
-<td></td>
-<td>0</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
-<tr>
-<td title='vestedApi.GetQuoteApi.verifySendOtpApiReturnsSuccessWithValidToken()'><b>verifySendOtpApiReturnsSuccessWithValidToken</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify OTP is sent successfully</td>
-<td></td>
-<td>4</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
-<tr>
-<td title='vestedApi.GetQuoteApi.verifyGenerateTokenApiReturnsSuccessWithValidRequest()'><b>verifyGenerateTokenApiReturnsSuccessWithValidRequest</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify token is generated successfully</td>
-<td></td>
-<td>7</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
-<tr>
-<td title='vestedApi.GetQuoteApi.verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsGift()'><b>verifyGetQuoteApiReturnsSuccessWhenSourceOfFundsIsGift</b><br>Test class: vestedApi.GetQuoteApi<br>Test method: Verify Get Quote API returns success when sourceOfFunds is Gift</td>
-<td></td>
-<td>9</td>
-<td>vestedApi.GetQuoteApi@4e0ae11f</td></tr>
+<td>vestedApi.BookTransactionApi@68878f6d</td></tr>
 </table><p>
 </body>
 </html>

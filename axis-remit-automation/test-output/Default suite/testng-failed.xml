@@ -3,19 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="vestedApi.GetQuoteApi">
+      <class name="vestedApi.BookTransactionApi">
         <methods>
-          <include name="verifyVerifyOtpApiReturnsSuccessWithValidOtp"/>
-          <include name="verifyQuoteApiReturnsError1008WhenFcAmtHasMoreThanTwoDecimalPlaces"/>
-          <include name="setup"/>
-          <include name="verifyGenerateTokenApiReturnsSuccessWithValidRequest"/>
-          <include name="verifyQuoteApiReturnsError1007WhenAuthTokenIsInvalid"/>
           <include name="verifySendOtpApiReturnsSuccessWithValidToken"/>
-          <include name="verifyQuoteApiReturnsError1002WhenInsufficientBankBalance"/>
-          <include name="verifyQuoteApiReturnsError1001WhenLrsLimitExceeded"/>
-          <include name="verifyQuoteApiReturnsError1003WhenPurposeMismatch"/>
+          <include name="setup"/>
+          <include name="verifyVerifyOtpApiReturnsSuccessWithValidOtp"/>
+          <include name="verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp"/>
+          <include name="verifyGenerateTokenApiReturnsSuccessWithValidRequest"/>
+          <include name="verifyBookTransactionApiReturnsSuccessWithValidQuoteData"/>
         </methods>
-      </class> <!-- vestedApi.GetQuoteApi -->
+      </class> <!-- vestedApi.BookTransactionApi -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
