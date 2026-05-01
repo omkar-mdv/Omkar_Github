@@ -3,18 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="vestedApi.GenerateTokenApi">
+      <class name="vestedApi.OtpApi">
         <methods>
-          <include name="verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted"/>
-          <include name="verifyGenerateTokenApiWhenAccNoDoesNotMatchApacInBCIF"/>
+          <include name="verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber"/>
+          <include name="verifyOtpApiWithIncorrectOtp"/>
           <include name="setup"/>
-          <include name="verifyGenerateTokenApiWhenCustomerCRNStatusIsSuspended"/>
-          <include name="verifyGenerateTokenApiWhenAccountStatusIsCreditFreeze"/>
-          <include name="verifyGenerateTokenApiWhenSchemeCodeIsNotAllowed"/>
-          <include name="verifyGenerateTokenApiWithInvalidNonExistentCRN"/>
-          <include name="verifyGenerateTokenApiWhenAccountStatusIsTotalFreeze"/>
+          <include name="verifyGenerateTokenApiWithValidCRNAndAccountNumber"/>
         </methods>
-      </class> <!-- vestedApi.GenerateTokenApi -->
+      </class> <!-- vestedApi.OtpApi -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

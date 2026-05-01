@@ -62,14 +62,25 @@ public class TestListener implements ITestListener {
 
 	private String formatTestName(String methodName) {
 
-		String name = methodName.replaceAll("([a-z])([A-Z])", "$1 $2");
+		// Step 1: Split camel case (handles CRNAnd, APIResponse, etc.)
+		String[] words = methodName.replaceAll("([a-z])([A-Z])", "$1 $2").replaceAll("([A-Z]+)([A-Z][a-z])", "$1 $2")
+				.split(" ");
 
-		name = name.replace("Api", "API");
-		name = name.replace("Otp", "OTP");
-		name = name.replace("Crn", "CRN");
-		name = name.replace("Fx", "FX");
-		name = name.replace("Tcs", "TCS");
+		StringBuilder formatted = new StringBuilder();
 
-		return name.substring(0, 1).toUpperCase() + name.substring(1);
+		for (String word : words) {
+
+			// Step 2: If already uppercase OR short word → treat as abbreviation
+			if (word.equals(word.toUpperCase()) || word.length() <= 3) {
+				formatted.append(word.toUpperCase());
+			} else {
+				// Normal word → capitalize first letter
+				formatted.append(word.substring(0, 1).toUpperCase()).append(word.substring(1).toLowerCase());
+			}
+
+			formatted.append(" ");
+		}
+
+		return formatted.toString().trim();
 	}
 }

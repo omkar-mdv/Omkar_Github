@@ -1,39 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="24" passed="17" failed="7" skipped="0">
+<testng-results ignored="0" total="10" passed="9" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-01T13:13:05 IST" name="Default suite" finished-at="2026-05-01T13:13:41 IST" duration-ms="36479">
+  <suite started-at="2026-05-01T13:49:29 IST" name="Default suite" finished-at="2026-05-01T13:49:41 IST" duration-ms="11382">
     <groups>
     </groups>
-    <test started-at="2026-05-01T13:13:05 IST" name="Default test" finished-at="2026-05-01T13:13:41 IST" duration-ms="36479">
-      <class name="vestedApi.GenerateTokenApi">
-        <test-method is-config="true" signature="setup()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:05 IST" name="setup" finished-at="2026-05-01T13:13:06 IST" duration-ms="758" status="PASS">
+    <test started-at="2026-05-01T13:49:29 IST" name="Default test" finished-at="2026-05-01T13:49:41 IST" duration-ms="11382">
+      <class name="vestedApi.OtpApi">
+        <test-method is-config="true" signature="setup()[pri:0, instance:vestedApi.OtpApi@747f281]" started-at="2026-05-01T13:49:29 IST" name="setup" finished-at="2026-05-01T13:49:30 IST" duration-ms="703" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:06 IST" name="verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi" description="Verify API successfully validates customer via CRN and Account Inquiry APIs" finished-at="2026-05-01T13:13:12 IST" duration-ms="6856" status="PASS">
+        <test-method signature="verifyGenerateTokenApiWithValidCRNAndAccountNumber()[pri:0, instance:vestedApi.OtpApi@747f281]" started-at="2026-05-01T13:49:30 IST" name="verifyGenerateTokenApiWithValidCRNAndAccountNumber" description="Verify token is generated successfully for valid CRN and account number" finished-at="2026-05-01T13:49:35 IST" duration-ms="5058" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi -->
-        <test-method signature="verifyGenerateTokenApiWhenAadharLinkIsN()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:13 IST" name="verifyGenerateTokenApiWhenAadharLinkIsN" description="Verify API returns business decline when Aadhaar link status is &#039;N&#039;" finished-at="2026-05-01T13:13:15 IST" duration-ms="2171" status="PASS">
+        </test-method> <!-- verifyGenerateTokenApiWithValidCRNAndAccountNumber -->
+        <test-method signature="verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber()[pri:0, instance:vestedApi.OtpApi@747f281]" started-at="2026-05-01T13:49:35 IST" name="verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber" description="Verify OTP is sent successfully to customer&#039;s registered mobile number" finished-at="2026-05-01T13:49:38 IST" depends-on-methods="vestedApi.OtpApi.verifyGenerateTokenApiWithValidCRNAndAccountNumber" duration-ms="3154" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWhenAadharLinkIsN -->
-        <test-method signature="verifyGenerateTokenApiWhenAccNoDoesNotMatchApacInBCIF()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:15 IST" name="verifyGenerateTokenApiWhenAccNoDoesNotMatchApacInBCIF" description="Verify API returns business decline when account number does not match any APAC in BCIF response" finished-at="2026-05-01T13:13:16 IST" duration-ms="1304" status="FAIL">
+        </test-method> <!-- verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber -->
+        <test-method signature="verifyOtpApiWithAlphabeticCharactersInOtpField()[pri:0, instance:vestedApi.OtpApi@747f281]" started-at="2026-05-01T13:49:39 IST" name="verifyOtpApiWithAlphabeticCharactersInOtpField" description="Verify API returns error when OTP contains alphabetic characters" finished-at="2026-05-01T13:49:39 IST" depends-on-methods="vestedApi.OtpApi.verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber" duration-ms="123" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyOtpApiWithAlphabeticCharactersInOtpField -->
+        <test-method signature="verifyOtpApiWithIncorrectOtp()[pri:0, instance:vestedApi.OtpApi@747f281]" started-at="2026-05-01T13:49:39 IST" name="verifyOtpApiWithIncorrectOtp" description="Verify API returns error when incorrect OTP is provided" finished-at="2026-05-01T13:49:39 IST" depends-on-methods="vestedApi.OtpApi.verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber" duration-ms="514" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [ERR7007] but found [ERR002]]]>
+              <![CDATA[expected [OTP is incorrect] but found [Invalid OTP]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [ERR7007] but found [ERR002]
+              <![CDATA[java.lang.AssertionError: expected [OTP is incorrect] but found [Invalid OTP]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:656)
 at org.testng.Assert.assertEquals(Assert.java:666)
-at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:48)
-at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenAccNoDoesNotMatchApacInBCIF(GenerateTokenApi.java:334)
+at vestedApi.OtpApi.verifyOtpApiWithIncorrectOtp(OtpApi.java:126)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -65,350 +68,32 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWhenAccNoDoesNotMatchApacInBCIF -->
-        <test-method signature="verifyGenerateTokenApiWhenAccountStatusIsCreditFreeze()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:16 IST" name="verifyGenerateTokenApiWhenAccountStatusIsCreditFreeze" description="Verify API returns business decline when account status is Credit Freeze (C)" finished-at="2026-05-01T13:13:18 IST" duration-ms="1776" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [ERR7010] but found [ERR7007]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [ERR7010] but found [ERR7007]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:48)
-at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenAccountStatusIsCreditFreeze(GenerateTokenApi.java:347)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- verifyOtpApiWithIncorrectOtp -->
+        <test-method signature="verifyOtpApiWithLessThanSixDigits()[pri:0, instance:vestedApi.OtpApi@747f281]" started-at="2026-05-01T13:49:39 IST" name="verifyOtpApiWithLessThanSixDigits" description="Verify API returns error when OTP is less than 6 digits" finished-at="2026-05-01T13:49:39 IST" depends-on-methods="vestedApi.OtpApi.verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber" duration-ms="315" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWhenAccountStatusIsCreditFreeze -->
-        <test-method signature="verifyGenerateTokenApiWhenAccountStatusIsDebitFreeze()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:18 IST" name="verifyGenerateTokenApiWhenAccountStatusIsDebitFreeze" description="Verify API returns business decline when account status is Debit Freeze" finished-at="2026-05-01T13:13:20 IST" duration-ms="1620" status="PASS">
+        </test-method> <!-- verifyOtpApiWithLessThanSixDigits -->
+        <test-method signature="verifyOtpApiWithMoreThanSixDigits()[pri:0, instance:vestedApi.OtpApi@747f281]" started-at="2026-05-01T13:49:39 IST" name="verifyOtpApiWithMoreThanSixDigits" description="Verify API returns error when OTP is more than 6 digits" finished-at="2026-05-01T13:49:40 IST" depends-on-methods="vestedApi.OtpApi.verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber" duration-ms="347" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWhenAccountStatusIsDebitFreeze -->
-        <test-method signature="verifyGenerateTokenApiWhenAccountStatusIsDormant()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:20 IST" name="verifyGenerateTokenApiWhenAccountStatusIsDormant" description="Verify API returns business decline when account status is Dormant" finished-at="2026-05-01T13:13:21 IST" duration-ms="1838" status="PASS">
+        </test-method> <!-- verifyOtpApiWithMoreThanSixDigits -->
+        <test-method signature="verifyOtpApiWithoutAuthToken()[pri:0, instance:vestedApi.OtpApi@747f281]" started-at="2026-05-01T13:49:40 IST" name="verifyOtpApiWithoutAuthToken" description="Verify API returns error when authToken is missing" finished-at="2026-05-01T13:49:40 IST" depends-on-methods="vestedApi.OtpApi.verifySendOtpApiTriggersSmsToCustomerRegisteredMobileNumber" duration-ms="208" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWhenAccountStatusIsDormant -->
-        <test-method signature="verifyGenerateTokenApiWhenAccountStatusIsTotalFreeze()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:21 IST" name="verifyGenerateTokenApiWhenAccountStatusIsTotalFreeze" description="Verify API returns business decline when account status is Total Freeze (T)" finished-at="2026-05-01T13:13:24 IST" duration-ms="2250" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [ERR7010] but found [ERR7007]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [ERR7010] but found [ERR7007]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:48)
-at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenAccountStatusIsTotalFreeze(GenerateTokenApi.java:360)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- verifyOtpApiWithoutAuthToken -->
+        <test-method signature="verifySendOtpApiWithInvalidExpiredAuthToken()[pri:0, instance:vestedApi.OtpApi@747f281]" started-at="2026-05-01T13:49:40 IST" name="verifySendOtpApiWithInvalidExpiredAuthToken" description="Verify API returns error when authToken is invalid or expired" finished-at="2026-05-01T13:49:40 IST" depends-on-methods="vestedApi.OtpApi.verifyGenerateTokenApiWithValidCRNAndAccountNumber" duration-ms="336" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWhenAccountStatusIsTotalFreeze -->
-        <test-method signature="verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:24 IST" name="verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted" description="Verify API returns business decline when customer CRN is blacklisted" finished-at="2026-05-01T13:13:25 IST" duration-ms="1445" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [ERR7002] but found [ERR002]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [ERR7002] but found [ERR002]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:48)
-at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted(GenerateTokenApi.java:192)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- verifySendOtpApiWithInvalidExpiredAuthToken -->
+        <test-method signature="verifySendOtpApiWithMissingMandatoryCRNField()[pri:0, instance:vestedApi.OtpApi@747f281]" started-at="2026-05-01T13:49:40 IST" name="verifySendOtpApiWithMissingMandatoryCRNField" description="Verify API returns error when CRN is missing in Send OTP request" finished-at="2026-05-01T13:49:41 IST" depends-on-methods="vestedApi.OtpApi.verifyGenerateTokenApiWithValidCRNAndAccountNumber" duration-ms="228" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted -->
-        <test-method signature="verifyGenerateTokenApiWhenCustomerCRNStatusIsSuspended()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:25 IST" name="verifyGenerateTokenApiWhenCustomerCRNStatusIsSuspended" description="Verify API returns business decline when customer CRN status is Suspended" finished-at="2026-05-01T13:13:27 IST" duration-ms="1867" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [F] but found [S]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [F] but found [S]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:47)
-at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenCustomerCRNStatusIsSuspended(GenerateTokenApi.java:321)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- verifySendOtpApiWithMissingMandatoryCRNField -->
+        <test-method signature="verifySendOtpApiWithoutAuthTokenInHeader()[pri:0, instance:vestedApi.OtpApi@747f281]" started-at="2026-05-01T13:49:41 IST" name="verifySendOtpApiWithoutAuthTokenInHeader" description="Verify API returns error when authToken is not provided in header" finished-at="2026-05-01T13:49:41 IST" depends-on-methods="vestedApi.OtpApi.verifyGenerateTokenApiWithValidCRNAndAccountNumber" duration-ms="175" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWhenCustomerCRNStatusIsSuspended -->
-        <test-method signature="verifyGenerateTokenApiWhenITTypeIsNotAllowed()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:27 IST" name="verifyGenerateTokenApiWhenITTypeIsNotAllowed" description="Verify API returns business decline when IT type is not allowed" finished-at="2026-05-01T13:13:29 IST" duration-ms="1736" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWhenITTypeIsNotAllowed -->
-        <test-method signature="verifyGenerateTokenApiWhenPartyTypeIsCorporate()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:29 IST" name="verifyGenerateTokenApiWhenPartyTypeIsCorporate" description="Verify API returns business decline when party type is corporate" finished-at="2026-05-01T13:13:30 IST" duration-ms="1665" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWhenPartyTypeIsCorporate -->
-        <test-method signature="verifyGenerateTokenApiWhenRelationTypeIsNotAllowed()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:30 IST" name="verifyGenerateTokenApiWhenRelationTypeIsNotAllowed" description="Verify API returns business decline when relation type is not allowed" finished-at="2026-05-01T13:13:32 IST" duration-ms="1855" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWhenRelationTypeIsNotAllowed -->
-        <test-method signature="verifyGenerateTokenApiWhenSchemeCodeIsNotAllowed()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:32 IST" name="verifyGenerateTokenApiWhenSchemeCodeIsNotAllowed" description="Verify API returns business decline when SchemeCode is not in allowed list" finished-at="2026-05-01T13:13:36 IST" duration-ms="3551" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [F] but found [S]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [F] but found [S]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:47)
-at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWhenSchemeCodeIsNotAllowed(GenerateTokenApi.java:373)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWhenSchemeCodeIsNotAllowed -->
-        <test-method signature="verifyGenerateTokenApiWithAlphabeticCharactersInCRN()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:36 IST" name="verifyGenerateTokenApiWithAlphabeticCharactersInCRN" description="Verify API returns error when CRN contains alphabetic characters" finished-at="2026-05-01T13:13:36 IST" duration-ms="153" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWithAlphabeticCharactersInCRN -->
-        <test-method signature="verifyGenerateTokenApiWithCRNAboveMaximumLength()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:36 IST" name="verifyGenerateTokenApiWithCRNAboveMaximumLength" description="Verify API returns error when CRN exceeds maximum length" finished-at="2026-05-01T13:13:36 IST" duration-ms="199" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWithCRNAboveMaximumLength -->
-        <test-method signature="verifyGenerateTokenApiWithCrnAboveMaximumLength()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:36 IST" name="verifyGenerateTokenApiWithCrnAboveMaximumLength" description="Verify API returns failure when CRN exceeds maximum allowed length (16 digits)" finished-at="2026-05-01T13:13:36 IST" duration-ms="207" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWithCrnAboveMaximumLength -->
-        <test-method signature="verifyGenerateTokenApiWithCrnAtMaximumLength()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:36 IST" name="verifyGenerateTokenApiWithCrnAtMaximumLength" description="Verify API works successfully when CRN is at maximum allowed length" finished-at="2026-05-01T13:13:38 IST" duration-ms="1700" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWithCrnAtMaximumLength -->
-        <test-method signature="verifyGenerateTokenApiWithCrnAtMinimumLengthFourDigits()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:38 IST" name="verifyGenerateTokenApiWithCrnAtMinimumLengthFourDigits" description="Verify API returns failure when CRN is exactly 4 digits (minimum length boundary case)" finished-at="2026-05-01T13:13:38 IST" duration-ms="197" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWithCrnAtMinimumLengthFourDigits -->
-        <test-method signature="verifyGenerateTokenApiWithEmptyCRN()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:38 IST" name="verifyGenerateTokenApiWithEmptyCRN" description="Verify API returns error when CRN is empty" finished-at="2026-05-01T13:13:39 IST" duration-ms="182" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWithEmptyCRN -->
-        <test-method signature="verifyGenerateTokenApiWithInvalidNonExistentCRN()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:39 IST" name="verifyGenerateTokenApiWithInvalidNonExistentCRN" description="Verify API returns business decline for non-existent CRN" finished-at="2026-05-01T13:13:39 IST" duration-ms="544" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [ERR7002] but found [ERR002]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [ERR7002] but found [ERR002]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at vestedApi.GenerateTokenApi.validateFailureResponse(GenerateTokenApi.java:48)
-at vestedApi.GenerateTokenApi.verifyGenerateTokenApiWithInvalidNonExistentCRN(GenerateTokenApi.java:204)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWithInvalidNonExistentCRN -->
-        <test-method signature="verifyGenerateTokenApiWithMissingClientCode()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:39 IST" name="verifyGenerateTokenApiWithMissingClientCode" description="Verify API returns error when client code is missing" finished-at="2026-05-01T13:13:39 IST" duration-ms="158" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWithMissingClientCode -->
-        <test-method signature="verifyGenerateTokenApiWithMissingMandatoryFieldAccNo()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:39 IST" name="verifyGenerateTokenApiWithMissingMandatoryFieldAccNo" description="Verify API returns error when account number is missing" finished-at="2026-05-01T13:13:39 IST" duration-ms="222" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWithMissingMandatoryFieldAccNo -->
-        <test-method signature="verifyGenerateTokenApiWithSpecialCharactersInAccNo()[pri:0, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:39 IST" name="verifyGenerateTokenApiWithSpecialCharactersInAccNo" description="Verify API returns error when account number contains special characters" finished-at="2026-05-01T13:13:40 IST" duration-ms="177" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWithSpecialCharactersInAccNo -->
-        <test-method signature="verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer()[pri:1, instance:vestedApi.GenerateTokenApi@51bf5add]" started-at="2026-05-01T13:13:40 IST" name="verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer" description="Verify token is generated successfully for valid CRN and account number (Eligible ETB customer)" finished-at="2026-05-01T13:13:41 IST" duration-ms="1640" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer -->
-      </class> <!-- vestedApi.GenerateTokenApi -->
+        </test-method> <!-- verifySendOtpApiWithoutAuthTokenInHeader -->
+      </class> <!-- vestedApi.OtpApi -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
