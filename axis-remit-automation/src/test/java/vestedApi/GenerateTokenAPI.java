@@ -12,7 +12,7 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 
 @Listeners(listeners.TestListener.class)
-public class GenerateTokenApi extends ApiBaseTest {
+public class GenerateTokenAPI extends ApiBaseTest {
 
 	public static String generatedToken;
 

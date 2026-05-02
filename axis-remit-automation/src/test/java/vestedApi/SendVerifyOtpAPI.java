@@ -13,7 +13,7 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 
 @Listeners(TestListener.class)
-public class SendVerifyOtpApi extends ApiBaseTest {
+public class SendVerifyOtpAPI extends ApiBaseTest {
 
     public static String generatedToken;
     public static String requestId;

@@ -13,7 +13,7 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 
 @Listeners(TestListener.class)
-public class BookTransactionApi extends ApiBaseTest {
+public class BookTransactionAPI extends ApiBaseTest {
 
 	public static String generatedToken;
 	public static String requestId;
