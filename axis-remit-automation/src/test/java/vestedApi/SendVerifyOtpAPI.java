@@ -261,7 +261,9 @@ public class SendVerifyOtpAPI extends ApiBaseTest {
 
         logToReport(requestBody, response);
 
-        Assert.assertEquals(response.jsonPath().getString("errCode"), "ERR1007");
+        Assert.assertEquals(response.jsonPath().getString("status"), "F");
+		Assert.assertEquals(response.jsonPath().getString("errCode"), "ERR1007");
+		Assert.assertEquals(response.jsonPath().getString("errorDescription"), "Technical error");
     }
 
     /**
@@ -279,6 +281,8 @@ public class SendVerifyOtpAPI extends ApiBaseTest {
 
         logToReport(requestBody, response);
 
-        Assert.assertEquals(response.jsonPath().getString("errCode"), "ERR1007");
+        Assert.assertEquals(response.jsonPath().getString("status"), "F");
+		Assert.assertEquals(response.jsonPath().getString("errCode"), "ERR1007");
+		Assert.assertEquals(response.jsonPath().getString("errorDescription"), "Technical error");
     }
 }

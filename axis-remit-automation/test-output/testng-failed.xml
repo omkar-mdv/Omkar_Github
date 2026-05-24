@@ -3,16 +3,25 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="vestedApi.BookTransactionApi">
+      <class name="vestedApi.UploadDocumentAPI">
         <methods>
-          <include name="verifySendOtpApiReturnsSuccessWithValidToken"/>
+          <include name="verifyBookTransactionApiReturnsSuccessWithValidData"/>
           <include name="setup"/>
-          <include name="verifyVerifyOtpApiReturnsSuccessWithValidOtp"/>
+          <include name="verifyUploadDocumentApiReturnsError1008WhenFileSizeExceedsLimit"/>
+          <include name="verifyUploadDocumentApiReturnsError1007WhenAuthTokenIsInvalid"/>
+          <include name="verifySendOtpApiReturnsSuccessWithValidToken"/>
+          <include name="verifyUploadDocumentApiReturnsErrorForUnsupportedFile"/>
+          <include name="verifyUploadDocumentApiReturnsSuccessWhenSourceOfFundsIsOwnedFundsAndCustomerConsentIsY"/>
+          <include name="verifyUploadDocumentApiReturnsError1008WhenCustomerConsentIsInvalid"/>
+          <include name="verifyUploadDocumentApiReturnsSuccessWhenSourceOfFundsIsGiftAndCustomerConsentIsY"/>
           <include name="verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp"/>
+          <include name="verifyUploadDocumentApiReturnsSuccessWhenFileSizeIsWithinLimit"/>
           <include name="verifyGenerateTokenApiReturnsSuccessWithValidRequest"/>
-          <include name="verifyBookTransactionApiReturnsSuccessWithValidQuoteData"/>
+          <include name="verifyUploadDocumentApiReturnsSuccessWhenSourceOfFundsIsOwnedFundsAndCustomerConsentIsN"/>
+          <include name="verifyVerifyOtpApiReturnsSuccessWithValidOtp"/>
+          <include name="verifyUploadDocumentApiReturnsBusinessDeclineWhenSourceOfFundsIsGiftAndCustomerConsentIsN"/>
         </methods>
-      </class> <!-- vestedApi.BookTransactionApi -->
+      </class> <!-- vestedApi.UploadDocumentAPI -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

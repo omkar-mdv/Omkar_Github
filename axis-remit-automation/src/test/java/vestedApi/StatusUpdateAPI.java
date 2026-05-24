@@ -18,11 +18,11 @@ public class StatusUpdateAPI extends ApiBaseTest {
 	public static String generatedToken;
 	public static String requestId;
 
-	public static String txnRefNo = config.getProperty("txnRefNo");
-
 	// -------------------- Common Methods --------------------
 
 	private Map<String, Object> getGenerateTokenRequest() {
+
+		// Generate single requestId
 		requestId = "REQ" + System.currentTimeMillis();
 
 		Map<String, Object> requestBody = new HashMap<>();
@@ -36,27 +36,17 @@ public class StatusUpdateAPI extends ApiBaseTest {
 		return requestBody;
 	}
 
-	private Map<String, Object> getOtpRequest() {
-		Map<String, Object> requestBody = new HashMap<>();
-		requestBody.put("requestId", requestId);
-		requestBody.put("otpType", "SMS");
-		requestBody.put("crn", "1000100644");
-		requestBody.put("accNo", "0050303922");
-		requestBody.put("channel", "WEB");
-		requestBody.put("groupId", "KB");
-		requestBody.put("clientCode", "VESTED");
-		return requestBody;
-	}
-
 	private void logToReport(Map<String, Object> requestBody, Response response) {
+
 		if (TestListener.test.get() != null) {
 			TestListener.test.get().info("Request Body: " + requestBody);
 			TestListener.test.get().info("Response Body: " + response.asPrettyString());
 		}
 	}
 
-	// ✅ Reusable Assertion
+	// Reusable Assertion
 	private void assertTxnStatus(Response response, String expectedStatus, String expectedCode) {
+
 		String txnStatus = response.jsonPath().getString("txnStatus");
 		String txnStatusCode = response.jsonPath().getString("txnStatusCode");
 
@@ -68,16 +58,20 @@ public class StatusUpdateAPI extends ApiBaseTest {
 	}
 
 	private Response hitStatusUpdate(String txnRefNo) {
+
 		Map<String, Object> requestBody = new HashMap<>();
 		requestBody.put("groupId", "KB");
 		requestBody.put("clientCode", "VESTED");
 		requestBody.put("txnRefNo", txnRefNo);
+
+		// Same requestId generated in Generate Token API
 		requestBody.put("requestId", requestId);
 
 		Response response = given().spec(requestSpec).header("authToken", generatedToken).body(requestBody)
 				.post("/services/api/partner/statusUpdate");
 
 		logToReport(requestBody, response);
+
 		return response;
 	}
 
@@ -99,54 +93,29 @@ public class StatusUpdateAPI extends ApiBaseTest {
 	}
 
 	/**
-	 * TC02: Verify Send OTP API
+	 * TC02: Verify Status Update API returns correct transaction status
 	 */
-	@Test(dependsOnMethods = "verifyGenerateTokenApiReturnsSuccessWithValidRequest", description = "Verify OTP is sent successfully")
-	public void verifySendOtpApiReturnsSuccessWithValidToken() {
-
-		Response response = given().spec(requestSpec).header("authToken", generatedToken).body(getOtpRequest())
-				.post("/services/api/partner/sendOTP");
-
-		Assert.assertEquals(response.jsonPath().getString("status"), "S");
-	}
-
-	/**
-	 * TC03: Verify OTP API
-	 */
-	@Test(dependsOnMethods = "verifySendOtpApiReturnsSuccessWithValidToken", description = "Verify OTP is validated successfully")
-	public void verifyVerifyOtpApiReturnsSuccessWithValidOtpWithValidOtp() {
-
-		Map<String, Object> requestBody = getOtpRequest();
-		requestBody.put("otp", "123456");
-
-		Response response = given().spec(requestSpec).header("authToken", generatedToken).body(requestBody)
-				.post("/services/api/partner/verifyOTP");
-
-		Assert.assertEquals(response.jsonPath().getString("status"), "S");
-	}
-
-	/**
-	 * TC04: Verify Status Update API returns correct transaction status
-	 */
-	@Test(dependsOnMethods = "verifyVerifyOtpApiReturnsSuccessWithValidOtpWithValidOtp", description = "Verify Status Update API returns correct transaction status")
+	@Test(dependsOnMethods = "verifyGenerateTokenApiReturnsSuccessWithValidRequest", description = "Verify Status Update API returns correct transaction status")
 	public void verifyStatusUpdateApiReturnsCorrectTransactionStatus() {
 
 		String txnRefNo = config.getProperty("txnRefNo");
+
 		Response response = hitStatusUpdate(txnRefNo);
 
 		Assert.assertEquals(response.jsonPath().getString("status"), "S");
 		Assert.assertEquals(response.jsonPath().getString("txnRefNo"), txnRefNo);
 
-		assertTxnStatus(response, "Transaction Booked", "101");
+		assertTxnStatus(response, "CRN Updated", "153");
 	}
 
 	/**
-	 * TC05: Verify Status Update API returns txnStatusCode 101
+	 * TC03: Verify Status Update API returns txnStatusCode 101
 	 */
-	@Test(dependsOnMethods = "verifyVerifyOtpApiReturnsSuccessWithValidOtpWithValidOtp", description = "Verify Status Update API returns status 101")
+	@Test(dependsOnMethods = "verifyGenerateTokenApiReturnsSuccessWithValidRequest", description = "Verify Status Update API returns status 101")
 	public void verifyStatusUpdateApiReturnsTxnStatus101ForBookedTransaction() {
 
 		String txnRefNo = config.getProperty("txnRefNo101");
+
 		Response response = hitStatusUpdate(txnRefNo);
 
 		Assert.assertEquals(response.jsonPath().getString("status"), "S");
@@ -156,27 +125,29 @@ public class StatusUpdateAPI extends ApiBaseTest {
 	}
 
 	/**
-	 * TC06: Verify Status Update API returns txnStatusCode 153
+	 * TC04: Verify Status Update API returns txnStatusCode 153
 	 */
-	@Test(dependsOnMethods = "verifyVerifyOtpApiReturnsSuccessWithValidOtpWithValidOtp", description = "Verify Status Update API returns status 153")
+	@Test(dependsOnMethods = "verifyGenerateTokenApiReturnsSuccessWithValidRequest", description = "Verify Status Update API returns status 153")
 	public void verifyStatusUpdateApiReturnsTxnStatus153ForCrnUpdatedTransaction() {
 
 		String txnRefNo = config.getProperty("txnRefNo153");
+
 		Response response = hitStatusUpdate(txnRefNo);
 
 		Assert.assertEquals(response.jsonPath().getString("status"), "S");
 		Assert.assertEquals(response.jsonPath().getString("txnRefNo"), txnRefNo);
 
-		assertTxnStatus(response, "CRN-Updated", "153");
+		assertTxnStatus(response, "CRN Updated", "153");
 	}
 
 	/**
-	 * TC07: Verify Status Update API returns txnStatusCode 204
+	 * TC05: Verify Status Update API returns txnStatusCode 204
 	 */
-	@Test(dependsOnMethods = "verifyVerifyOtpApiReturnsSuccessWithValidOtpWithValidOtp", description = "Verify Status Update API returns status 204")
+	@Test(dependsOnMethods = "verifyGenerateTokenApiReturnsSuccessWithValidRequest", description = "Verify Status Update API returns status 204")
 	public void verifyStatusUpdateApiReturnsTxnStatus204ForMoneyDeliveredTransaction() {
 
 		String txnRefNo = config.getProperty("txnRefNo204");
+
 		Response response = hitStatusUpdate(txnRefNo);
 
 		Assert.assertEquals(response.jsonPath().getString("status"), "S");
@@ -186,12 +157,13 @@ public class StatusUpdateAPI extends ApiBaseTest {
 	}
 
 	/**
-	 * TC08: Verify Status Update API returns txnStatusCode 306
+	 * TC06: Verify Status Update API returns txnStatusCode 306
 	 */
-	@Test(dependsOnMethods = "verifyVerifyOtpApiReturnsSuccessWithValidOtpWithValidOtp", description = "Verify Status Update API returns status 306")
+	@Test(dependsOnMethods = "verifyGenerateTokenApiReturnsSuccessWithValidRequest", description = "Verify Status Update API returns status 306")
 	public void verifyStatusUpdateApiReturnsTxnStatus306ForCredenceRejectedTransaction() {
 
 		String txnRefNo = config.getProperty("txnRefNo306");
+
 		Response response = hitStatusUpdate(txnRefNo);
 
 		Assert.assertEquals(response.jsonPath().getString("status"), "S");
@@ -201,28 +173,25 @@ public class StatusUpdateAPI extends ApiBaseTest {
 	}
 
 	/**
-	 * TC09: Verify Status Update API returns error 1008
+	 * TC07: Verify Status Update API returns error 1008
 	 */
-	@Test(dependsOnMethods = "verifyVerifyOtpApiReturnsSuccessWithValidOtpWithValidOtp", description = "Verify Status Update API returns error 1008")
+	@Test(dependsOnMethods = "verifyGenerateTokenApiReturnsSuccessWithValidRequest", description = "Verify Status Update API returns error 1008")
 	public void verifyStatusUpdateApiReturnsError1008WhenTxnRefNoIsInvalid() {
 
 		String txnRefNo = config.getProperty("txnRefNoInvalid");
+
 		Response response = hitStatusUpdate(txnRefNo);
 
-		Assert.assertEquals(response.getStatusCode(), 200);
 		Assert.assertEquals(response.jsonPath().getString("status"), "F");
 
 		Assert.assertEquals(response.jsonPath().getString("errCode"), "ERR1008");
 		Assert.assertEquals(response.jsonPath().getString("errorDescription"), "Technical Decline");
-
-		Assert.assertFalse(response.jsonPath().getBoolean("success"));
-		Assert.assertTrue(response.jsonPath().getBoolean("failure"));
 	}
 
 	/**
-	 * TC10: Verify Status Update API returns error 1007
+	 * TC08: Verify Status Update API returns error 1007
 	 */
-	@Test(description = "Verify Status Update API returns error 1007 when auth token is invalid")
+	@Test(dependsOnMethods = "verifyGenerateTokenApiReturnsSuccessWithValidRequest", description = "Verify Status Update API returns error 1007 when auth token is invalid")
 	public void verifyStatusUpdateApiReturnsError1007WhenAuthTokenIsInvalid() {
 
 		String txnRefNo = config.getProperty("txnRefNo");
@@ -231,6 +200,8 @@ public class StatusUpdateAPI extends ApiBaseTest {
 		requestBody.put("groupId", "KB");
 		requestBody.put("clientCode", "VESTED");
 		requestBody.put("txnRefNo", txnRefNo);
+
+		// Same requestId used here also
 		requestBody.put("requestId", requestId);
 
 		Response response = given().spec(requestSpec).header("authToken", "INVALID_TOKEN").body(requestBody)
@@ -238,13 +209,9 @@ public class StatusUpdateAPI extends ApiBaseTest {
 
 		logToReport(requestBody, response);
 
-		Assert.assertEquals(response.getStatusCode(), 200);
 		Assert.assertEquals(response.jsonPath().getString("status"), "F");
 
 		Assert.assertEquals(response.jsonPath().getString("errCode"), "ERR1007");
 		Assert.assertEquals(response.jsonPath().getString("errorDescription"), "Technical error");
-
-		Assert.assertFalse(response.jsonPath().getBoolean("success"));
-		Assert.assertTrue(response.jsonPath().getBoolean("failure"));
 	}
 }

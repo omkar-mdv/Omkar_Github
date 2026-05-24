@@ -20,7 +20,7 @@ public class ApiBaseTest {
         // ✅ Load config file
         config = new Properties();
         try {
-            FileInputStream fis = new FileInputStream("src/test/resources/config.properties");
+            FileInputStream fis = new FileInputStream("src/test/resources/config/config.properties");
             config.load(fis);
         } catch (Exception e) {
             throw new RuntimeException("Failed to load config file", e);

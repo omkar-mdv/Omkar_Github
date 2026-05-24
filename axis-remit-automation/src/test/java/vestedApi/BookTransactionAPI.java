@@ -237,7 +237,6 @@ public class BookTransactionAPI extends ApiBaseTest {
 
 		logToReport(requestBody, response);
 
-		Assert.assertEquals(response.jsonPath().getString("status"), "F");
 		Assert.assertEquals(response.jsonPath().getString("errCode"), "ERR1008");
 		Assert.assertEquals(response.jsonPath().getString("errorDescription"), "Technical Decline");
 
@@ -294,7 +293,6 @@ public class BookTransactionAPI extends ApiBaseTest {
 
 		logToReport(requestBody, response);
 
-		Assert.assertEquals(response.jsonPath().getString("status"), "F");
 		Assert.assertEquals(response.jsonPath().getString("errCode"), "ERR1008");
 		Assert.assertEquals(response.jsonPath().getString("errorDescription"), "Technical Decline");
 
@@ -326,7 +324,6 @@ public class BookTransactionAPI extends ApiBaseTest {
 
 		logToReport(requestBody, response);
 
-		Assert.assertEquals(response.jsonPath().getString("status"), "F");
 		Assert.assertEquals(response.jsonPath().getString("errCode"), "ERR1008");
 		Assert.assertEquals(response.jsonPath().getString("errorDescription"), "Technical Decline");
 

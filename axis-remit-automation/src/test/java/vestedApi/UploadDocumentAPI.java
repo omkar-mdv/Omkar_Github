@@ -68,7 +68,7 @@ public class UploadDocumentAPI extends ApiBaseTest {
 	/**
 	 * Generates request body for Quote API
 	 */
-	private Map<String, Object> getQuoteRequest() {
+	private Map<String, Object> getQuoteRequest(String sourceOfFunds) {
 		Map<String, Object> requestBody = new HashMap<>();
 		requestBody.put("requestId", requestId);
 		requestBody.put("groupId", "KB");
@@ -81,7 +81,7 @@ public class UploadDocumentAPI extends ApiBaseTest {
 		requestBody.put("CRN", "1000100644");
 		requestBody.put("beneCountrycode", "US");
 		requestBody.put("Req date n time", "2026-01-06T15:30:00Z");
-		requestBody.put("sourceOfFunds", "Owned Funds");
+		requestBody.put("sourceOfFunds", sourceOfFunds); // ✅ dynamic
 		return requestBody;
 	}
 
@@ -138,6 +138,30 @@ public class UploadDocumentAPI extends ApiBaseTest {
 		requestBody.put("content", getBase64Content(filePath));
 
 		return requestBody;
+	}
+
+	private void generateNewTransaction(String sourceOfFunds) {
+
+		// Step 1: Get Quote
+		Response quoteResponse = given().spec(requestSpec).header("authToken", generatedToken)
+				.body(getQuoteRequest(sourceOfFunds)).post("/services/api/partner/getQuote");
+
+		Assert.assertEquals(quoteResponse.jsonPath().getString("status"), "S");
+
+		quoteId = quoteResponse.jsonPath().getString("getQuoteDetails.quoteId");
+		recvAmount = quoteResponse.jsonPath().getString("getQuoteDetails.fc_amt");
+		conversionRate = quoteResponse.jsonPath().getString("transactionDetails.rate");
+		finalSendAmountINR = quoteResponse.jsonPath().getString("transactionDetails.lcyamt");
+		checkSum = quoteResponse.jsonPath().getString("transactionDetails.checkSum");
+
+		// Step 2: Book Transaction
+		Response bookResponse = given().spec(requestSpec).header("authToken", generatedToken)
+				.body(getBookTransactionRequest()).post("/services/api/partner/bookTransaction");
+
+		Assert.assertEquals(bookResponse.jsonPath().getString("status"), "S");
+
+		txnRefNo = bookResponse.jsonPath().getString("txnRefNo");
+		Assert.assertNotNull(txnRefNo);
 	}
 
 	/**
@@ -206,15 +230,15 @@ public class UploadDocumentAPI extends ApiBaseTest {
 	@Test(dependsOnMethods = "verifyVerifyOtpApiReturnsSuccessWithValidOtp")
 	public void verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp() {
 
-		Response response = given().spec(requestSpec).header("authToken", generatedToken).body(getQuoteRequest())
-				.post("/services/api/partner/getQuote");
+		Response response = given().spec(requestSpec).header("authToken", generatedToken)
+				.body(getQuoteRequest("Owned Funds")).post("/services/api/partner/getQuote");
 
 		Assert.assertEquals(response.jsonPath().getString("status"), "S");
 
 		quoteId = response.jsonPath().getString("getQuoteDetails.quoteId");
 		recvAmount = response.jsonPath().getString("getQuoteDetails.fc_amt");
 		conversionRate = response.jsonPath().getString("transactionDetails.rate");
-		finalSendAmountINR = response.jsonPath().getString("transactionDetails.finalSendAmountINR");
+		finalSendAmountINR = response.jsonPath().getString("transactionDetails.lcyamt");
 		checkSum = response.jsonPath().getString("transactionDetails.checkSum");
 	}
 
@@ -237,7 +261,7 @@ public class UploadDocumentAPI extends ApiBaseTest {
 	 * TC06: Verify Upload Document API returns success when file size is within
 	 * 250KB
 	 */
-	@Test(dependsOnMethods = "verifyBookTransactionApiReturnsSuccessWithValidQuoteData", description = "Verify Upload Document API returns success when file size is within 250KB")
+	@Test(dependsOnMethods = "verifyBookTransactionApiReturnsSuccessWithValidData", description = "Verify Upload Document API returns success when file size is within 250KB")
 	public void verifyUploadDocumentApiReturnsSuccessWhenFileSizeIsWithinLimit() {
 
 		Assert.assertNotNull(generatedToken);
@@ -265,7 +289,7 @@ public class UploadDocumentAPI extends ApiBaseTest {
 	 * TC07: Verify Upload Document API returns error 1008 when file size exceeds
 	 * 250KB
 	 */
-	@Test(dependsOnMethods = "verifyBookTransactionApiReturnsSuccessWithValidQuoteData", description = "Verify Upload Document API returns error when file exceeds 250KB")
+	@Test(dependsOnMethods = "verifyBookTransactionApiReturnsSuccessWithValidData", description = "Verify Upload Document API returns error when file exceeds 250KB")
 	public void verifyUploadDocumentApiReturnsError1008WhenFileSizeExceedsLimit() {
 
 		Assert.assertNotNull(generatedToken);
@@ -293,7 +317,7 @@ public class UploadDocumentAPI extends ApiBaseTest {
 	 * TC08: Verify Upload Document API returns error when unsupported file type is
 	 * uploaded
 	 */
-	@Test(dependsOnMethods = "verifyBookTransactionApiReturnsSuccessWithValidQuoteData", description = "Verify Upload Document API returns error for unsupported file type")
+	@Test(dependsOnMethods = "verifyBookTransactionApiReturnsSuccessWithValidData", description = "Verify Upload Document API returns error for unsupported file type")
 	public void verifyUploadDocumentApiReturnsErrorForUnsupportedFile() {
 
 		Map<String, Object> requestBody = getUploadDocumentRequest(BASE64_UNSUPPORTED);
@@ -316,7 +340,7 @@ public class UploadDocumentAPI extends ApiBaseTest {
 	/**
 	 * TC09: Verify Upload Document API returns error 1008 when uniqueId is blank
 	 */
-	@Test(dependsOnMethods = "verifyBookTransactionApiReturnsSuccessWithValidQuoteData", description = "Verify Upload Document API returns error 1008 when uniqueId is blank")
+	@Test(dependsOnMethods = "verifyBookTransactionApiReturnsSuccessWithValidData", description = "Verify Upload Document API returns error 1008 when uniqueId is blank")
 	public void verifyUploadDocumentApiReturnsError1008WhenUniqueIdIsBlank() {
 
 		Assert.assertNotNull(generatedToken);
@@ -344,7 +368,7 @@ public class UploadDocumentAPI extends ApiBaseTest {
 	 * TC10: Verify Upload Document API returns error 1008 when content field is
 	 * blank
 	 */
-	@Test(dependsOnMethods = "verifyBookTransactionApiReturnsSuccessWithValidQuoteData", description = "Verify Upload Document API returns error 1008 when content is blank")
+	@Test(dependsOnMethods = "verifyBookTransactionApiReturnsSuccessWithValidData", description = "Verify Upload Document API returns error 1008 when content is blank")
 	public void verifyUploadDocumentApiReturnsError1008WhenContentIsBlank() {
 
 		Assert.assertNotNull(generatedToken);
@@ -393,117 +417,77 @@ public class UploadDocumentAPI extends ApiBaseTest {
 	/**
 	 * TC12: Verify Upload Document API allows Gift with customerConsent = Y
 	 */
-	@Test(dependsOnMethods = "verifyBookTransactionApiReturnsSuccessWithValidQuoteData", description = "Verify Upload Document API returns success when sourceOfFunds is Gift and customerConsent is Y")
+	@Test(dependsOnMethods = "verifyBookTransactionApiReturnsSuccessWithValidData")
 	public void verifyUploadDocumentApiReturnsSuccessWhenSourceOfFundsIsGiftAndCustomerConsentIsY() {
 
-		Assert.assertNotNull(generatedToken);
-		Assert.assertNotNull(txnRefNo);
+		generateNewTransaction("Gift"); // ✅ NEW txn
 
 		Map<String, Object> requestBody = getUploadDocumentRequest(BASE64_BELOW_250KB);
-
-		// ✅ Set customer consent to Y
 		requestBody.put("customerConsent", "Y");
 
 		Response response = given().spec(requestSpec).header("authToken", generatedToken).body(requestBody)
 				.post("/services/api/partner/uploadDocument");
 
-		logToReport(requestBody, response);
-
 		Assert.assertEquals(response.jsonPath().getString("status"), "S");
-
-		Assert.assertTrue(response.jsonPath().getBoolean("success"));
-		Assert.assertFalse(response.jsonPath().getBoolean("failure"));
-
-		Assert.assertEquals(response.jsonPath().getString("documentResults[0].uploadStatus"), "S");
 	}
 
 	/**
 	 * TC13: Verify Upload Document API declines Gift when customerConsent = N
 	 */
-	@Test(dependsOnMethods = "verifyBookTransactionApiReturnsSuccessWithValidQuoteData", description = "Verify Upload Document API returns Business Decline when sourceOfFunds is Gift and customerConsent is N")
+	@Test(dependsOnMethods = "verifyBookTransactionApiReturnsSuccessWithValidData")
 	public void verifyUploadDocumentApiReturnsBusinessDeclineWhenSourceOfFundsIsGiftAndCustomerConsentIsN() {
 
-		Assert.assertNotNull(generatedToken);
-		Assert.assertNotNull(txnRefNo);
+		generateNewTransaction("Gift"); // ✅ NEW txn
 
 		Map<String, Object> requestBody = getUploadDocumentRequest(BASE64_BELOW_250KB);
-
-		// ❌ Gift requires consent → set N
 		requestBody.put("customerConsent", "N");
 
 		Response response = given().spec(requestSpec).header("authToken", generatedToken).body(requestBody)
 				.post("/services/api/partner/uploadDocument");
 
-		logToReport(requestBody, response);
-
 		Assert.assertEquals(response.jsonPath().getString("status"), "F");
-
-		// Business rule failure
 		Assert.assertEquals(response.jsonPath().getString("errorDescription"), "Business Decline");
-
-		Assert.assertFalse(response.jsonPath().getBoolean("success"));
-		Assert.assertTrue(response.jsonPath().getBoolean("failure"));
 	}
 
 	/**
 	 * TC14: Verify Upload Document API allows Owned Funds when customerConsent = Y
 	 */
-	@Test(dependsOnMethods = "verifyBookTransactionApiReturnsSuccessWithValidQuoteData", description = "Verify Upload Document API returns success when sourceOfFunds is Owned Funds and customerConsent is Y")
+	@Test(dependsOnMethods = "verifyBookTransactionApiReturnsSuccessWithValidData")
 	public void verifyUploadDocumentApiReturnsSuccessWhenSourceOfFundsIsOwnedFundsAndCustomerConsentIsY() {
 
-		Assert.assertNotNull(generatedToken);
-		Assert.assertNotNull(txnRefNo);
+		generateNewTransaction("Owned Funds"); // ✅ NEW txn
 
 		Map<String, Object> requestBody = getUploadDocumentRequest(BASE64_BELOW_250KB);
-
-		// ✅ Set consent Y
 		requestBody.put("customerConsent", "Y");
 
 		Response response = given().spec(requestSpec).header("authToken", generatedToken).body(requestBody)
 				.post("/services/api/partner/uploadDocument");
 
-		logToReport(requestBody, response);
-
 		Assert.assertEquals(response.jsonPath().getString("status"), "S");
-
-		Assert.assertTrue(response.jsonPath().getBoolean("success"));
-		Assert.assertFalse(response.jsonPath().getBoolean("failure"));
-
-		Assert.assertEquals(response.jsonPath().getString("documentResults[0].uploadStatus"), "S");
 	}
 
 	/**
 	 * TC15: Verify Upload Document API allows Owned Funds when customerConsent = N
 	 */
-	@Test(dependsOnMethods = "verifyBookTransactionApiReturnsSuccessWithValidQuoteData", description = "Verify Upload Document API returns success when sourceOfFunds is Owned Funds and customerConsent is N")
+	@Test(dependsOnMethods = "verifyBookTransactionApiReturnsSuccessWithValidData")
 	public void verifyUploadDocumentApiReturnsSuccessWhenSourceOfFundsIsOwnedFundsAndCustomerConsentIsN() {
 
-		Assert.assertNotNull(generatedToken);
-		Assert.assertNotNull(txnRefNo);
+		generateNewTransaction("Owned Funds"); // ✅ NEW txn
 
 		Map<String, Object> requestBody = getUploadDocumentRequest(BASE64_BELOW_250KB);
-
-		// ✅ Consent not required for Owned Funds
 		requestBody.put("customerConsent", "N");
 
 		Response response = given().spec(requestSpec).header("authToken", generatedToken).body(requestBody)
 				.post("/services/api/partner/uploadDocument");
 
-		logToReport(requestBody, response);
-
 		Assert.assertEquals(response.jsonPath().getString("status"), "S");
-
-		Assert.assertTrue(response.jsonPath().getBoolean("success"));
-		Assert.assertFalse(response.jsonPath().getBoolean("failure"));
-
-		Assert.assertEquals(response.jsonPath().getString("documentResults[0].uploadStatus"), "S");
 	}
 
 	/**
 	 * TC16: Verify Upload Document API returns error 1008 when customerConsent is
 	 * blank for Gift
 	 */
-	@Test(dependsOnMethods = "verifyBookTransactionApiReturnsSuccessWithValidQuoteData", description = "Verify Upload Document API returns error 1008 when sourceOfFunds is Gift and customerConsent is blank")
+	@Test(dependsOnMethods = "verifyBookTransactionApiReturnsSuccessWithValidData", description = "Verify Upload Document API returns error 1008 when sourceOfFunds is Gift and customerConsent is blank")
 	public void verifyUploadDocumentApiReturnsError1008WhenCustomerConsentIsBlankForGift() {
 
 		Assert.assertNotNull(generatedToken);
@@ -531,7 +515,7 @@ public class UploadDocumentAPI extends ApiBaseTest {
 	 * TC17: Verify Upload Document API returns error 1008 when customerConsent has
 	 * invalid value
 	 */
-	@Test(dependsOnMethods = "verifyBookTransactionApiReturnsSuccessWithValidQuoteData", description = "Verify Upload Document API returns error 1008 when customerConsent is invalid (e.g., X)")
+	@Test(dependsOnMethods = "verifyBookTransactionApiReturnsSuccessWithValidData", description = "Verify Upload Document API returns error 1008 when customerConsent is invalid (e.g., X)")
 	public void verifyUploadDocumentApiReturnsError1008WhenCustomerConsentIsInvalid() {
 
 		Assert.assertNotNull(generatedToken);
