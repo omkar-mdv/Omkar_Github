@@ -3,25 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="vestedApi.UploadDocumentAPI">
+      <class name="vestedApi.StatusUpdateAPI">
         <methods>
-          <include name="verifyBookTransactionApiReturnsSuccessWithValidData"/>
           <include name="setup"/>
-          <include name="verifyUploadDocumentApiReturnsError1008WhenFileSizeExceedsLimit"/>
-          <include name="verifyUploadDocumentApiReturnsError1007WhenAuthTokenIsInvalid"/>
-          <include name="verifySendOtpApiReturnsSuccessWithValidToken"/>
-          <include name="verifyUploadDocumentApiReturnsErrorForUnsupportedFile"/>
-          <include name="verifyUploadDocumentApiReturnsSuccessWhenSourceOfFundsIsOwnedFundsAndCustomerConsentIsY"/>
-          <include name="verifyUploadDocumentApiReturnsError1008WhenCustomerConsentIsInvalid"/>
-          <include name="verifyUploadDocumentApiReturnsSuccessWhenSourceOfFundsIsGiftAndCustomerConsentIsY"/>
-          <include name="verifyGetQuoteApiReturnsSuccessWithValidTokenAndVerifiedOtp"/>
-          <include name="verifyUploadDocumentApiReturnsSuccessWhenFileSizeIsWithinLimit"/>
+          <include name="verifyStatusUpdateApiReturnsError1007WhenAuthTokenIsInvalid"/>
+          <include name="verifyStatusUpdateApiReturnsTxnStatus101ForBookedTransaction"/>
+          <include name="verifyStatusUpdateApiReturnsError1008WhenTxnRefNoIsInvalid"/>
           <include name="verifyGenerateTokenApiReturnsSuccessWithValidRequest"/>
-          <include name="verifyUploadDocumentApiReturnsSuccessWhenSourceOfFundsIsOwnedFundsAndCustomerConsentIsN"/>
-          <include name="verifyVerifyOtpApiReturnsSuccessWithValidOtp"/>
-          <include name="verifyUploadDocumentApiReturnsBusinessDeclineWhenSourceOfFundsIsGiftAndCustomerConsentIsN"/>
+          <include name="verifyStatusUpdateApiReturnsTxnStatus306ForCredenceRejectedTransaction"/>
         </methods>
-      </class> <!-- vestedApi.UploadDocumentAPI -->
+      </class> <!-- vestedApi.StatusUpdateAPI -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
