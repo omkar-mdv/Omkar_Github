@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu May 28 13:06:14 IST 2026</td>
+<td>Started on:</td><td>Mon Jun 01 21:13:30 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>86 seconds (86251 ms)</td>
+<tr><td>Total time:</td><td>118 seconds (118578 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,9 +76,32 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User successfully signs up, verifies account and logs in", "Signup and Login End-to-End"</td>
-<td></td>
-<td>85</td>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User successfully completes German customer registration", "German Customer Registration"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\OMKAR~1.MAD\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52349}, goog:processID: 5788, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52349/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f24d29441c942c4aad05003c0bc7eac9
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.GermanRegisterPage.acceptPopup(GermanRegisterPage.java:291)
+	at stepdefinitions.GermanRegisterStepDef.user_clicks_on_german_ok_button_on_popup(GermanRegisterStepDef.java:74)
+	at ✽.user clicks on German OK button on popup(file:///C:/Users/Omkar.Madav/git/Omkar_Github/axis-remit-automation/src/test/resources/features/GermanCustomerRegistration.feature:27)
+</pre></div><a href='#' onClick='toggleBox("stack-trace993208674", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace993208674'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\OMKAR~1.MAD\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52349}, goog:processID: 5788, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52349/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f24d29441c942c4aad05003c0bc7eac9
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.GermanRegisterPage.acceptPopup(GermanRegisterPage.java:291)
+	at stepdefinitions.GermanRegisterStepDef.user_clicks_on_german_ok_button_on_popup(GermanRegisterStepDef.java:74)
+	at ✽.user clicks on German OK button on popup(file:///C:/Users/Omkar.Madav/git/Omkar_Github/axis-remit-automation/src/test/resources/features/GermanCustomerRegistration.feature:27)
+</pre></div></td>
+<td>117</td>
 <td>runner.TestRunner@3cce57c7</td></tr>
 </table><p>
 </body>

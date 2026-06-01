@@ -49,7 +49,7 @@ public class AxisSignupLoginSteps {
 		String path = System.getProperty("user.dir") + "/src/test/resources/testdata/TestData.xlsx";
 
 		ExcelUtils.loadExcel(path, "Sheet1");
-		testData = ExcelUtils.getTestData(1);	//1 EU 2 SWZ 3 USA
+		testData = ExcelUtils.getTestData(3);	//1 EU 2 SWZ 3 USA
 
 		driver.get(testData.get("baseUrl"));
 		signupPage = new AxisSignupPage(driver);

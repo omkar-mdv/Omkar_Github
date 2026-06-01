@@ -3,16 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="vestedApi.StatusUpdateAPI">
+      <class name="runner.TestRunner">
         <methods>
-          <include name="setup"/>
-          <include name="verifyStatusUpdateApiReturnsError1007WhenAuthTokenIsInvalid"/>
-          <include name="verifyStatusUpdateApiReturnsTxnStatus101ForBookedTransaction"/>
-          <include name="verifyStatusUpdateApiReturnsError1008WhenTxnRefNoIsInvalid"/>
-          <include name="verifyGenerateTokenApiReturnsSuccessWithValidRequest"/>
-          <include name="verifyStatusUpdateApiReturnsTxnStatus306ForCredenceRejectedTransaction"/>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
         </methods>
-      </class> <!-- vestedApi.StatusUpdateAPI -->
+      </class> <!-- runner.TestRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

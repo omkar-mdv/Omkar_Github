@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">API Automation Execution Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">May 26, 2026 05:55:12 pm</span></a>
+<a href="#"><span class="badge badge-primary">May 28, 2026 06:59:01 pm</span></a>
 </li>
 </ul>
 </div>
@@ -76,8 +76,8 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
 <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -91,25 +91,25 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag="StatusUpdateAPI"
           device="">
           <div class="test-detail">
             <p class="name">Verify Generate Token Api Returns Success With Valid Request</p>
             <p class="text-sm">
-              <span>5:55:14 pm</span> / <span>00:00:06:758</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>6:59:02 pm</span> / <span>00:00:08:987</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Verify Generate Token Api Returns Success With Valid Request</h5>
-<span class='badge badge-success'>05.26.2026 5:55:14 pm</span>
-<span class='badge badge-danger'>05.26.2026 5:55:20 pm</span>
-<span class='badge badge-default'>00:00:06:758</span>
+<h5 class="test-status text-fail">Verify Generate Token Api Returns Success With Valid Request</h5>
+<span class='badge badge-success'>05.28.2026 6:59:02 pm</span>
+<span class='badge badge-danger'>05.28.2026 6:59:11 pm</span>
+<span class='badge badge-default'>00:00:08:987</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -123,16 +123,65 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:55:14 pm</td>
+        <td>6:59:02 pm</td>
         <td>
           Test Class: StatusUpdateAPI
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:55:20 pm</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:59:11 pm</td>
         <td>
-          Test Passed
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:59:11 pm</td>
+        <td>
+          Reason: expected [S] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:59:11 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [S] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.StatusUpdateAPI.verifyGenerateTokenApiReturnsSuccessWithValidRequest(StatusUpdateAPI.java:91)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
         </td>
       </tr>
   </tbody>
@@ -140,25 +189,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="2"
+        <li class="test-item"  status="skip" test-id="2"
           author=""
           tag="StatusUpdateAPI"
           device="">
           <div class="test-detail">
             <p class="name">Verify Status Update Api Returns Correct Transaction Status</p>
             <p class="text-sm">
-              <span>5:55:20 pm</span> / <span>00:00:00:622</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>6:59:11 pm</span> / <span>00:00:00:012</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Verify Status Update Api Returns Correct Transaction Status</h5>
-<span class='badge badge-success'>05.26.2026 5:55:20 pm</span>
-<span class='badge badge-danger'>05.26.2026 5:55:21 pm</span>
-<span class='badge badge-default'>00:00:00:622</span>
+<h5 class="test-status text-skip">Verify Status Update Api Returns Correct Transaction Status</h5>
+<span class='badge badge-success'>05.28.2026 6:59:11 pm</span>
+<span class='badge badge-danger'>05.28.2026 6:59:11 pm</span>
+<span class='badge badge-default'>00:00:00:012</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -172,44 +221,16 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:55:20 pm</td>
+        <td>6:59:11 pm</td>
         <td>
           Test Class: StatusUpdateAPI
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:55:21 pm</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>6:59:11 pm</td>
         <td>
-          Request Body: {clientCode=VESTED, txnRefNo=KB10003330970011, requestId=REQ1779798314346, groupId=KB}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:55:21 pm</td>
-        <td>
-          Response Body: {
-    "requestId": "REQ1779798314346",
-    "responseId": "RES_1779798371550_a3fdd8fb",
-    "status": "S",
-    "errorDescription": "",
-    "errCode": "",
-    "failure": false,
-    "success": true,
-    "txnRefNo": "KB10003330970011",
-    "txnStatus": "CRN Updated",
-    "txnStatusCode": "153",
-    "reason": "",
-    "debitInvoice": "",
-    "swiftInvoice": ""
-}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:55:21 pm</td>
-        <td>
-          Test Passed
+          Test Skipped
         </td>
       </tr>
   </tbody>
@@ -217,25 +238,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="3"
+        <li class="test-item"  status="skip" test-id="3"
           author=""
           tag="StatusUpdateAPI"
           device="">
           <div class="test-detail">
             <p class="name">Verify Status Update Api Returns Error 1007 When Auth Token Is Invalid</p>
             <p class="text-sm">
-              <span>5:55:21 pm</span> / <span>00:00:00:201</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>6:59:11 pm</span> / <span>00:00:00:009</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Verify Status Update Api Returns Error 1007 When Auth Token Is Invalid</h5>
-<span class='badge badge-success'>05.26.2026 5:55:21 pm</span>
-<span class='badge badge-danger'>05.26.2026 5:55:21 pm</span>
-<span class='badge badge-default'>00:00:00:201</span>
+<h5 class="test-status text-skip">Verify Status Update Api Returns Error 1007 When Auth Token Is Invalid</h5>
+<span class='badge badge-success'>05.28.2026 6:59:11 pm</span>
+<span class='badge badge-danger'>05.28.2026 6:59:11 pm</span>
+<span class='badge badge-default'>00:00:00:009</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -249,93 +270,16 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:55:21 pm</td>
+        <td>6:59:11 pm</td>
         <td>
           Test Class: StatusUpdateAPI
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:55:21 pm</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>6:59:11 pm</td>
         <td>
-          Request Body: {clientCode=VESTED, txnRefNo=KB10003330970011, requestId=REQ1779798314346, groupId=KB}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:55:21 pm</td>
-        <td>
-          Response Body: {
-    "requestId": "REQ1779798314346",
-    "responseId": "RES_1779798372063_bed5dd7a",
-    "status": "F",
-    "errorDescription": "Technical Decline",
-    "errCode": "ERR1007",
-    "failure": true,
-    "success": false,
-    "txnRefNo": null,
-    "txnStatus": null,
-    "txnStatusCode": null,
-    "reason": null,
-    "debitInvoice": null,
-    "swiftInvoice": null
-}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>5:55:21 pm</td>
-        <td>
-          Test Failed
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>5:55:21 pm</td>
-        <td>
-          Reason: expected [Technical error] but found [Technical Decline]
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>5:55:21 pm</td>
-        <td>
-          <textarea readonly class="code-block">java.lang.AssertionError: expected [Technical error] but found [Technical Decline]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.StatusUpdateAPI.verifyStatusUpdateApiReturnsError1007WhenAuthTokenIsInvalid(StatusUpdateAPI.java:215)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</textarea>
-          
+          Test Skipped
         </td>
       </tr>
   </tbody>
@@ -343,25 +287,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="4"
+        <li class="test-item"  status="skip" test-id="4"
           author=""
           tag="StatusUpdateAPI"
           device="">
           <div class="test-detail">
             <p class="name">Verify Status Update Api Returns Error 1008 When Txn Ref No Is Invalid</p>
             <p class="text-sm">
-              <span>5:55:21 pm</span> / <span>00:00:00:311</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>6:59:11 pm</span> / <span>00:00:00:009</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Verify Status Update Api Returns Error 1008 When Txn Ref No Is Invalid</h5>
-<span class='badge badge-success'>05.26.2026 5:55:21 pm</span>
-<span class='badge badge-danger'>05.26.2026 5:55:21 pm</span>
-<span class='badge badge-default'>00:00:00:311</span>
+<h5 class="test-status text-skip">Verify Status Update Api Returns Error 1008 When Txn Ref No Is Invalid</h5>
+<span class='badge badge-success'>05.28.2026 6:59:11 pm</span>
+<span class='badge badge-danger'>05.28.2026 6:59:11 pm</span>
+<span class='badge badge-default'>00:00:00:009</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -375,93 +319,16 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:55:21 pm</td>
+        <td>6:59:11 pm</td>
         <td>
           Test Class: StatusUpdateAPI
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:55:21 pm</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>6:59:11 pm</td>
         <td>
-          Request Body: {clientCode=VESTED, txnRefNo=KB10002040970085, requestId=REQ1779798314346, groupId=KB}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:55:21 pm</td>
-        <td>
-          Response Body: {
-    "requestId": "REQ1779798314346",
-    "responseId": "RES_1779798372326_cf4b9413",
-    "status": "F",
-    "errorDescription": "No Data Found",
-    "errCode": "504",
-    "failure": true,
-    "success": false,
-    "txnRefNo": null,
-    "txnStatus": null,
-    "txnStatusCode": null,
-    "reason": null,
-    "debitInvoice": null,
-    "swiftInvoice": null
-}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>5:55:21 pm</td>
-        <td>
-          Test Failed
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>5:55:21 pm</td>
-        <td>
-          Reason: expected [ERR1008] but found [504]
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>5:55:21 pm</td>
-        <td>
-          <textarea readonly class="code-block">java.lang.AssertionError: expected [ERR1008] but found [504]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.StatusUpdateAPI.verifyStatusUpdateApiReturnsError1008WhenTxnRefNoIsInvalid(StatusUpdateAPI.java:187)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</textarea>
-          
+          Test Skipped
         </td>
       </tr>
   </tbody>
@@ -469,25 +336,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="5"
+        <li class="test-item"  status="skip" test-id="5"
           author=""
           tag="StatusUpdateAPI"
           device="">
           <div class="test-detail">
             <p class="name">Verify Status Update Api Returns Txn Status 101 For Booked Transaction</p>
             <p class="text-sm">
-              <span>5:55:21 pm</span> / <span>00:00:00:316</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>6:59:11 pm</span> / <span>00:00:00:013</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Verify Status Update Api Returns Txn Status 101 For Booked Transaction</h5>
-<span class='badge badge-success'>05.26.2026 5:55:21 pm</span>
-<span class='badge badge-danger'>05.26.2026 5:55:22 pm</span>
-<span class='badge badge-default'>00:00:00:316</span>
+<h5 class="test-status text-skip">Verify Status Update Api Returns Txn Status 101 For Booked Transaction</h5>
+<span class='badge badge-success'>05.28.2026 6:59:11 pm</span>
+<span class='badge badge-danger'>05.28.2026 6:59:11 pm</span>
+<span class='badge badge-default'>00:00:00:013</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -501,93 +368,16 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:55:21 pm</td>
+        <td>6:59:11 pm</td>
         <td>
           Test Class: StatusUpdateAPI
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:55:22 pm</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>6:59:11 pm</td>
         <td>
-          Request Body: {clientCode=VESTED, txnRefNo=KB10003330970011, requestId=REQ1779798314346, groupId=KB}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:55:22 pm</td>
-        <td>
-          Response Body: {
-    "requestId": "REQ1779798314346",
-    "responseId": "RES_1779798372653_67c72057",
-    "status": "S",
-    "errorDescription": "",
-    "errCode": "",
-    "failure": false,
-    "success": true,
-    "txnRefNo": "KB10003330970011",
-    "txnStatus": "CRN Updated",
-    "txnStatusCode": "153",
-    "reason": "",
-    "debitInvoice": "",
-    "swiftInvoice": ""
-}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>5:55:22 pm</td>
-        <td>
-          Test Failed
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>5:55:22 pm</td>
-        <td>
-          Reason: Unexpected txnStatus expected [Transaction Booked] but found [CRN Updated]
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>5:55:22 pm</td>
-        <td>
-          <textarea readonly class="code-block">java.lang.AssertionError: Unexpected txnStatus expected [Transaction Booked] but found [CRN Updated]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at vestedApi.StatusUpdateAPI.assertTxnStatus(StatusUpdateAPI.java:56)
-	at vestedApi.StatusUpdateAPI.verifyStatusUpdateApiReturnsTxnStatus101ForBookedTransaction(StatusUpdateAPI.java:124)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</textarea>
-          
+          Test Skipped
         </td>
       </tr>
   </tbody>
@@ -595,25 +385,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="6"
+        <li class="test-item"  status="skip" test-id="6"
           author=""
           tag="StatusUpdateAPI"
           device="">
           <div class="test-detail">
             <p class="name">Verify Status Update Api Returns Txn Status 153 For Crn Updated Transaction</p>
             <p class="text-sm">
-              <span>5:55:22 pm</span> / <span>00:00:00:326</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>6:59:11 pm</span> / <span>00:00:00:009</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Verify Status Update Api Returns Txn Status 153 For Crn Updated Transaction</h5>
-<span class='badge badge-success'>05.26.2026 5:55:22 pm</span>
-<span class='badge badge-danger'>05.26.2026 5:55:22 pm</span>
-<span class='badge badge-default'>00:00:00:326</span>
+<h5 class="test-status text-skip">Verify Status Update Api Returns Txn Status 153 For Crn Updated Transaction</h5>
+<span class='badge badge-success'>05.28.2026 6:59:11 pm</span>
+<span class='badge badge-danger'>05.28.2026 6:59:11 pm</span>
+<span class='badge badge-default'>00:00:00:009</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -627,44 +417,16 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:55:22 pm</td>
+        <td>6:59:11 pm</td>
         <td>
           Test Class: StatusUpdateAPI
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:55:22 pm</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>6:59:11 pm</td>
         <td>
-          Request Body: {clientCode=VESTED, txnRefNo=KB10003330970011, requestId=REQ1779798314346, groupId=KB}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:55:22 pm</td>
-        <td>
-          Response Body: {
-    "requestId": "REQ1779798314346",
-    "responseId": "RES_1779798372967_6ad92c41",
-    "status": "S",
-    "errorDescription": "",
-    "errCode": "",
-    "failure": false,
-    "success": true,
-    "txnRefNo": "KB10003330970011",
-    "txnStatus": "CRN Updated",
-    "txnStatusCode": "153",
-    "reason": "",
-    "debitInvoice": "",
-    "swiftInvoice": ""
-}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:55:22 pm</td>
-        <td>
-          Test Passed
+          Test Skipped
         </td>
       </tr>
   </tbody>
@@ -672,25 +434,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="7"
+        <li class="test-item"  status="skip" test-id="7"
           author=""
           tag="StatusUpdateAPI"
           device="">
           <div class="test-detail">
             <p class="name">Verify Status Update Api Returns Txn Status 204 For Money Delivered Transaction</p>
             <p class="text-sm">
-              <span>5:55:22 pm</span> / <span>00:00:00:606</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>6:59:11 pm</span> / <span>00:00:00:010</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Verify Status Update Api Returns Txn Status 204 For Money Delivered Transaction</h5>
-<span class='badge badge-success'>05.26.2026 5:55:22 pm</span>
-<span class='badge badge-danger'>05.26.2026 5:55:23 pm</span>
-<span class='badge badge-default'>00:00:00:606</span>
+<h5 class="test-status text-skip">Verify Status Update Api Returns Txn Status 204 For Money Delivered Transaction</h5>
+<span class='badge badge-success'>05.28.2026 6:59:11 pm</span>
+<span class='badge badge-danger'>05.28.2026 6:59:11 pm</span>
+<span class='badge badge-default'>00:00:00:010</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -704,44 +466,16 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:55:22 pm</td>
+        <td>6:59:11 pm</td>
         <td>
           Test Class: StatusUpdateAPI
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:55:23 pm</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>6:59:11 pm</td>
         <td>
-          Request Body: {clientCode=VESTED, txnRefNo=KB10003330970010, requestId=REQ1779798314346, groupId=KB}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:55:23 pm</td>
-        <td>
-          Response Body: {
-    "requestId": "REQ1779798314346",
-    "responseId": "RES_1779798373535_c43d87ff",
-    "status": "S",
-    "errorDescription": "",
-    "errCode": "",
-    "failure": false,
-    "success": true,
-    "txnRefNo": "KB10003330970010",
-    "txnStatus": "Money Delivered",
-    "txnStatusCode": "204",
-    "reason": "",
-    "debitInvoice": "",
-    "swiftInvoice": ""
-}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:55:23 pm</td>
-        <td>
-          Test Passed
+          Test Skipped
         </td>
       </tr>
   </tbody>
@@ -749,25 +483,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="8"
+        <li class="test-item"  status="skip" test-id="8"
           author=""
           tag="StatusUpdateAPI"
           device="">
           <div class="test-detail">
             <p class="name">Verify Status Update Api Returns Txn Status 306 For Credence Rejected Transaction</p>
             <p class="text-sm">
-              <span>5:55:23 pm</span> / <span>00:00:00:331</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>6:59:11 pm</span> / <span>00:00:00:011</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Verify Status Update Api Returns Txn Status 306 For Credence Rejected Transaction</h5>
-<span class='badge badge-success'>05.26.2026 5:55:23 pm</span>
-<span class='badge badge-danger'>05.26.2026 5:55:23 pm</span>
-<span class='badge badge-default'>00:00:00:331</span>
+<h5 class="test-status text-skip">Verify Status Update Api Returns Txn Status 306 For Credence Rejected Transaction</h5>
+<span class='badge badge-success'>05.28.2026 6:59:11 pm</span>
+<span class='badge badge-danger'>05.28.2026 6:59:11 pm</span>
+<span class='badge badge-default'>00:00:00:011</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -781,93 +515,16 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:55:23 pm</td>
+        <td>6:59:11 pm</td>
         <td>
           Test Class: StatusUpdateAPI
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:55:23 pm</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>6:59:11 pm</td>
         <td>
-          Request Body: {clientCode=VESTED, txnRefNo=KB10003330970011, requestId=REQ1779798314346, groupId=KB}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:55:23 pm</td>
-        <td>
-          Response Body: {
-    "requestId": "REQ1779798314346",
-    "responseId": "RES_1779798373921_2c4ccba9",
-    "status": "S",
-    "errorDescription": "",
-    "errCode": "",
-    "failure": false,
-    "success": true,
-    "txnRefNo": "KB10003330970011",
-    "txnStatus": "CRN Updated",
-    "txnStatusCode": "153",
-    "reason": "",
-    "debitInvoice": "",
-    "swiftInvoice": ""
-}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>5:55:23 pm</td>
-        <td>
-          Test Failed
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>5:55:23 pm</td>
-        <td>
-          Reason: Unexpected txnStatus expected [Transaction Rejected by Credence] but found [CRN Updated]
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>5:55:23 pm</td>
-        <td>
-          <textarea readonly class="code-block">java.lang.AssertionError: Unexpected txnStatus expected [Transaction Rejected by Credence] but found [CRN Updated]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at vestedApi.StatusUpdateAPI.assertTxnStatus(StatusUpdateAPI.java:56)
-	at vestedApi.StatusUpdateAPI.verifyStatusUpdateApiReturnsTxnStatus306ForCredenceRejectedTransaction(StatusUpdateAPI.java:172)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</textarea>
-          
+          Test Skipped
         </td>
       </tr>
   </tbody>
@@ -895,15 +552,15 @@
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>4</span>
+<span class='badge log badge-danger'>1</span>
 </span>
 <p class="name">java.lang.AssertionError</p>
-<p class="duration text-sm">4 tests</p>
+<p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
 <h4>java.lang.AssertionError</h4>
-<span status="fail" class='badge log badge-danger'>4 failed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -916,30 +573,9 @@
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>17:55:21 pm</td>
+<td>18:59:02 pm</td>
 <td>
-<a href="#" class="linked" test-id='3' id='3'>Verify Status Update Api Returns Error 1007 When Auth Token Is Invalid</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>17:55:21 pm</td>
-<td>
-<a href="#" class="linked" test-id='4' id='4'>Verify Status Update Api Returns Error 1008 When Txn Ref No Is Invalid</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>17:55:21 pm</td>
-<td>
-<a href="#" class="linked" test-id='5' id='5'>Verify Status Update Api Returns Txn Status 101 For Booked Transaction</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>17:55:23 pm</td>
-<td>
-<a href="#" class="linked" test-id='8' id='8'>Verify Status Update Api Returns Txn Status 306 For Credence Rejected Transaction</a>
+<a href="#" class="linked" test-id='1' id='1'>Verify Generate Token Api Returns Success With Valid Request</a>
 </td>
 </tr>
 </tbody>
@@ -965,8 +601,8 @@
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>4</span>
-<span class='badge log badge-danger'>4</span>
+<span class='badge log badge-danger'>1</span>
+<span class='badge log badge-skip'>7</span>
 </span>
 <p class="name">StatusUpdateAPI</p>
 <p class="duration text-sm">8 tests</p>
@@ -974,8 +610,8 @@
 <div class="test-contents d-none">
 <div class="info">
 <h4>StatusUpdateAPI</h4>
-<span status="pass" class='badge log pass-bg'>4 passed</span>
-<span status="fail" class='badge log badge-danger'>4 failed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+<span status="skip" class='badge log badge-skip'>7 skipped</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -986,58 +622,58 @@
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>17:55:14 pm</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>18:59:02 pm</td>
 <td>
 <a href="#" class="linked" test-id='1' id='1'>Verify Generate Token Api Returns Success With Valid Request</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>17:55:20 pm</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>18:59:11 pm</td>
 <td>
 <a href="#" class="linked" test-id='2' id='2'>Verify Status Update Api Returns Correct Transaction Status</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>17:55:21 pm</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>18:59:11 pm</td>
 <td>
 <a href="#" class="linked" test-id='3' id='3'>Verify Status Update Api Returns Error 1007 When Auth Token Is Invalid</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>17:55:21 pm</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>18:59:11 pm</td>
 <td>
 <a href="#" class="linked" test-id='4' id='4'>Verify Status Update Api Returns Error 1008 When Txn Ref No Is Invalid</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>17:55:21 pm</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>18:59:11 pm</td>
 <td>
 <a href="#" class="linked" test-id='5' id='5'>Verify Status Update Api Returns Txn Status 101 For Booked Transaction</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>17:55:22 pm</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>18:59:11 pm</td>
 <td>
 <a href="#" class="linked" test-id='6' id='6'>Verify Status Update Api Returns Txn Status 153 For Crn Updated Transaction</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>17:55:22 pm</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>18:59:11 pm</td>
 <td>
 <a href="#" class="linked" test-id='7' id='7'>Verify Status Update Api Returns Txn Status 204 For Money Delivered Transaction</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>17:55:23 pm</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>18:59:11 pm</td>
 <td>
 <a href="#" class="linked" test-id='8' id='8'>Verify Status Update Api Returns Txn Status 306 For Credence Rejected Transaction</a>
 </td>
@@ -1059,25 +695,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>May 26, 2026 05:55:12 pm</h3>
+<h3>May 28, 2026 06:59:01 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>May 26, 2026 05:55:23 pm</h3>
+<h3>May 28, 2026 06:59:11 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>4</h3>
+<h3>0</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>4</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -1093,13 +729,13 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='50%'>
-<b>4</b> tests passed
+<div><small data-tooltip='0%'>
+<b>0</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='50%'><b>4</b> tests failed,
-<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+<small data-tooltip='12%'><b>1</b> tests failed,
+<b>7</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
 </div>
@@ -1116,10 +752,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='10%'><b>4</b> events passed</small></div>
+<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
 <div>
-<small data-tooltip='31%'><b>12</b> events failed,
-<b data-tooltip='%'>22</b> others
+<small data-tooltip='16%'><b>3</b> events failed,
+<b data-tooltip='%'>15</b> others
 </small>
 </div>
 </div>
@@ -1135,7 +771,7 @@
 </div></div>
 <script>
 var timeline = {
-"Verify Generate Token Api Returns Success With Valid Request":6.758,"Verify Status Update Api Returns Correct Transaction Status":0.622,"Verify Status Update Api Returns Error 1007 When Auth Token Is Invalid":0.201,"Verify Status Update Api Returns Error 1008 When Txn Ref No Is Invalid":0.311,"Verify Status Update Api Returns Txn Status 101 For Booked Transaction":0.316,"Verify Status Update Api Returns Txn Status 153 For Crn Updated Transaction":0.326,"Verify Status Update Api Returns Txn Status 204 For Money Delivered Transaction":0.606,"Verify Status Update Api Returns Txn Status 306 For Credence Rejected Transaction":0.331
+"Verify Generate Token Api Returns Success With Valid Request":8.987,"Verify Status Update Api Returns Correct Transaction Status":0.012,"Verify Status Update Api Returns Error 1007 When Auth Token Is Invalid":0.009,"Verify Status Update Api Returns Error 1008 When Txn Ref No Is Invalid":0.009,"Verify Status Update Api Returns Txn Status 101 For Booked Transaction":0.013,"Verify Status Update Api Returns Txn Status 153 For Crn Updated Transaction":0.009,"Verify Status Update Api Returns Txn Status 204 For Money Delivered Transaction":0.01,"Verify Status Update Api Returns Txn Status 306 For Credence Rejected Transaction":0.011
 };
 </script>
 <div class="row">
@@ -1146,11 +782,11 @@ var timeline = {
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
 <td>StatusUpdateAPI</td>
-<td>4</td>
-<td>4</td>
 <td>0</td>
+<td>1</td>
+<td>7</td>
 <td>0</td>
-<td>50%</td>
+<td>0%</td>
 </tr>
 </tbody>
 </table></div>
@@ -1183,10 +819,10 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 4,
-failParent: 4,
+passParent: 0,
+failParent: 1,
 warningParent: 0,
-skipParent: 0,
+skipParent: 7,
 childCount: 5,
 passChild: 0,
 failChild: 0,
@@ -1200,11 +836,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 4,
-failEvents: 12,
+passEvents: 0,
+failEvents: 3,
 warningEvents: 0,
-skipEvents: 0,
-infoEvents: 22
+skipEvents: 7,
+infoEvents: 8
 };
 </script>        </div>
       </div>
