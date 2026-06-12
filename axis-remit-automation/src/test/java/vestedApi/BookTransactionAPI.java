@@ -37,6 +37,7 @@ public class BookTransactionAPI extends ApiBaseTest {
 		requestBody.put("clientCode", "VESTED");
 		requestBody.put("groupId", "KB");
 		requestBody.put("channel", "WEB");
+		requestBody.put("userIPaddress", "123.456.78");
 
 		return requestBody;
 	}
@@ -187,7 +188,7 @@ public class BookTransactionAPI extends ApiBaseTest {
 		quoteId = response.jsonPath().getString("getQuoteDetails.quoteId");
 		recvAmount = response.jsonPath().getString("getQuoteDetails.fc_amt");
 		conversionRate = response.jsonPath().getString("transactionDetails.rate");
-		finalSendAmountINR = response.jsonPath().getString("transactionDetails.lcyamt");
+		finalSendAmountINR = response.jsonPath().getString("transactionDetails.finalSendAmountINR");
 		checkSum = response.jsonPath().getString("transactionDetails.checkSum");
 	}
 

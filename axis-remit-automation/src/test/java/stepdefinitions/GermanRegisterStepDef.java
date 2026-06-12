@@ -92,15 +92,17 @@ public class GermanRegisterStepDef {
 	}
 
 	@When("user enters German email address")
-	public void user_enters_german_email_address() {
+	public void user_enters_german_email_address() throws InterruptedException {
 
-		germanPage.enterEmail("abc123@yopmail.com");
+		germanPage.enterEmail("german21@yopmail.com");
+		germanPage.clickOutsideAfterPan();
 	}
 
 	@When("user clicks on German Get OTP button")
-	public void user_clicks_on_german_get_otp_button() {
+	public void user_clicks_on_german_get_otp_button() throws InterruptedException {
 
 		germanPage.clickGetOtpButton();
+		Thread.sleep(30000);
 	}
 
 	@Then("user should receive German OTP for email verification")
@@ -109,11 +111,11 @@ public class GermanRegisterStepDef {
 		System.out.println("German Email OTP popup displayed successfully");
 	}
 
-	@When("user enters German OTP for email verification")
-	public void user_enters_german_otp_for_email_verification() {
-
-		germanPage.enterEmailOtp("123456");
-	}
+//	@When("user enters German OTP for email verification")
+//	public void user_enters_german_otp_for_email_verification() {
+//
+//		germanPage.enterEmailOtp("123456");
+//	}
 
 	@When("user clicks on German Verify button for email verification")
 	public void user_clicks_on_german_verify_button_for_email_verification() {

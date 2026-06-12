@@ -23,18 +23,18 @@ public class SwiftUpdateApi extends ApiBaseTest {
 	 * Generates request body for Generate Token API
 	 */
 	private Map<String, Object> getGenerateTokenRequest() {
+	    requestId = "REQ" + System.currentTimeMillis();
 
-		requestId = "REQ" + System.currentTimeMillis();
+	    Map<String, Object> requestBody = new HashMap<>();
+	    requestBody.put("requestId", requestId);
+	    requestBody.put("crn", "1000100644");
+	    requestBody.put("accNo", "0050303922");
+	    requestBody.put("clientCode", "VESTED");
+	    requestBody.put("groupId", "KB");
+	    requestBody.put("channel", "WEB");
+	    requestBody.put("userIPaddress", "123.456.78");
 
-		Map<String, Object> requestBody = new HashMap<>();
-		requestBody.put("requestId", requestId);
-		requestBody.put("crn", "1000100644");
-		requestBody.put("accNo", "0050303922");
-		requestBody.put("clientCode", "VESTED");
-		requestBody.put("groupId", "KB");
-		requestBody.put("channel", "WEB");
-
-		return requestBody;
+	    return requestBody;
 	}
 
 	/**

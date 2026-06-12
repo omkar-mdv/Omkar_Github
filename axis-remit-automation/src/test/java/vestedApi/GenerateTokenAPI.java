@@ -57,12 +57,14 @@ public class GenerateTokenAPI extends ApiBaseTest {
 	 */
 	private Map<String, Object> getDefaultRequestBody() {
 		Map<String, Object> requestBody = new HashMap<>();
-		requestBody.put("requestId", "REQTEST002");
+		requestBody.put("requestId", "VST-20260612153819789-3YKA5D");
 		requestBody.put("crn", "1000100644");
 		requestBody.put("accNo", "0050303922");
 		requestBody.put("clientCode", "VESTED");
 		requestBody.put("groupId", "KB");
 		requestBody.put("channel", "WEB");
+		requestBody.put("userIPaddress", "123.456.78");
+
 		return requestBody;
 	}
 

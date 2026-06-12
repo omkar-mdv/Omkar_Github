@@ -24,9 +24,6 @@ Feature: German Customer Registration
     And user clicks on German Get OTP button
 
     Then user should receive German OTP for email verification
-    And user clicks on German OK button on popup
-
-    When user enters German OTP for email verification
     And user clicks on German Verify button for email verification
 
     And user enters German password

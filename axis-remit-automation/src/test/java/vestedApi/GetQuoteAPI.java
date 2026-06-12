@@ -31,6 +31,7 @@ public class GetQuoteAPI extends ApiBaseTest {
 		requestBody.put("clientCode", "VESTED");
 		requestBody.put("groupId", "KB");
 		requestBody.put("channel", "WEB");
+		requestBody.put("userIPaddress", "123.456.78");
 
 		return requestBody;
 	}

@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">API Automation Execution Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">May 28, 2026 06:59:01 pm</span></a>
+<a href="#"><span class="badge badge-primary">Jun 12, 2026 03:45:39 pm</span></a>
 </li>
 </ul>
 </div>
@@ -77,7 +77,6 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
-<a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -85,7 +84,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">StatusUpdateAPI</a>
+<a class="dropdown-item" href="#">GenerateTokenAPI</a>
 </ul>
 </li>
 </ul>
@@ -93,12 +92,12 @@
       <ul class="test-list-item">
         <li class="test-item"  status="fail" test-id="1"
           author=""
-          tag="StatusUpdateAPI"
+          tag="GenerateTokenAPI"
           device="">
           <div class="test-detail">
-            <p class="name">Verify Generate Token Api Returns Success With Valid Request</p>
+            <p class="name">Verify Generate Token Api Validates Customer Via CRN Api And Account Inquiry Api</p>
             <p class="text-sm">
-              <span>6:59:02 pm</span> / <span>00:00:08:987</span>
+              <span>3:45:42 pm</span> / <span>00:00:04:114</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -106,16 +105,16 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Verify Generate Token Api Returns Success With Valid Request</h5>
-<span class='badge badge-success'>05.28.2026 6:59:02 pm</span>
-<span class='badge badge-danger'>05.28.2026 6:59:11 pm</span>
-<span class='badge badge-default'>00:00:08:987</span>
+<h5 class="test-status text-fail">Verify Generate Token Api Validates Customer Via CRN Api And Account Inquiry Api</h5>
+<span class='badge badge-success'>06.12.2026 3:45:42 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:45:46 pm</span>
+<span class='badge badge-default'>00:00:04:114</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">StatusUpdateAPI</span></div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -123,37 +122,265 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>6:59:02 pm</td>
+        <td>3:45:42 pm</td>
         <td>
-          Test Class: StatusUpdateAPI
+          Test Class: GenerateTokenAPI
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>6:59:11 pm</td>
+        <td>3:45:46 pm</td>
         <td>
           Test Failed
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>6:59:11 pm</td>
+        <td>3:45:46 pm</td>
         <td>
-          Reason: expected [S] but found [null]
+          Reason: (certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>6:59:11 pm</td>
+        <td>3:45:46 pm</td>
         <td>
-          <textarea readonly class="code-block">java.lang.AssertionError: expected [S] but found [null]
+          <textarea readonly class="code-block">javax.net.ssl.SSLHandshakeException: (certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:383)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:326)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:321)
+	at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.checkServerCerts(CertificateMessage.java:1287)
+	at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.onConsumeCertificate(CertificateMessage.java:1164)
+	at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.consume(CertificateMessage.java:1107)
+	at java.base/sun.security.ssl.SSLHandshake.consume(SSLHandshake.java:393)
+	at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:477)
+	at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:448)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:206)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1506)
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1421)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426)
+	at org.apache.http.conn.ssl.SSLSocketFactory.createLayeredSocket(SSLSocketFactory.java:570)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:554)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:415)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
+	at io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:349)
+	at io.restassured.internal.http.HTTPBuilder$post$2.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1209)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1334)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1089)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:791)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:157)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1334)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1089)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:791)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1334)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1089)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:791)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:176)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
+	at vestedApi.GenerateTokenAPI.hitGenerateTokenApi(GenerateTokenAPI.java:24)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi(GenerateTokenAPI.java:176)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at java.base/sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:388)
+	at java.base/sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:271)
+	at java.base/sun.security.validator.Validator.validate(Validator.java:256)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:230)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:132)
+	at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.checkServerCerts(CertificateMessage.java:1271)
+	... 127 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at java.base/sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:148)
+	at java.base/sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:129)
+	at java.base/java.security.cert.CertPathBuilder.build(CertPathBuilder.java:297)
+	at java.base/sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:383)
+	... 132 more
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="2"
+          author=""
+          tag="GenerateTokenAPI"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Generate Token Api When Aadhar Link Is N</p>
+            <p class="text-sm">
+              <span>3:45:46 pm</span> / <span>00:00:03:420</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verify Generate Token Api When Aadhar Link Is N</h5>
+<span class='badge badge-success'>06.12.2026 3:45:46 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:45:49 pm</span>
+<span class='badge badge-default'>00:00:03:420</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:46 pm</td>
+        <td>
+          Test Class: GenerateTokenAPI
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:48 pm</td>
+        <td>
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=VESTED, accNo=04221040003886, groupId=KB, channel=WEB, crn=27374059}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:48 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "gukX49d44I9XBtx9eGXmAt5BPZeu3GYqCnRYRe4XtSqkY2yz/5assCMEIkPlXn15j7GRVj1j1S05QPddv1BmtBf6sZYgMp9KIQvM4nrdKng5iTwxG2y6tcLFRjwz7zkCy61Q9p9fN29ACpXOuuprO4DFjvKNmEm+V4Ucoh+z+dlMxgY6kMvGKlMmoslxtx/N+vZminh21Qxx+HvFkOrfV7p7tWTSSC44K8oAdGGST0/XnMygr0pLjdCwDyxZxyZCTVgbPO021d4tP93Kf1qUHdUvJUSc5d7z+vgdyycrw5I="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:45:49 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:45:49 pm</td>
+        <td>
+          Reason: expected [F] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:45:49 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [F] but found [null]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at vestedApi.StatusUpdateAPI.verifyGenerateTokenApiReturnsSuccessWithValidRequest(StatusUpdateAPI.java:91)
+	at vestedApi.GenerateTokenAPI.validateFailureResponse(GenerateTokenAPI.java:47)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWhenAadharLinkIsN(GenerateTokenAPI.java:107)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -189,80 +416,31 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="skip" test-id="2"
+        <li class="test-item"  status="fail" test-id="3"
           author=""
-          tag="StatusUpdateAPI"
+          tag="GenerateTokenAPI"
           device="">
           <div class="test-detail">
-            <p class="name">Verify Status Update Api Returns Correct Transaction Status</p>
+            <p class="name">Verify Generate Token Api When Acc No Does Not Match Apac In BCIF</p>
             <p class="text-sm">
-              <span>6:59:11 pm</span> / <span>00:00:00:012</span>
-              <span class="badge skip-bg log float-right">Skip</span>
+              <span>3:45:49 pm</span> / <span>00:00:01:731</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-skip">Verify Status Update Api Returns Correct Transaction Status</h5>
-<span class='badge badge-success'>05.28.2026 6:59:11 pm</span>
-<span class='badge badge-danger'>05.28.2026 6:59:11 pm</span>
-<span class='badge badge-default'>00:00:00:012</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">StatusUpdateAPI</span></div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>6:59:11 pm</td>
-        <td>
-          Test Class: StatusUpdateAPI
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log skip-bg">Skip</span></td>
-        <td>6:59:11 pm</td>
-        <td>
-          Test Skipped
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="skip" test-id="3"
-          author=""
-          tag="StatusUpdateAPI"
-          device="">
-          <div class="test-detail">
-            <p class="name">Verify Status Update Api Returns Error 1007 When Auth Token Is Invalid</p>
-            <p class="text-sm">
-              <span>6:59:11 pm</span> / <span>00:00:00:009</span>
-              <span class="badge skip-bg log float-right">Skip</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-skip">Verify Status Update Api Returns Error 1007 When Auth Token Is Invalid</h5>
-<span class='badge badge-success'>05.28.2026 6:59:11 pm</span>
-<span class='badge badge-danger'>05.28.2026 6:59:11 pm</span>
-<span class='badge badge-default'>00:00:00:009</span>
+<h5 class="test-status text-fail">Verify Generate Token Api When Acc No Does Not Match Apac In BCIF</h5>
+<span class='badge badge-success'>06.12.2026 3:45:49 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:45:51 pm</span>
+<span class='badge badge-default'>00:00:01:731</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">StatusUpdateAPI</span></div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -270,16 +448,82 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>6:59:11 pm</td>
+        <td>3:45:49 pm</td>
         <td>
-          Test Class: StatusUpdateAPI
+          Test Class: GenerateTokenAPI
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log skip-bg">Skip</span></td>
-        <td>6:59:11 pm</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:51 pm</td>
         <td>
-          Test Skipped
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=VESTED, accNo=0050303924, groupId=KB, channel=WEB, crn=1000100644}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:51 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "zUG0s6odfpzyH9NK20FNr5agHuf227Bz1Ls7H3r6ftjF4xDekUBQfL4jtz3lOM01LzCZHQX6k1ldN5xH2hOitItwCLo2Ovo5u2ZyQtTpYrL+D5X2vISPycteBAuCld9SsZmT8q6J6hLQKu2xGCyTrP80kyzF2G4wMEyC9T0N5LkUGe32lfqHMx/PzKx9zhabB0+TC7O8gjsIDpX7rxDJyYX5lanFuLkmmh4IM9q5R79j9dDkpBwnQmX9xPeQTiJuAWAgtiCeKLOIk/OE2uOMIUWpW2Jnd3+Q9GFmLbzadZM="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:45:51 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:45:51 pm</td>
+        <td>
+          Reason: expected [F] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:45:51 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [F] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenAPI.validateFailureResponse(GenerateTokenAPI.java:47)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWhenAccNoDoesNotMatchApacInBCIF(GenerateTokenAPI.java:336)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
         </td>
       </tr>
   </tbody>
@@ -287,31 +531,31 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="skip" test-id="4"
+        <li class="test-item"  status="fail" test-id="4"
           author=""
-          tag="StatusUpdateAPI"
+          tag="GenerateTokenAPI"
           device="">
           <div class="test-detail">
-            <p class="name">Verify Status Update Api Returns Error 1008 When Txn Ref No Is Invalid</p>
+            <p class="name">Verify Generate Token Api When Account Status Is Credit Freeze</p>
             <p class="text-sm">
-              <span>6:59:11 pm</span> / <span>00:00:00:009</span>
-              <span class="badge skip-bg log float-right">Skip</span>
+              <span>3:45:51 pm</span> / <span>00:00:01:788</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-skip">Verify Status Update Api Returns Error 1008 When Txn Ref No Is Invalid</h5>
-<span class='badge badge-success'>05.28.2026 6:59:11 pm</span>
-<span class='badge badge-danger'>05.28.2026 6:59:11 pm</span>
-<span class='badge badge-default'>00:00:00:009</span>
+<h5 class="test-status text-fail">Verify Generate Token Api When Account Status Is Credit Freeze</h5>
+<span class='badge badge-success'>06.12.2026 3:45:51 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:45:53 pm</span>
+<span class='badge badge-default'>00:00:01:788</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">StatusUpdateAPI</span></div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -319,16 +563,82 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>6:59:11 pm</td>
+        <td>3:45:51 pm</td>
         <td>
-          Test Class: StatusUpdateAPI
+          Test Class: GenerateTokenAPI
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log skip-bg">Skip</span></td>
-        <td>6:59:11 pm</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:53 pm</td>
         <td>
-          Test Skipped
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=VESTED, accNo=0050910410, groupId=KB, channel=WEB, crn=1000851901}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:53 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "RdVB426onx1RtyBnoF78ND69YxKnzjrxbPOlUpITQYHhXmAV6tH76f7IH/oEE5ZcPvWPAgAdN0EFyQN7NI7jeHf7DunRsOwpGBYP2VL+W6j6IFYR2fIrno2jQlzdw0h8oHi6RV8E18Q1bOsvUMQDwQsEpxdgBlMCgFDYebg5CN95IXh+zMRPQOTyHLyPAILRodd+7AYw2j3uB8oT5nP5vpLIF1l0o+Xpp/5m3DzIsO40k/9OO4pAlqBxvqTT6heuMd9xXA6xTwN0JCSyJzLXpp9x5x7lVwf8ugFDEBMp6Xo="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:45:53 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:45:53 pm</td>
+        <td>
+          Reason: expected [F] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:45:53 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [F] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenAPI.validateFailureResponse(GenerateTokenAPI.java:47)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWhenAccountStatusIsCreditFreeze(GenerateTokenAPI.java:349)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
         </td>
       </tr>
   </tbody>
@@ -336,31 +646,31 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="skip" test-id="5"
+        <li class="test-item"  status="fail" test-id="5"
           author=""
-          tag="StatusUpdateAPI"
+          tag="GenerateTokenAPI"
           device="">
           <div class="test-detail">
-            <p class="name">Verify Status Update Api Returns Txn Status 101 For Booked Transaction</p>
+            <p class="name">Verify Generate Token Api When Account Status Is Debit Freeze</p>
             <p class="text-sm">
-              <span>6:59:11 pm</span> / <span>00:00:00:013</span>
-              <span class="badge skip-bg log float-right">Skip</span>
+              <span>3:45:53 pm</span> / <span>00:00:02:151</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-skip">Verify Status Update Api Returns Txn Status 101 For Booked Transaction</h5>
-<span class='badge badge-success'>05.28.2026 6:59:11 pm</span>
-<span class='badge badge-danger'>05.28.2026 6:59:11 pm</span>
-<span class='badge badge-default'>00:00:00:013</span>
+<h5 class="test-status text-fail">Verify Generate Token Api When Account Status Is Debit Freeze</h5>
+<span class='badge badge-success'>06.12.2026 3:45:53 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:45:55 pm</span>
+<span class='badge badge-default'>00:00:02:151</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">StatusUpdateAPI</span></div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -368,16 +678,82 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>6:59:11 pm</td>
+        <td>3:45:53 pm</td>
         <td>
-          Test Class: StatusUpdateAPI
+          Test Class: GenerateTokenAPI
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log skip-bg">Skip</span></td>
-        <td>6:59:11 pm</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:55 pm</td>
         <td>
-          Test Skipped
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=VESTED, accNo=0050910427, groupId=KB, channel=WEB, crn=1000851875}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:55 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "VVNmFUYKYVuK/+L6CheiCOPH8ARNKa97LLdgv6OGP+KruZ4GQUww8Rw9mY98mfmP7zPcQx/YZTkx58mz+AcSaZcSi8qWPfkR6Nu66ov8bcOQS69sFgXf0a4Apv2e2TovJc3rJhZLVcSnhtjBfWhlSvEoKYSINwTJqL9okkBEbEqzvnunyG/LS3Q89J3EsVbcgOOGq0Ir36HAFohK+eDynt2LRY8tOCxiq+aiwT/k+JApEIVYzFLiWjRuJ3CwmDTsJQXN2cgVBY+5zVEaGSgJANwDEv8OPosIw77ub3aaBrM="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:45:55 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:45:55 pm</td>
+        <td>
+          Reason: expected [F] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:45:55 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [F] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenAPI.validateFailureResponse(GenerateTokenAPI.java:47)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWhenAccountStatusIsDebitFreeze(GenerateTokenAPI.java:258)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
         </td>
       </tr>
   </tbody>
@@ -385,31 +761,31 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="skip" test-id="6"
+        <li class="test-item"  status="fail" test-id="6"
           author=""
-          tag="StatusUpdateAPI"
+          tag="GenerateTokenAPI"
           device="">
           <div class="test-detail">
-            <p class="name">Verify Status Update Api Returns Txn Status 153 For Crn Updated Transaction</p>
+            <p class="name">Verify Generate Token Api When Account Status Is Dormant</p>
             <p class="text-sm">
-              <span>6:59:11 pm</span> / <span>00:00:00:009</span>
-              <span class="badge skip-bg log float-right">Skip</span>
+              <span>3:45:55 pm</span> / <span>00:00:01:827</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-skip">Verify Status Update Api Returns Txn Status 153 For Crn Updated Transaction</h5>
-<span class='badge badge-success'>05.28.2026 6:59:11 pm</span>
-<span class='badge badge-danger'>05.28.2026 6:59:11 pm</span>
-<span class='badge badge-default'>00:00:00:009</span>
+<h5 class="test-status text-fail">Verify Generate Token Api When Account Status Is Dormant</h5>
+<span class='badge badge-success'>06.12.2026 3:45:55 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:45:57 pm</span>
+<span class='badge badge-default'>00:00:01:827</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">StatusUpdateAPI</span></div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -417,16 +793,82 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>6:59:11 pm</td>
+        <td>3:45:55 pm</td>
         <td>
-          Test Class: StatusUpdateAPI
+          Test Class: GenerateTokenAPI
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log skip-bg">Skip</span></td>
-        <td>6:59:11 pm</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:57 pm</td>
         <td>
-          Test Skipped
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=VESTED, accNo=0050910397, groupId=KB, channel=WEB, crn=1000816994}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:57 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "PNk/DbY02gpA7SOMgu1bxrNenxGn0225DKREx7frLcNqdQDTAiay/XDlLn/RR8Tc6CYIUYYsc/+TlhfReqPIHNiChjzRwFKKfYFHnO3rMKzmq7TVnCTyB0HJoExJGW5FGQHurrUNQyaNMFcJwfaho0N5/aXbiYuzIGHJYGQHal5E03u0AjZi1Of7ZQRCaOa/EVJ688ILstTwt9zD8goNp3VU5gjEWbX55DXzpZ1UAFNc1HAy3GzumGDYoRsUVbqnYH1jgbSrY0qW7syJBO+NpfYfZH+axucUG79k/0ifS3Q="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:45:57 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:45:57 pm</td>
+        <td>
+          Reason: expected [F] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:45:57 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [F] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenAPI.validateFailureResponse(GenerateTokenAPI.java:47)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWhenAccountStatusIsDormant(GenerateTokenAPI.java:245)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
         </td>
       </tr>
   </tbody>
@@ -434,31 +876,31 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="skip" test-id="7"
+        <li class="test-item"  status="fail" test-id="7"
           author=""
-          tag="StatusUpdateAPI"
+          tag="GenerateTokenAPI"
           device="">
           <div class="test-detail">
-            <p class="name">Verify Status Update Api Returns Txn Status 204 For Money Delivered Transaction</p>
+            <p class="name">Verify Generate Token Api When Account Status Is Total Freeze</p>
             <p class="text-sm">
-              <span>6:59:11 pm</span> / <span>00:00:00:010</span>
-              <span class="badge skip-bg log float-right">Skip</span>
+              <span>3:45:57 pm</span> / <span>00:00:02:215</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-skip">Verify Status Update Api Returns Txn Status 204 For Money Delivered Transaction</h5>
-<span class='badge badge-success'>05.28.2026 6:59:11 pm</span>
-<span class='badge badge-danger'>05.28.2026 6:59:11 pm</span>
-<span class='badge badge-default'>00:00:00:010</span>
+<h5 class="test-status text-fail">Verify Generate Token Api When Account Status Is Total Freeze</h5>
+<span class='badge badge-success'>06.12.2026 3:45:57 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:45:59 pm</span>
+<span class='badge badge-default'>00:00:02:215</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">StatusUpdateAPI</span></div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -466,16 +908,82 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>6:59:11 pm</td>
+        <td>3:45:57 pm</td>
         <td>
-          Test Class: StatusUpdateAPI
+          Test Class: GenerateTokenAPI
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log skip-bg">Skip</span></td>
-        <td>6:59:11 pm</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:59 pm</td>
         <td>
-          Test Skipped
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=VESTED, accNo=9949856068, groupId=KB, channel=WEB, crn=9999995211}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:59 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "wOmmNUtD/Ds8YQa88LXhDGjCN1f5rGwwX0aVOpGRPByeUtZBYqLuN3VQDMppJ71WrDCiks7pGbK67Pof8vlK92/tt0oQgR8PjDXRGZvckhzm9LsfkmJF41jazC2rCTcwzXTndU/c/PFM2aY5wfK1phouOkvkskjPR8rSQmIXuPu1gUDP9rWkoIBASxqNdDAbUvekCstNsXBKBNUyV50Oxa4T5HeaAS3LyddnOf1BUcOKB6ptGcHSA5RUw7IfnDNVy3psTCC6lBX2ajRYLTWofXWTmXnHLZcgABv4axSG29c="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:45:59 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:45:59 pm</td>
+        <td>
+          Reason: expected [F] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:45:59 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [F] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenAPI.validateFailureResponse(GenerateTokenAPI.java:47)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWhenAccountStatusIsTotalFreeze(GenerateTokenAPI.java:362)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
         </td>
       </tr>
   </tbody>
@@ -483,31 +991,31 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="skip" test-id="8"
+        <li class="test-item"  status="fail" test-id="8"
           author=""
-          tag="StatusUpdateAPI"
+          tag="GenerateTokenAPI"
           device="">
           <div class="test-detail">
-            <p class="name">Verify Status Update Api Returns Txn Status 306 For Credence Rejected Transaction</p>
+            <p class="name">Verify Generate Token Api When Customer CRN Status Is Blacklisted</p>
             <p class="text-sm">
-              <span>6:59:11 pm</span> / <span>00:00:00:011</span>
-              <span class="badge skip-bg log float-right">Skip</span>
+              <span>3:45:59 pm</span> / <span>00:00:01:638</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-skip">Verify Status Update Api Returns Txn Status 306 For Credence Rejected Transaction</h5>
-<span class='badge badge-success'>05.28.2026 6:59:11 pm</span>
-<span class='badge badge-danger'>05.28.2026 6:59:11 pm</span>
-<span class='badge badge-default'>00:00:00:011</span>
+<h5 class="test-status text-fail">Verify Generate Token Api When Customer CRN Status Is Blacklisted</h5>
+<span class='badge badge-success'>06.12.2026 3:45:59 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:46:01 pm</span>
+<span class='badge badge-default'>00:00:01:638</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">StatusUpdateAPI</span></div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -515,16 +1023,1922 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>6:59:11 pm</td>
+        <td>3:45:59 pm</td>
         <td>
-          Test Class: StatusUpdateAPI
+          Test Class: GenerateTokenAPI
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log skip-bg">Skip</span></td>
-        <td>6:59:11 pm</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:01 pm</td>
         <td>
-          Test Skipped
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=VESTED, accNo=08160140009332, groupId=KB, channel=WEB, crn=8593560}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:01 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "S2byX/FRyzY9opyGSgr94TenLSHiaefmOC53l13WdwKoBb3qFlHPRdIKI5GQL2o9XsToH9O8P4Jgk+EdsbGtOSqmxBf7Im7tHP1vysogMh1L0saCVFF/uQreGlP91o+HLv32Zo0y0oJP7OE0h/topV+wksc4OjLPYyKktv+1YiWDe+eCbFkEappzhSdySS2XprZz4QnoFT9c10y5YeiIw0eBFHX+ekvsp1NQsZmntu85PCuCLut1duX74/dkxESdh8BNnkNTxa3NKTOwBpy7itib5qNPN89FHAM/4HoUKB0="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:01 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:01 pm</td>
+        <td>
+          Reason: expected [F] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:01 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [F] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenAPI.validateFailureResponse(GenerateTokenAPI.java:47)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted(GenerateTokenAPI.java:194)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="9"
+          author=""
+          tag="GenerateTokenAPI"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Generate Token Api When Customer CRN Status Is Suspended</p>
+            <p class="text-sm">
+              <span>3:46:01 pm</span> / <span>00:00:02:446</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verify Generate Token Api When Customer CRN Status Is Suspended</h5>
+<span class='badge badge-success'>06.12.2026 3:46:01 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:46:03 pm</span>
+<span class='badge badge-default'>00:00:02:446</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:01 pm</td>
+        <td>
+          Test Class: GenerateTokenAPI
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:03 pm</td>
+        <td>
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=VESTED, accNo=06381040000773, groupId=KB, channel=WEB, crn=24213234}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:03 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "yr5K7rJacWxspfHWlOZIwN/jat+pfieERiI1r7mLGPx0x5+UuJd0gZup349tXYeBgHsjIPEkJENAW9hMc2/puelr1ef9NYQ0Gt044gTDIooH+nKaJ46OLi6jgMHjZbwY7ZFC/2PhHkbcXItK/8G/iHxZrjzGMDspDmBXEyQ/cy+sgM+ekFsK1PbOw1G2vk27n/BQoDdXwbKAo5sFeImLsseEKEaIPB6BFNYKITYVNTan2cS2usUV5sGpS55COq8/AY4MvnqfIrxzrUvYyAHd8QyFW3ZR1t0vsL219Da0+pfUe/Acag0QcRdqxKDigR7KugJzSadoaVJDyRxGw35l8z/m+8u7DjO9+4D2BxA5KNPZP+6mpYgV1HtLtQ+ys9uFVs9O9QUn8Updiev8e/vsr38HLBeB40ffSwXRYEzo8gL62Ua9rYAB/XL4rDhskcTPRaZxOxk8kj6TgyCdFtc/AZr31fmt8sf5OQI8m2Oar06ArwHbNxFgporQvZATD934LMVEE7WdNWUGFhQyCaVedA=="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:03 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:03 pm</td>
+        <td>
+          Reason: expected [F] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:03 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [F] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenAPI.validateFailureResponse(GenerateTokenAPI.java:47)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWhenCustomerCRNStatusIsSuspended(GenerateTokenAPI.java:323)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="10"
+          author=""
+          tag="GenerateTokenAPI"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Generate Token Api When IT Type Is Not Allowed</p>
+            <p class="text-sm">
+              <span>3:46:03 pm</span> / <span>00:00:02:664</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verify Generate Token Api When IT Type Is Not Allowed</h5>
+<span class='badge badge-success'>06.12.2026 3:46:03 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:46:06 pm</span>
+<span class='badge badge-default'>00:00:02:664</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:03 pm</td>
+        <td>
+          Test Class: GenerateTokenAPI
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:06 pm</td>
+        <td>
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=VESTED, accNo=8111200890, groupId=KB, channel=WEB, crn=1005817}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:06 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "czSfZ0pUAvFE8ABEKVdFxDQPXT/uprPS1lvZtXwhQyLOD1c1kHWZljElWG2ACe7YKkdzDfaV2OzdBucGMl0+CghBKA4CvLVBqz0l30K/lmOnf6Wp61PX9pxbtq4n2IVlZZhW3WZDwN6DxQU6S+yzl8jtx+nJcGQ2DoSHLzYNdGBm090LIyVTGxtVXoUfiTb8sgrQtiBn/0yiQyelRXAMUJERW73PEhhfKGcGehkU3YZ40GmvCUb8EbVAtt3WyWeV0mCVQGBKFEMMJTnrQjugD/1A7e7jWdTerG5BzGAKnGc="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:06 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:06 pm</td>
+        <td>
+          Reason: expected [F] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:06 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [F] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenAPI.validateFailureResponse(GenerateTokenAPI.java:47)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWhenITTypeIsNotAllowed(GenerateTokenAPI.java:232)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="11"
+          author=""
+          tag="GenerateTokenAPI"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Generate Token Api When Party Type Is Corporate</p>
+            <p class="text-sm">
+              <span>3:46:06 pm</span> / <span>00:00:02:139</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verify Generate Token Api When Party Type Is Corporate</h5>
+<span class='badge badge-success'>06.12.2026 3:46:06 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:46:08 pm</span>
+<span class='badge badge-default'>00:00:02:139</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:06 pm</td>
+        <td>
+          Test Class: GenerateTokenAPI
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:08 pm</td>
+        <td>
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=VESTED, accNo=6311175802, groupId=KB, channel=WEB, crn=3397636}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:08 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "vlLlpYMp+quqEHn9FupNU2LcUVuEQsonewhBHT5JVCHJ7qzQApT5chcQxcfJuZwdzfCfIMDQScWt2mtz6KBXhKP7whxxd+blKuE0sJ2sREdJEbDl0dRCfZpW3kK8Jy3xK30P55Ca5HkHYgkO6bvtBldoZFQ2VLe1vyOi/cvuXcwe+UyNhq0MXbxv6tlq/UCiYiORklSlZQLz+fmuXIWxrxzTk8SMrc5y83DipbtEeOuacN4xCeB+l9hwXIedYt1Bdtu9vAWL+OAJ+6lSD0V+snF5SCy4xNIFLYWuHlOVRwc="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:08 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:08 pm</td>
+        <td>
+          Reason: expected [F] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:08 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [F] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenAPI.validateFailureResponse(GenerateTokenAPI.java:47)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWhenPartyTypeIsCorporate(GenerateTokenAPI.java:219)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="12"
+          author=""
+          tag="GenerateTokenAPI"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Generate Token Api When Relation Type Is Not Allowed</p>
+            <p class="text-sm">
+              <span>3:46:08 pm</span> / <span>00:00:02:469</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verify Generate Token Api When Relation Type Is Not Allowed</h5>
+<span class='badge badge-success'>06.12.2026 3:46:08 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:46:10 pm</span>
+<span class='badge badge-default'>00:00:02:469</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:08 pm</td>
+        <td>
+          Test Class: GenerateTokenAPI
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:10 pm</td>
+        <td>
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=VESTED, accNo=09581040001571, groupId=KB, channel=WEB, crn=7706040}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:10 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "0dEtFCqtKckDkp2djJ2drxykZesCQpQk96OY49s2ckRQr6RecsRP08ufPpiXT6W1czJpniY+ZOhddBA+NaLSGzQDBwAIlEWPy3LvpiDgq+jbOM+fb58zQ8g2EaPS8USjHfEfKd7Uvo2229CfOx5yOFTqlo327DaVorl2SINZFh5zhye4f+3cEp5NWn7XGod+qB4PXnIp47q7GIhPD8+D5+1RotPvJg6p0z63cAk5Kxg2ccUmH45RMQzU7JksCqnbe0PP9nirKlTOCu+7Lo9ddLqLGnua00UDFGcMINbtntw="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:10 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:10 pm</td>
+        <td>
+          Reason: expected [F] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:10 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [F] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenAPI.validateFailureResponse(GenerateTokenAPI.java:47)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWhenRelationTypeIsNotAllowed(GenerateTokenAPI.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="13"
+          author=""
+          tag="GenerateTokenAPI"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Generate Token Api When Scheme Code Is Not Allowed</p>
+            <p class="text-sm">
+              <span>3:46:10 pm</span> / <span>00:00:02:654</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verify Generate Token Api When Scheme Code Is Not Allowed</h5>
+<span class='badge badge-success'>06.12.2026 3:46:10 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:46:13 pm</span>
+<span class='badge badge-default'>00:00:02:654</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:10 pm</td>
+        <td>
+          Test Class: GenerateTokenAPI
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:13 pm</td>
+        <td>
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=VESTED, accNo=7150157172, groupId=KB, channel=WEB, crn=100759017}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:13 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "Y6h52Osacn2E8M4tbrEJUDqL4vL8lmp1AOdKA06zS+Y4n8eAqy8tiM4FqBdz/IavoykOzBFonX3J9P0dO8WsdsunDZKZ6Okt64KkQGMGON72zV57pxIhtVLUghNxHELassuuCympaWWBKpN1TOG8T0KIG7Ubxo/xQmebqmgyvafP/RVauJ+WoVgQkBgbwmgxacu331pbXsDvTJ8USJNRFXNVsGGv0uOP7CzZ/zvOg1YYiOxav2E9OBV2btMWG5f0fIV1dMtKaBUxQFQEgA+xo4GXI0BFA/DVNsUvFNsmeJY3FrxiFX9KIe1nlp8y/drM1J23J/IrXM8B5N1s2NFb+tcvHzCNY8ns2MbE3Cfj0iVe0IIRTEVbIoBnZAtWui/Xvzmp80OFofWjm7E3TJvPEuXxujLkI46ycyIyRl1wHW7badNtItmSAzGi1qkBXZHKvxhedMfXcvEEkm3DAApMf6jWG4gXS85+CiGdNRd3wufTgP6t8y9wDGTt2++MNiS3oxZaphrsxQ2qHa5wyaym4A=="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:13 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:13 pm</td>
+        <td>
+          Reason: expected [F] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:13 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [F] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenAPI.validateFailureResponse(GenerateTokenAPI.java:47)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWhenSchemeCodeIsNotAllowed(GenerateTokenAPI.java:375)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="14"
+          author=""
+          tag="GenerateTokenAPI"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Generate Token Api With Alphabetic Characters In CRN</p>
+            <p class="text-sm">
+              <span>3:46:13 pm</span> / <span>00:00:00:369</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verify Generate Token Api With Alphabetic Characters In CRN</h5>
+<span class='badge badge-success'>06.12.2026 3:46:13 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:46:13 pm</span>
+<span class='badge badge-default'>00:00:00:369</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:13 pm</td>
+        <td>
+          Test Class: GenerateTokenAPI
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:13 pm</td>
+        <td>
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=VESTED, accNo=0050303922, groupId=KB, channel=WEB, crn=ABCD59017}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:13 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "Kg4Y6V4ecTqb71IJsDkFAYwLf8TTBNEIhCAcqSx4HzibqvuwsKyTMheutCEgPRNji07GkG4TWZhcp6pFf/936x0tyqRNbEPAOnjRUETeiY0kptfl/xDL5FMFT/mqzK+qqj+SM+lrf6fAH95jSQ2rpWp+zaDJjTUEZQ8Fv8g7T84qzW0B4zv5c+BPPVsNF5QSZnnwhes1DuI0E8yGctNV9+66XwMbw4iPcq+Z/r7AXfEo++OyMsFWzpXLb9wpngeNCg/qq2JrHFztTANp41NGocly9F2Bmhs1OF7FZaNRKpo="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:13 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:13 pm</td>
+        <td>
+          Reason: expected [F] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:13 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [F] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenAPI.validateFailureResponse(GenerateTokenAPI.java:47)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWithAlphabeticCharactersInCRN(GenerateTokenAPI.java:155)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="15"
+          author=""
+          tag="GenerateTokenAPI"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Generate Token Api With CRN Above Maximum Length</p>
+            <p class="text-sm">
+              <span>3:46:13 pm</span> / <span>00:00:00:444</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verify Generate Token Api With CRN Above Maximum Length</h5>
+<span class='badge badge-success'>06.12.2026 3:46:13 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:46:14 pm</span>
+<span class='badge badge-default'>00:00:00:444</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:13 pm</td>
+        <td>
+          Test Class: GenerateTokenAPI
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:14 pm</td>
+        <td>
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=VESTED, accNo=0050303922, groupId=KB, channel=WEB, crn=1234567890123456}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:14 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "kjNYPERTlZuwiob264wTBlNEOF1hkMFU0sLcVtxsSu5Gl9M21ENDuIJTh17NUw8ZAzBOuoIQAvWBFQZaMI3hfazxSfYPdXKk/tNyhRkFArryzMSeWSE00BSZ0YzLBaLJXkZZM0dX6lnGzj4asDw/mcBlPR9uiNE62ax6OX9cpc8S72Eew42XSA88M6nU6cVYr+23qXEi7xmBFa/A0AidBtretUb2qXuk8oo28vpeChVoZ+ZOS07ZoZPbmDZLhoCazsj9M2DnLU8kwdNCvEiHc473zE5HYAkUXHtMyRJJ/V0="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:14 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:14 pm</td>
+        <td>
+          Reason: expected [F] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:14 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [F] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenAPI.validateFailureResponse(GenerateTokenAPI.java:47)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWithCRNAboveMaximumLength(GenerateTokenAPI.java:143)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="16"
+          author=""
+          tag="GenerateTokenAPI"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Generate Token Api With Crn Above Maximum Length</p>
+            <p class="text-sm">
+              <span>3:46:14 pm</span> / <span>00:00:00:459</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verify Generate Token Api With Crn Above Maximum Length</h5>
+<span class='badge badge-success'>06.12.2026 3:46:14 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:46:14 pm</span>
+<span class='badge badge-default'>00:00:00:459</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:14 pm</td>
+        <td>
+          Test Class: GenerateTokenAPI
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:14 pm</td>
+        <td>
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=VESTED, accNo=0050303922, groupId=KB, channel=WEB, crn=1234567890123456}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:14 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "ezbg+Zf3FPOZqBvW0VqIV3wYeiqwF5V9LQoTW86Mcqj5xNVJA1WUXj6LSA+6omC7nb4XObPqDftpyp5576hs66BvC4BYBL5SLKwsrFuec9daVvZGpwfLKIZFDaiNxx/qlbWwzdZCyCdFZtGv1oUAHZcxV0vV3EXr7iMgmUxpauq315WlvdPfNwSoQgR6Dqw0+p7Astb9T5hTWIFYkQMnnyxydOuTPlxx3/Mh0j28UtuaE4jo7x0plOoidzkumchfozuF7R9OttCO4zw9O6kwEBJ/fPY54vnAsstZ6H8q+Wo="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:14 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:14 pm</td>
+        <td>
+          Reason: expected [F] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:14 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [F] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenAPI.validateFailureResponse(GenerateTokenAPI.java:47)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWithCrnAboveMaximumLength(GenerateTokenAPI.java:310)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="17"
+          author=""
+          tag="GenerateTokenAPI"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Generate Token Api With Crn At Maximum Length</p>
+            <p class="text-sm">
+              <span>3:46:14 pm</span> / <span>00:00:02:052</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verify Generate Token Api With Crn At Maximum Length</h5>
+<span class='badge badge-success'>06.12.2026 3:46:14 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:46:16 pm</span>
+<span class='badge badge-default'>00:00:02:052</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:14 pm</td>
+        <td>
+          Test Class: GenerateTokenAPI
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:16 pm</td>
+        <td>
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=VESTED, accNo=0050262120, groupId=KB, channel=WEB, crn=100000081000}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:16 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "gP5CBvdwmvPesqJ1NCb73iEm+aHLJx8pHSaIXqaAwBu8WmwBI3JmENRJA7nNVuJD8suDNcHZXqvTg9Vcm1DK4cECyKt6M2Stb9IDm3cSk9ycHKrxBr3KdzTZJ0pcFwWzIefJZ7diak1x2I2A5gmb0lQh3d6BUPJa9F/kKfSuZYozz7TLWKrAJAKxCXvyB6Od6dN56dgzlpUtx/ZSmSZ59m/m5wcsTfkM8uVf5KVCyJUkTkGhARIufpXIkLxrgdjqa7BoP0SXyP/K5esyAmzRAe1nZUPIq9l/LkusZ1N4w6c="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:16 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:16 pm</td>
+        <td>
+          Reason: expected [S] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:16 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [S] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenAPI.validateSuccessResponse(GenerateTokenAPI.java:37)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWithCrnAtMaximumLength(GenerateTokenAPI.java:284)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="18"
+          author=""
+          tag="GenerateTokenAPI"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Generate Token Api With Crn At Minimum Length Four Digits</p>
+            <p class="text-sm">
+              <span>3:46:16 pm</span> / <span>00:00:00:321</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verify Generate Token Api With Crn At Minimum Length Four Digits</h5>
+<span class='badge badge-success'>06.12.2026 3:46:16 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:46:17 pm</span>
+<span class='badge badge-default'>00:00:00:321</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:16 pm</td>
+        <td>
+          Test Class: GenerateTokenAPI
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:17 pm</td>
+        <td>
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=VESTED, accNo=0050303922, groupId=KB, channel=WEB, crn=1234}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:17 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "Sll0e50N7C3VtAaKfA8xdfebNbMjkvufRa6LU1Lbu2upolffl0vnCA4LvEYR39JZ8DNSC77NQAKuApeGEGRoLEFY7jEsAO3Aho7ApfJuiAdbNnYWJl3uU0I8qJ/NJU16QmeQTnHivgmJ/kplSIW2/OyX6PqmIf5QC7uyH7M/TJ4vURt93SGVSCAc5HOVsE7yWk7wrA75XFf1IYH55tCF/i8A7CPlzLPOzuldkS353iIriiEJsU1I2OhV95wA6P01Q8cvbeTzEks+VoSm5K3pEOiMTPyd4ouUbqIe+jVSid4="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:17 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:17 pm</td>
+        <td>
+          Reason: expected [F] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:17 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [F] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenAPI.validateFailureResponse(GenerateTokenAPI.java:47)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWithCrnAtMinimumLengthFourDigits(GenerateTokenAPI.java:297)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="19"
+          author=""
+          tag="GenerateTokenAPI"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Generate Token Api With Empty CRN</p>
+            <p class="text-sm">
+              <span>3:46:17 pm</span> / <span>00:00:00:433</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verify Generate Token Api With Empty CRN</h5>
+<span class='badge badge-success'>06.12.2026 3:46:17 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:46:17 pm</span>
+<span class='badge badge-default'>00:00:00:433</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:17 pm</td>
+        <td>
+          Test Class: GenerateTokenAPI
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:17 pm</td>
+        <td>
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=VESTED, accNo=0050303922, groupId=KB, channel=WEB, crn=}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:17 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "4XlVG7kU84MY7TTjeba/rFX3ZZoRkqUsRqs+s0E687kEWY2vziyYsk7N15buixxsdXki0jL+whsgCk8LgkM3N32EjltBG6nTI/Ds3R2dNvJSk1DASfLEy1pk9P1ua2zIdKxMOK0qtXRSysjxg+f/8apaAWtB0gHVWFVt5jHZKV3oD0p84zggIDob8nGNwB0aq0x21CnGK9xY8XJeFIvNi810OcHqZloI6LiMhq8S24zAQ0I1yWglKZAnzv4ZKySCe+AaP3DfPxR1EO5tV73XdAwgSN1VsUkoKFJqhTu1+IA="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:17 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:17 pm</td>
+        <td>
+          Reason: expected [F] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:17 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [F] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenAPI.validateFailureResponse(GenerateTokenAPI.java:47)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWithEmptyCRN(GenerateTokenAPI.java:94)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="20"
+          author=""
+          tag="GenerateTokenAPI"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Generate Token Api With Invalid Non Existent CRN</p>
+            <p class="text-sm">
+              <span>3:46:17 pm</span> / <span>00:00:00:798</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verify Generate Token Api With Invalid Non Existent CRN</h5>
+<span class='badge badge-success'>06.12.2026 3:46:17 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:46:18 pm</span>
+<span class='badge badge-default'>00:00:00:798</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:17 pm</td>
+        <td>
+          Test Class: GenerateTokenAPI
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:18 pm</td>
+        <td>
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=VESTED, accNo=0050303922, groupId=KB, channel=WEB, crn=99999999}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:18 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "BSJubkfJFtF4VrqZJW6R9H9V7v1gx8Y9j8XZ6cwrZ2KmBpkO8KZyTKe6B8RZGOc7sMGYcb+OIW4YdX5OIcyidvE39+O6ffI5MHcqioGtCN5hyMLBhk82MJA5yEH5bV2i6vMo5QtcEs1vTTPkxu1KAGVdOE5dh1WQyvrD2eUfV72I0G42xszY7W/7djm44Iuomq0WGKWYbE4X6XErVocTxsED0tsVaEtPB0Y9p5NcnQPrk4CFMKqfkKSMvkTGNCuyua3ycP28iKs+LBakWFcFuf1UuVwUg3j842mr4gElSiY="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:18 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:18 pm</td>
+        <td>
+          Reason: expected [F] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:18 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [F] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenAPI.validateFailureResponse(GenerateTokenAPI.java:47)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWithInvalidNonExistentCRN(GenerateTokenAPI.java:206)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="21"
+          author=""
+          tag="GenerateTokenAPI"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Generate Token Api With Missing Client Code</p>
+            <p class="text-sm">
+              <span>3:46:18 pm</span> / <span>00:00:00:369</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verify Generate Token Api With Missing Client Code</h5>
+<span class='badge badge-success'>06.12.2026 3:46:18 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:46:18 pm</span>
+<span class='badge badge-default'>00:00:00:369</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:18 pm</td>
+        <td>
+          Test Class: GenerateTokenAPI
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:18 pm</td>
+        <td>
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=, accNo=0050303922, groupId=KB, channel=WEB, crn=1000100644}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:18 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "IqeyFcq4/p71brwtFspBOvCoHx95EFjDQgNFAixovgILU6G+a0x81SKaFBiJkgyiAfNq5GF26joK5BBPhB5oRpV6bsEk8jnvkV5FJwcFbHKiVHUYeUzPEOwVfyeHJqlgU/1BIZRthComhlkx/WZMyAHRdVoTmyDrmCpbIb1kwXYuGyW/UOGvuOizxK5TKlKjsSL42yU6+Q4qJTzj8Q64JHAsGZEMmh0HNcgFPuGAX+r1fbnRV+NodBiRuIA2X8DOvLNG31GCeHKoQqAryMOK5od9HaZVZtnYOPbEdspcJL4="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:18 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:18 pm</td>
+        <td>
+          Reason: expected [F] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:18 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [F] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenAPI.validateFailureResponse(GenerateTokenAPI.java:47)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWithMissingClientCode(GenerateTokenAPI.java:131)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="22"
+          author=""
+          tag="GenerateTokenAPI"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Generate Token Api With Missing Mandatory Field Acc No</p>
+            <p class="text-sm">
+              <span>3:46:18 pm</span> / <span>00:00:00:363</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verify Generate Token Api With Missing Mandatory Field Acc No</h5>
+<span class='badge badge-success'>06.12.2026 3:46:18 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:46:19 pm</span>
+<span class='badge badge-default'>00:00:00:363</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:18 pm</td>
+        <td>
+          Test Class: GenerateTokenAPI
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:19 pm</td>
+        <td>
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=VESTED, accNo=, groupId=KB, channel=WEB, crn=1000100644}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:19 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "9E61FiFe72WbWuwJg+g1QpCyMzw9cjYapkMb3sikHup13S3a6BoZ8ryDr5RwNhQkRhynat0F+sDLDJbaP8Q+KtW12DAjck0hegscYTVmkqIdT+9MSJirYpEVfsaVzOB8fKXHVaQhVH55vXa93u5rSD53iT+U1s35aPb7pfZspP2YTu3SBusVKJT9uasVJSwtreCsxFaFfRVhV7Vvkd6Iemaaq0fb8JmKErMurtQyPS7FO7ZsXLCiyDnXA+k911d6z7bpVuMEJ7RO9zJGcxdudkqrgLbjT/IfGl3bcB16AYg="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:19 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:19 pm</td>
+        <td>
+          Reason: expected [F] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:19 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [F] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenAPI.validateFailureResponse(GenerateTokenAPI.java:47)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWithMissingMandatoryFieldAccNo(GenerateTokenAPI.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="23"
+          author=""
+          tag="GenerateTokenAPI"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Generate Token Api With Special Characters In Acc No</p>
+            <p class="text-sm">
+              <span>3:46:19 pm</span> / <span>00:00:00:319</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verify Generate Token Api With Special Characters In Acc No</h5>
+<span class='badge badge-success'>06.12.2026 3:46:19 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:46:19 pm</span>
+<span class='badge badge-default'>00:00:00:319</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:19 pm</td>
+        <td>
+          Test Class: GenerateTokenAPI
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:19 pm</td>
+        <td>
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=VESTED, accNo=0958!@#$%, groupId=KB, channel=WEB, crn=1000100644}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:19 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "IWZAmp/AolqlAflfbqRl40B+EgU5je5HqnHH7z9TH53+jg1E/DesKm4O7PzWQ8oClwWNG9CDpEIU98unACkK+4R6tcoXSWnb2jx9i5TEMKBacpUJsT7IEhGncadVzLaaUN/bsl+YozPZQwidyJC7WSGeOhasgFW//i839DP4Xl+QC2RSEfXJOxVlxMvdI+yr1uZF3fzPuPPbKKeyaIrpefzlbYz9MpGU6nDDO4TsrvEYC9YovhO/HeEfqvMW0lbNnahUSvyLlhkC0tjZiWZbhtqVzeEAZRvm3oNJBNNJTb0="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:19 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:19 pm</td>
+        <td>
+          Reason: expected [F] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:19 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [F] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenAPI.validateFailureResponse(GenerateTokenAPI.java:47)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWithSpecialCharactersInAccNo(GenerateTokenAPI.java:167)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="24"
+          author=""
+          tag="GenerateTokenAPI"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Generate Token Api With Valid CRN And Account Number For Eligible ETB Customer</p>
+            <p class="text-sm">
+              <span>3:46:19 pm</span> / <span>00:00:02:169</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verify Generate Token Api With Valid CRN And Account Number For Eligible ETB Customer</h5>
+<span class='badge badge-success'>06.12.2026 3:46:19 pm</span>
+<span class='badge badge-danger'>06.12.2026 3:46:21 pm</span>
+<span class='badge badge-default'>00:00:02:169</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">GenerateTokenAPI</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:19 pm</td>
+        <td>
+          Test Class: GenerateTokenAPI
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:21 pm</td>
+        <td>
+          Request Body: {userIPaddress=123.456.78, requestId=VST-20260612153819789-3YKA5D, clientCode=VESTED, accNo=0050303922, groupId=KB, channel=WEB, crn=1000100644}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:21 pm</td>
+        <td>
+          Response Body: {
+    "encryptedData": "KWUb7B9YeAJNwsLbYvayX4wnDRDsBQyeBseAH66FuPoBQbjMnqsWiUph7XmEQ2w0jNFY7HEkccBYW/AaN02C9EBYm5EInhMS/KEY6DS/DYlvmMlzHiI5Fzm67C/Tpp2pHVTKN6dyEoJ0dABqgRj84OGj2ho3LZfEtZBti8+xdc1kUKoeT2ADdlS3UeyDoi3NOBQjfpEd8htmJEdYLgbNY16Rj6R5AevdBM+XDn3nbYpA/qlgiqfAgl4kfeRr2G0inT0YSLmyxEGNWjwCIgsCiSXbhBTWzBeGM36CudmluMOGQGXAv0D+PFSzajZv/m02enztkZXDJ+pJf7I7vVQKXAKktNevITQKKmZ3uvY3+JY0hUZANwl7yW2/Ze/F6FHVQnMwK8NmBLF0pJjNd2r3kZzaqhL1tOxundu6Hf788BrPv6eG08pF9jAm/uW0RutvIogQumXUXflQyjU6PUEr58l8FXFeni30es1igXdGQhGzbPbCOFdoZOGmsoBbqE1wgPUaQU5C9tlu0UajJYk3uw=="
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:21 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:21 pm</td>
+        <td>
+          Reason: expected [S] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:46:21 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [S] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at vestedApi.GenerateTokenAPI.validateSuccessResponse(GenerateTokenAPI.java:37)
+	at vestedApi.GenerateTokenAPI.verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer(GenerateTokenAPI.java:78)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
         </td>
       </tr>
   </tbody>
@@ -545,21 +2959,208 @@
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>1</span>
+<span class='badge log badge-danger'>23</span>
 </span>
 <p class="name">java.lang.AssertionError</p>
-<p class="duration text-sm">1 tests</p>
+<p class="duration text-sm">23 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
 <h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>23 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:45:46 pm</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>Verify Generate Token Api When Aadhar Link Is N</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:45:49 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>Verify Generate Token Api When Acc No Does Not Match Apac In BCIF</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:45:51 pm</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>Verify Generate Token Api When Account Status Is Credit Freeze</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:45:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>Verify Generate Token Api When Account Status Is Debit Freeze</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:45:55 pm</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>Verify Generate Token Api When Account Status Is Dormant</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:45:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>Verify Generate Token Api When Account Status Is Total Freeze</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:45:59 pm</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>Verify Generate Token Api When Customer CRN Status Is Blacklisted</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:01 pm</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>Verify Generate Token Api When Customer CRN Status Is Suspended</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:03 pm</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>Verify Generate Token Api When IT Type Is Not Allowed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:06 pm</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>Verify Generate Token Api When Party Type Is Corporate</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>Verify Generate Token Api When Relation Type Is Not Allowed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:10 pm</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>Verify Generate Token Api When Scheme Code Is Not Allowed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:13 pm</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>Verify Generate Token Api With Alphabetic Characters In CRN</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:13 pm</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>Verify Generate Token Api With CRN Above Maximum Length</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:14 pm</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>Verify Generate Token Api With Crn Above Maximum Length</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:14 pm</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>Verify Generate Token Api With Crn At Maximum Length</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:16 pm</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>Verify Generate Token Api With Crn At Minimum Length Four Digits</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:17 pm</td>
+<td>
+<a href="#" class="linked" test-id='19' id='19'>Verify Generate Token Api With Empty CRN</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:17 pm</td>
+<td>
+<a href="#" class="linked" test-id='20' id='20'>Verify Generate Token Api With Invalid Non Existent CRN</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:18 pm</td>
+<td>
+<a href="#" class="linked" test-id='21' id='21'>Verify Generate Token Api With Missing Client Code</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:18 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='22'>Verify Generate Token Api With Missing Mandatory Field Acc No</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:19 pm</td>
+<td>
+<a href="#" class="linked" test-id='23' id='23'>Verify Generate Token Api With Special Characters In Acc No</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:19 pm</td>
+<td>
+<a href="#" class="linked" test-id='24' id='24'>Verify Generate Token Api With Valid CRN And Account Number For Eligible ETB Customer</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">javax.net.ssl.SSLHandshakeException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>javax.net.ssl.SSLHandshakeException</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -573,9 +3174,9 @@
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>18:59:02 pm</td>
+<td>15:45:42 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='1'>Verify Generate Token Api Returns Success With Valid Request</a>
+<a href="#" class="linked" test-id='1' id='1'>Verify Generate Token Api Validates Customer Via CRN Api And Account Inquiry Api</a>
 </td>
 </tr>
 </tbody>
@@ -601,17 +3202,15 @@
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>1</span>
-<span class='badge log badge-skip'>7</span>
+<span class='badge log badge-danger'>24</span>
 </span>
-<p class="name">StatusUpdateAPI</p>
-<p class="duration text-sm">8 tests</p>
+<p class="name">GenerateTokenAPI</p>
+<p class="duration text-sm">24 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>StatusUpdateAPI</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-<span status="skip" class='badge log badge-skip'>7 skipped</span>
+<h4>GenerateTokenAPI</h4>
+<span status="fail" class='badge log badge-danger'>24 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -624,58 +3223,170 @@
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>18:59:02 pm</td>
+<td>15:45:42 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='1'>Verify Generate Token Api Returns Success With Valid Request</a>
+<a href="#" class="linked" test-id='1' id='1'>Verify Generate Token Api Validates Customer Via CRN Api And Account Inquiry Api</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="skip">
-<td><span class="badge log skip-bg">Skip</span></td>
-<td>18:59:11 pm</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:45:46 pm</td>
 <td>
-<a href="#" class="linked" test-id='2' id='2'>Verify Status Update Api Returns Correct Transaction Status</a>
+<a href="#" class="linked" test-id='2' id='2'>Verify Generate Token Api When Aadhar Link Is N</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="skip">
-<td><span class="badge log skip-bg">Skip</span></td>
-<td>18:59:11 pm</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:45:49 pm</td>
 <td>
-<a href="#" class="linked" test-id='3' id='3'>Verify Status Update Api Returns Error 1007 When Auth Token Is Invalid</a>
+<a href="#" class="linked" test-id='3' id='3'>Verify Generate Token Api When Acc No Does Not Match Apac In BCIF</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="skip">
-<td><span class="badge log skip-bg">Skip</span></td>
-<td>18:59:11 pm</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:45:51 pm</td>
 <td>
-<a href="#" class="linked" test-id='4' id='4'>Verify Status Update Api Returns Error 1008 When Txn Ref No Is Invalid</a>
+<a href="#" class="linked" test-id='4' id='4'>Verify Generate Token Api When Account Status Is Credit Freeze</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="skip">
-<td><span class="badge log skip-bg">Skip</span></td>
-<td>18:59:11 pm</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:45:53 pm</td>
 <td>
-<a href="#" class="linked" test-id='5' id='5'>Verify Status Update Api Returns Txn Status 101 For Booked Transaction</a>
+<a href="#" class="linked" test-id='5' id='5'>Verify Generate Token Api When Account Status Is Debit Freeze</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="skip">
-<td><span class="badge log skip-bg">Skip</span></td>
-<td>18:59:11 pm</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:45:55 pm</td>
 <td>
-<a href="#" class="linked" test-id='6' id='6'>Verify Status Update Api Returns Txn Status 153 For Crn Updated Transaction</a>
+<a href="#" class="linked" test-id='6' id='6'>Verify Generate Token Api When Account Status Is Dormant</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="skip">
-<td><span class="badge log skip-bg">Skip</span></td>
-<td>18:59:11 pm</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:45:57 pm</td>
 <td>
-<a href="#" class="linked" test-id='7' id='7'>Verify Status Update Api Returns Txn Status 204 For Money Delivered Transaction</a>
+<a href="#" class="linked" test-id='7' id='7'>Verify Generate Token Api When Account Status Is Total Freeze</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="skip">
-<td><span class="badge log skip-bg">Skip</span></td>
-<td>18:59:11 pm</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:45:59 pm</td>
 <td>
-<a href="#" class="linked" test-id='8' id='8'>Verify Status Update Api Returns Txn Status 306 For Credence Rejected Transaction</a>
+<a href="#" class="linked" test-id='8' id='8'>Verify Generate Token Api When Customer CRN Status Is Blacklisted</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:01 pm</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>Verify Generate Token Api When Customer CRN Status Is Suspended</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:03 pm</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>Verify Generate Token Api When IT Type Is Not Allowed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:06 pm</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>Verify Generate Token Api When Party Type Is Corporate</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>Verify Generate Token Api When Relation Type Is Not Allowed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:10 pm</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>Verify Generate Token Api When Scheme Code Is Not Allowed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:13 pm</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>Verify Generate Token Api With Alphabetic Characters In CRN</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:13 pm</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>Verify Generate Token Api With CRN Above Maximum Length</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:14 pm</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>Verify Generate Token Api With Crn Above Maximum Length</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:14 pm</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>Verify Generate Token Api With Crn At Maximum Length</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:16 pm</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>Verify Generate Token Api With Crn At Minimum Length Four Digits</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:17 pm</td>
+<td>
+<a href="#" class="linked" test-id='19' id='19'>Verify Generate Token Api With Empty CRN</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:17 pm</td>
+<td>
+<a href="#" class="linked" test-id='20' id='20'>Verify Generate Token Api With Invalid Non Existent CRN</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:18 pm</td>
+<td>
+<a href="#" class="linked" test-id='21' id='21'>Verify Generate Token Api With Missing Client Code</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:18 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='22'>Verify Generate Token Api With Missing Mandatory Field Acc No</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:19 pm</td>
+<td>
+<a href="#" class="linked" test-id='23' id='23'>Verify Generate Token Api With Special Characters In Acc No</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:46:19 pm</td>
+<td>
+<a href="#" class="linked" test-id='24' id='24'>Verify Generate Token Api With Valid CRN And Account Number For Eligible ETB Customer</a>
 </td>
 </tr>
 </tbody>
@@ -695,13 +3406,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>May 28, 2026 06:59:01 pm</h3>
+<h3>Jun 12, 2026 03:45:39 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>May 28, 2026 06:59:11 pm</h3>
+<h3>Jun 12, 2026 03:46:21 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -713,7 +3424,7 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>1</h3>
+<h3>24</h3>
 </div></div>
 </div>
 </div>
@@ -734,8 +3445,8 @@
 </small>
 </div>
 <div>
-<small data-tooltip='12%'><b>1</b> tests failed,
-<b>7</b> skipped, <b data-tooltip='0%'>0</b> others
+<small data-tooltip='100%'><b>24</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
 </div>
@@ -754,8 +3465,8 @@
 <div class="card-footer">
 <div><small data-tooltip='0%'><b>0</b> events passed</small></div>
 <div>
-<small data-tooltip='16%'><b>3</b> events failed,
-<b data-tooltip='%'>15</b> others
+<small data-tooltip='50%'><b>72</b> events failed,
+<b data-tooltip='%'>70</b> others
 </small>
 </div>
 </div>
@@ -771,7 +3482,7 @@
 </div></div>
 <script>
 var timeline = {
-"Verify Generate Token Api Returns Success With Valid Request":8.987,"Verify Status Update Api Returns Correct Transaction Status":0.012,"Verify Status Update Api Returns Error 1007 When Auth Token Is Invalid":0.009,"Verify Status Update Api Returns Error 1008 When Txn Ref No Is Invalid":0.009,"Verify Status Update Api Returns Txn Status 101 For Booked Transaction":0.013,"Verify Status Update Api Returns Txn Status 153 For Crn Updated Transaction":0.009,"Verify Status Update Api Returns Txn Status 204 For Money Delivered Transaction":0.01,"Verify Status Update Api Returns Txn Status 306 For Credence Rejected Transaction":0.011
+"Verify Generate Token Api Validates Customer Via CRN Api And Account Inquiry Api":4.114,"Verify Generate Token Api When Aadhar Link Is N":3.42,"Verify Generate Token Api When Acc No Does Not Match Apac In BCIF":1.731,"Verify Generate Token Api When Account Status Is Credit Freeze":1.788,"Verify Generate Token Api When Account Status Is Debit Freeze":2.151,"Verify Generate Token Api When Account Status Is Dormant":1.827,"Verify Generate Token Api When Account Status Is Total Freeze":2.215,"Verify Generate Token Api When Customer CRN Status Is Blacklisted":1.638,"Verify Generate Token Api When Customer CRN Status Is Suspended":2.446,"Verify Generate Token Api When IT Type Is Not Allowed":2.664,"Verify Generate Token Api When Party Type Is Corporate":2.139,"Verify Generate Token Api When Relation Type Is Not Allowed":2.469,"Verify Generate Token Api When Scheme Code Is Not Allowed":2.654,"Verify Generate Token Api With Alphabetic Characters In CRN":0.369,"Verify Generate Token Api With CRN Above Maximum Length":0.444,"Verify Generate Token Api With Crn Above Maximum Length":0.459,"Verify Generate Token Api With Crn At Maximum Length":2.052,"Verify Generate Token Api With Crn At Minimum Length Four Digits":0.321,"Verify Generate Token Api With Empty CRN":0.433,"Verify Generate Token Api With Invalid Non Existent CRN":0.798,"Verify Generate Token Api With Missing Client Code":0.369,"Verify Generate Token Api With Missing Mandatory Field Acc No":0.363,"Verify Generate Token Api With Special Characters In Acc No":0.319,"Verify Generate Token Api With Valid CRN And Account Number For Eligible ETB Customer":2.169
 };
 </script>
 <div class="row">
@@ -781,10 +3492,10 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>StatusUpdateAPI</td>
+<td>GenerateTokenAPI</td>
 <td>0</td>
-<td>1</td>
-<td>7</td>
+<td>24</td>
+<td>0</td>
 <td>0</td>
 <td>0%</td>
 </tr>
@@ -820,9 +3531,9 @@ var timeline = {
 var statusGroup = {
 parentCount: 5,
 passParent: 0,
-failParent: 1,
+failParent: 24,
 warningParent: 0,
-skipParent: 7,
+skipParent: 0,
 childCount: 5,
 passChild: 0,
 failChild: 0,
@@ -837,10 +3548,10 @@ skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
 passEvents: 0,
-failEvents: 3,
+failEvents: 72,
 warningEvents: 0,
-skipEvents: 7,
-infoEvents: 8
+skipEvents: 0,
+infoEvents: 70
 };
 </script>        </div>
       </div>

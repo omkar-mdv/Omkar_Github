@@ -3,13 +3,35 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="runner.TestRunner">
+      <class name="vestedApi.GenerateTokenAPI">
         <methods>
-          <include name="setUpClass"/>
-          <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
+          <include name="verifyGenerateTokenApiWhenCustomerCRNStatusIsBlacklisted"/>
+          <include name="verifyGenerateTokenApiWithCrnAtMaximumLength"/>
+          <include name="verifyGenerateTokenApiWhenAccNoDoesNotMatchApacInBCIF"/>
+          <include name="verifyGenerateTokenApiWithMissingMandatoryFieldAccNo"/>
+          <include name="verifyGenerateTokenApiWithCrnAtMinimumLengthFourDigits"/>
+          <include name="verifyGenerateTokenApiWhenAccountStatusIsDormant"/>
+          <include name="setup"/>
+          <include name="verifyGenerateTokenApiWhenPartyTypeIsCorporate"/>
+          <include name="verifyGenerateTokenApiWithCRNAboveMaximumLength"/>
+          <include name="verifyGenerateTokenApiWhenRelationTypeIsNotAllowed"/>
+          <include name="verifyGenerateTokenApiWhenAccountStatusIsCreditFreeze"/>
+          <include name="verifyGenerateTokenApiWithInvalidNonExistentCRN"/>
+          <include name="verifyGenerateTokenApiWhenAccountStatusIsTotalFreeze"/>
+          <include name="verifyGenerateTokenApiWhenAadharLinkIsN"/>
+          <include name="verifyGenerateTokenApiValidatesCustomerViaCRNApiAndAccountInquiryApi"/>
+          <include name="verifyGenerateTokenApiWithAlphabeticCharactersInCRN"/>
+          <include name="verifyGenerateTokenApiWithEmptyCRN"/>
+          <include name="verifyGenerateTokenApiWhenCustomerCRNStatusIsSuspended"/>
+          <include name="verifyGenerateTokenApiWhenAccountStatusIsDebitFreeze"/>
+          <include name="verifyGenerateTokenApiWithValidCRNAndAccountNumberForEligibleETBCustomer"/>
+          <include name="verifyGenerateTokenApiWhenSchemeCodeIsNotAllowed"/>
+          <include name="verifyGenerateTokenApiWithSpecialCharactersInAccNo"/>
+          <include name="verifyGenerateTokenApiWhenITTypeIsNotAllowed"/>
+          <include name="verifyGenerateTokenApiWithMissingClientCode"/>
+          <include name="verifyGenerateTokenApiWithCrnAboveMaximumLength"/>
         </methods>
-      </class> <!-- runner.TestRunner -->
+      </class> <!-- vestedApi.GenerateTokenAPI -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
